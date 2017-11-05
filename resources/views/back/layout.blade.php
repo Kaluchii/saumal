@@ -5,7 +5,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>НазваниеСайта | Панель управления</title>
+    <title>Saumal | Панель управления</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -64,7 +64,7 @@
                         {{--<a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>--}}
                     {{--</li>--}}
                     <li>
-                        <a href="/logout"><i class="fa  fa-arrow-circle-right"></i></a>
+                        <a href="/logout">Выход <i class="fa  fa-arrow-circle-right"></i></a>
                     </li>
                 </ul>
             </div>

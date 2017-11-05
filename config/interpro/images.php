@@ -77,4 +77,10 @@ return [
     'mission.img' => [
         'resizes' => ['preview']
     ],
+    'news_item.preview' => [
+        'resizes' => ['preview']
+    ],
+    'news_item.preview_mob' => [
+        'resizes' => ['preview']
+    ],
 ];

@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 
@@ -18,8 +19,12 @@ class FrontController extends Controller
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
         $scripts = $this->extract->getBlock('scripts');
+        $all_site = $this->extract->getBlock('all_site');
+        $lg = App::getLocale();
         view()->share([
             'scripts' => $scripts,
+            'all_site' => $all_site,
+            'lg' => $lg
         ]);
     }
 

@@ -47,6 +47,25 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/',         'AdminController@getIndex');
 
 
+    Route::get('/all',              'AdminController@getAll');
+    Route::get('/home-slider',      'AdminController@getHomeSlider');
+    Route::get('/home-utility',     'AdminController@getHomeUtility');
+    Route::get('/home-influence',   'AdminController@getHomeInfluence');
+    Route::get('/home-process',     'AdminController@getHomeProcess');
+    Route::get('/about',            'AdminController@getAbout');
+    Route::get('/composition',      'AdminController@getComposition');
+    Route::get('/utility',          'AdminController@getUtility');
+    Route::get('/influence',        'AdminController@getInfluence');
+    Route::get('/mission',          'AdminController@getMission');
+    Route::get('/factory',          'AdminController@getFactory');
+    Route::get('/process',          'AdminController@getProcess');
+    Route::get('/news',             'AdminController@getNews');
+    Route::get('/news/{id}',        'AdminController@getNewsItem');
+    Route::get('/contacts',         'AdminController@getContacts');
+    Route::get('/contacts/{id}',    'AdminController@getCity');
+    Route::get('/catalog',          'AdminController@getCatalog');
+    Route::get('/order',            'AdminController@getOrder');
+
 
     // Таксономия проекта. Визуальная зависимость данных.
     Route::get('/taxonomy', 'Back\TaxonomyController@showTaxonomy');

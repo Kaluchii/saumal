@@ -4933,3 +4933,12 @@ table.text-center th {
     white-space: normal !important;
   }
 }
+.sidebar-menu li>a>.fa-angle-left, .sidebar-menu li>a>.pull-right-container>.fa-angle-left {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-right: 10px;
+  -webkit-transition: transform .4s ease;
+  -o-transition: transform .4s ease;
+  transition: transform .4s ease;
+}
