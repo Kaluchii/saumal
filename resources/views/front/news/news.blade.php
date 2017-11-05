@@ -5,14 +5,14 @@
     <div class="page page--news">
         <div class="container">
             <div class="page-title text--center">
-                <h2 class="title-1">О компании</h2>
+                <h2 class="title-1">@lang('all_page.about_company')</h2>
             </div>
             <div class="nav-content text--center">
                 <ul class="list--inline">
-                    <li> <a href="/mission">Миссия компании</a> </li>
-                    <li> <a href="/factory">Завод</a> </li>
-                    <li> <a href="/process">Процесс производства</a> </li>
-                    <li class="active"> <a href="/news">Новости</a> </li>
+                    <li> <a href="/mission">@lang('about_comp.mission')</a> </li>
+                    <li> <a href="/factory">@lang('about_comp.factory')</a> </li>
+                    <li> <a href="/process">@lang('about_comp.process')</a> </li>
+                    <li class="active"> <a href="/news">@lang('about_comp.news')</a> </li>
                 </ul>
             </div>
         </div>
@@ -22,7 +22,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-3">
                         <!-- news-items-list -->
                         <div class="news-items-list">
-                            <h3 class="title-3">Новости</h3>
+                            <h3 class="title-3">@lang('about_comp.news')</h3>
                             <div class="block-in">
                                 <!-- news-item -->
                                 <div class="news-item"> <time class="item-date">03. 04. 2017</time>

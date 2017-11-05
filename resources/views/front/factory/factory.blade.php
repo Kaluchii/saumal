@@ -5,14 +5,14 @@
     <div class="page">
         <div class="container">
             <div class="page-title text--center">
-                <h1 class="title-1">О компании</h1>
+                <h1 class="title-1">@lang('all_page.about_company')</h1>
             </div>
             <div class="nav-content text--center">
                 <ul class="list--inline">
-                    <li> <a href="/mission">Миссия компании</a> </li>
-                    <li class="active"> <a href="/factory">Завод</a> </li>
-                    <li> <a href="/process">Процесс производства</a> </li>
-                    <li> <a href="/news">Новости</a> </li>
+                    <li> <a href="/mission">@lang('about_comp.mission')</a> </li>
+                    <li class="active"> <a href="/factory">@lang('about_comp.factory')</a> </li>
+                    <li> <a href="/process">@lang('about_comp.process')</a> </li>
+                    <li> <a href="/news">@lang('about_comp.news')</a> </li>
                 </ul>
             </div>
         </div>

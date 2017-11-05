@@ -5,13 +5,13 @@
     <div class="page">
         <div class="container">
             <div class="page-title text--center">
-                <h1 class="title-1">Контакты</h1>
+                <h1 class="title-1">@lang('all_page.contacts')</h1>
             </div>
             <div class="nav-content text--center">
                 <ul class="list--inline" role="tablist">
-                    <li role="presentation" class="active"> <a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Места продаж</a> </li>
-                    <li role="presentation"> <a href="#address" aria-controls="address" role="tab" data-toggle="tab">Адрес производства</a> </li>
-                    <li role="presentation"> <a href="#distributors" aria-controls="distributors" role="tab" data-toggle="tab">Дистрибьюторы</a> </li>
+                    <li role="presentation" class="active"> <a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">@lang('contacts.menu1')</a> </li>
+                    <li role="presentation"> <a href="#address" aria-controls="address" role="tab" data-toggle="tab">@lang('contacts.menu2')</a> </li>
+                    <li role="presentation"> <a href="#distributors" aria-controls="distributors" role="tab" data-toggle="tab">@lang('contacts.menu3')</a> </li>
                 </ul>
             </div>
         </div>
@@ -23,7 +23,7 @@
                         <div class="container">
                             <div class="section-content">
                                 <div class="section-in">
-                                    <h3 class="title-3">Адреса продаж</h3>
+                                    <h3 class="title-3">@lang('contacts.distr_addr')</h3>
                                     <div class="nav-subcontent">
                                         <ul class="list--inline" role="tablist">
                                             <li role="presentation"> <a href="#tab-city-1" aria-controls="tab-city-1" role="tab" data-toggle="tab">Астана</a> </li>
@@ -103,7 +103,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="section-in">
-                                            <h3 class="title-3">Адрес производства</h3>
+                                            <h3 class="title-3">@lang('contacts.comp_addr')</h3>
                                             <p> Республика Казахстан, Карагандинская область,<br /> Осакаровский район, с. Жансары. </p>
                                         </div>
                                     </div>
@@ -126,7 +126,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="section-in">
-                                            <h3 class="title-3">Дистрибьюторы</h3>
+                                            <h3 class="title-3">@lang('contacts.distributors')</h3>
                                             <p>ТОО &laquo;Торговый дом &laquo;Saumal&raquo;, Республика Казахстан,</p>
                                             <div class="buttons"> <a href="#" type="button" class="btn--unstyled btn--map active" data-latitude="43.238949" data-longitude="76.961628" data-zoom="17" data-pin="img/pin.png">
                                                     <strong>Алматы</strong>

@@ -11,7 +11,7 @@
                 </a> </div>
             <!-- /rycle-informer -->
             <div class="page-title text--center">
-                <h1 class="title-1">Заказ продукта</h1>
+                <h1 class="title-1">@lang('order.title')</h1>
             </div>
         </div>
         <div class="page-content">
@@ -39,13 +39,13 @@
                                                 <div class="item-title">Сухое кобылье<br /> молоко Саумал<br /> 500 г</div>
                                             </div>
                                             <div class="column column--calc">
-                                                <div class="item-calc"> <label>Количество шт</label>
+                                                <div class="item-calc"> <label>@lang('order.count')</label>
                                                     <div class="item-calc-in"> <button type="button" class="btn--unstyled btn--calc btn--minus"><i class="icon icon-minus"></i></button> <input type="text" class="form-control inp--calc" value="1" data-min="1" data-max="10" readonly /> <button type="button"
                                                                                                                                                                                                                                                                                                     class="btn--unstyled btn--calc btn--plus"><i class="icon icon-plus"></i></button> </div>
                                                 </div>
                                             </div>
                                             <div class="column column--price">
-                                                <div class="item-price"> <label>Стоимость</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
+                                                <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
                                             </div>
                                         </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="1" /> </div>
                                     <!-- /item -->
@@ -65,22 +65,22 @@
                                                 <div class="item-title">Сухое кобылье<br /> молоко Саумал<br /> 250 г</div>
                                             </div>
                                             <div class="column column--calc">
-                                                <div class="item-calc"> <label>Количество шт</label>
+                                                <div class="item-calc"> <label>@lang('order.count')</label>
                                                     <div class="item-calc-in"> <button type="button" class="btn--unstyled btn--calc btn--minus"><i class="icon icon-minus"></i></button> <input type="text" class="form-control inp--calc" value="1" data-min="1" data-max="10" readonly /> <button type="button"
                                                                                                                                                                                                                                                                                                     class="btn--unstyled btn--calc btn--plus"><i class="icon icon-plus"></i></button> </div>
                                                 </div>
                                             </div>
                                             <div class="column column--price">
-                                                <div class="item-price"> <label>Стоимость</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
+                                                <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
                                             </div>
-                                        </div> <button type="button" class="btn--unstyled btn--add"><i class="icon icon-plus"></i></button> <input type="hidden" name="id" value="2" /> </div>
+                                        </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="2" /> </div>
                                     <!-- /item -->
                                 </div>
                                 <div class="list-amount clearfix">
-                                    <div class="pull-left"> <label>Выбрано</label> <strong data-output="count"></strong> </div>
+                                    <div class="pull-left"> <label>@lang('order.pic')</label> <strong data-output="count"></strong> </div>
                                     <div class="pull-right">
                                         <div class="div-inner text--right">
-                                            <div class="div-in text--left"> <label>Итого к оплате</label> <strong data-output="amount"></strong> <span class="tenge">n</span> </div>
+                                            <div class="div-in text--left"> <label>@lang('order.result')</label> <strong data-output="amount"></strong> <span class="tenge">n</span> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,28 +88,28 @@
                             <!-- /items-list -->
                         </fieldset>
                         <fieldset>
-                            <h3>Оформление заказа</h3>
+                            <h3>@lang('order.ordering')</h3>
                             <div class="form-body">
                                 <div class="form-in">
-                                    <div class="form-group clearfix"> <label class="control-label">Как к вам обращаться</label>
+                                    <div class="form-group clearfix"> <label class="control-label">@lang('order.name')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="name" required /> </div>
                                     </div>
-                                    <div class="form-group clearfix"> <label class="control-label">Адрес электронной почты</label>
+                                    <div class="form-group clearfix"> <label class="control-label">@lang('order.email')</label>
                                         <div class="controls"> <input type="email" class="form-control" name="email" required /> </div>
                                     </div>
-                                    <div class="form-group clearfix group--phone"> <label class="control-label">Номер телефона</label>
+                                    <div class="form-group clearfix group--phone"> <label class="control-label">@lang('order.tel')</label>
                                         <div class="controls"> <span class="prefix">+7</span> <input type="tel" class="form-control" name="phone" data-mask="(999) 999-99-99" required /> </div>
                                     </div>
-                                    <div class="form-group clearfix group--city"> <label class="control-label">Город</label>
+                                    <div class="form-group clearfix group--city"> <label class="control-label">@lang('order.city')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="city" required /> </div>
                                     </div>
-                                    <div class="form-group clearfix group--address"> <label class="control-label">Адрес доставки</label>
+                                    <div class="form-group clearfix group--address"> <label class="control-label">@lang('order.addr')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="address" required /> </div>
                                     </div>
                                 </div>
                                 <div class="form-controls clearfix">
-                                    <div class="pull-left"> <a href="/catalog" class="btn btn--white btn--back"><i class="icon icon-back"></i> <span>Вернуться к выбору продукта</span></a> </div>
-                                    <div class="pull-right"> <button type="submit" class="btn btn--blue btn--shadow btn--submit"><span>Оформить заказ</span></button> </div>
+                                    <div class="pull-left"> <a href="/catalog" class="btn btn--white btn--back"><i class="icon icon-back"></i> <span>@lang('order.back')</span></a> </div>
+                                    <div class="pull-right"> <button type="submit" class="btn btn--blue btn--shadow btn--submit"><span>@lang('order.checkout')</span></button> </div>
                                 </div>
                             </div>
                         </fieldset>

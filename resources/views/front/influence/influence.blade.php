@@ -5,14 +5,14 @@
     <div class="page">
         <div class="container">
             <div class="page-title text--center">
-                <h2 class="title-1">О продукте</h2>
+                <h2 class="title-1">@lang('all_page.about_product')</h2>
             </div>
             <div class="nav-content text--center">
                 <ul class="list--inline">
-                    <li> <a href="/about">О продукте</a> </li>
-                    <li> <a href="/composition">Состав</a> </li>
-                    <li> <a href="/utility">Кому полезен Саумал</a> </li>
-                    <li class="active"> <a href="/influence">Влияние на организм</a> </li>
+                    <li> <a href="/about">@lang('about.menu1')</a> </li>
+                    <li> <a href="/composition">@lang('about.menu2')</a> </li>
+                    <li> <a href="/utility">@lang('about.menu3')</a> </li>
+                    <li class="active"> <a href="/influence">@lang('about.menu4')</a> </li>
                 </ul>
             </div>
         </div>

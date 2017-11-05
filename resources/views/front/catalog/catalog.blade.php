@@ -11,7 +11,7 @@
                 </a> </div>
             <!-- /rycle-informer -->
             <div class="page-title text--center">
-                <h1 class="title-1">Заказ продукта</h1>
+                <h1 class="title-1">@lang('order.title')</h1>
             </div>
         </div>
         <div class="page-content">
@@ -30,7 +30,7 @@
                                         <div class="item-img">
                                             <div class="img--centered" data-img-loader> <img src="img/pic-good-01.png" srcset="img/pic-good-01.png 1x, img/pic-good-01@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="1"><span>Добавить в корзину</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">Уже в корзине</a>                              </div>
+                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="1"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
@@ -42,7 +42,7 @@
                                         <div class="item-img">
                                             <div class="img--centered" data-img-loader> <img src="img/pic-good-02.png" srcset="img/pic-good-02.png 1x, img/pic-good-02@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="2"><span>Добавить в корзину</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">Уже в корзине</a>                              </div>
+                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="2"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
@@ -52,7 +52,7 @@
                                         <div class="item-title">Сухое кобылье молоко Саумал 200 г</div>
                                         <div class="item-price"> <strong>13 000</strong> <span class="tenge">n</span> </div>
                                         <div class="item-img"> </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="3"><span>Добавить в корзину</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">Уже в корзине</a>                              </div>
+                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="3"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
                                     </div>
                                 </div>
                                 <!-- /item -->

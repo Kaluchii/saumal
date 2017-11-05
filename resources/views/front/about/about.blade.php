@@ -5,14 +5,14 @@
     <div class="page">
         <div class="container">
             <div class="page-title text--center">
-                <h1 class="title-1">О продукте</h1>
+                <h1 class="title-1">@lang('all_page.about_product')</h1>
             </div>
             <div class="nav-content text--center">
                 <ul class="list--inline">
-                    <li class="active"> <a href="/about">О продукте</a> </li>
-                    <li> <a href="/composition">Состав</a> </li>
-                    <li> <a href="/utility">Кому полезен Саумал</a> </li>
-                    <li> <a href="/influence">Влияние на организм</a> </li>
+                    <li class="active"> <a href="/about">@lang('about.menu1')</a> </li>
+                    <li> <a href="/composition">@lang('about.menu2')</a> </li>
+                    <li> <a href="/utility">@lang('about.menu3')</a> </li>
+                    <li> <a href="/influence">@lang('about.menu4')</a> </li>
                 </ul>
             </div>
         </div>
@@ -47,7 +47,7 @@
                                                 <div class="item-img">
                                                     <div class="img--centered"> <img src="img/pic-how-01.png" class="img--fluid" /> </div>
                                                 </div>
-                                                <div class="item-text text--center">3 столовые<br /> ложки порошка<br /> <b>20-22 г.</b></div>
+                                                <div class="item-text text--center">@lang('about.recipe1')</div>
                                             </div>
                                             <!-- /item -->
                                         </div>
@@ -57,7 +57,7 @@
                                                 <div class="item-img">
                                                     <div class="img--centered"> <img src="img/pic-how-02.png" class="img--fluid" /> </div>
                                                 </div>
-                                                <div class="item-text text--center">1 стакан<br /> тёплой воды (36<sup>0</sup>)<br /> <b>200 мл.</b></div>
+                                                <div class="item-text text--center">@lang('about.recipe2')</div>
                                             </div>
                                             <!-- /item -->
                                         </div>
@@ -67,7 +67,7 @@
                                                 <div class="item-img">
                                                     <div class="img--centered"> <img src="img/pic-how-03.png" class="img--fluid" /> </div>
                                                 </div>
-                                                <div class="item-text text--center">Готовый<br /> SAUMAL<sup>&reg;</sup></div>
+                                                <div class="item-text text--center">@lang('about.recipe3')</div>
                                             </div>
                                             <!-- /item -->
                                         </div>
