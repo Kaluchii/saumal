@@ -63,19 +63,19 @@
                                     <div class="section-stats">
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="item item--large"> <strong><span>25 000</span><span data-counter>25 000</span><small>Га</small></strong> Площадь пастбищных земель </div>
+                                                <div class="item item--large"> <strong><span>25 000</span><span data-counter>25 000</span><small>@lang('about_comp.ga')</small></strong> @lang('about_comp.area') </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <div class="item"> <strong><span>20</span><span data-counter>20</span><small>тонн</small></strong> сублимированного<br /> кобыльего молока в&nbsp;год </div>
+                                                <div class="item"> <strong><span>20</span><span data-counter>20</span><small>@lang('about_comp.ton')</small></strong> @lang('about_comp.in_year') </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <div class="item"> <strong><span>2.5</span><span data-counter>2.5</span><small>тонн</small></strong> кобыльего молока<br /> в&nbsp;сутки </div>
+                                                <div class="item"> <strong><span>2.5</span><span data-counter>2.5</span><small>@lang('about_comp.ton')</small></strong> @lang('about_comp.in_day') </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <div class="item"> <strong><span>1 500</span><span data-counter>1 500</span></strong> Кобылиц (конематок) </div>
+                                                <div class="item"> <strong><span>1 500</span><span data-counter>1 500</span></strong> @lang('about_comp.horse_count') </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <div class="item"> <strong><span>150</span><span data-counter>150</span></strong> Рабочих мест </div>
+                                                <div class="item"> <strong><span>150</span><span data-counter>150</span></strong> @lang('about_comp.work_count') </div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="section-tip" data-animate>
-                                <p>Лошади на&nbsp;нашем предприятии используются исключительно для молочного производства.</p>
+                                <p>@lang('about_comp.horse')</p>
                             </div>
                         </div>
                     </div>

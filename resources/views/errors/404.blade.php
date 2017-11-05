@@ -24,8 +24,8 @@
     }
     p.big {
         text-align: center;
-        font-size: 80px;
-        line-height: 75px;
+        font-size: 40px;
+        line-height: 60px;
         font-family: "Arial",sans-serif;
         color: #333333;
     }
@@ -33,9 +33,9 @@
     p.big:first-child {
         border-bottom: 1px solid #999999;
         margin: 0 auto;
-        max-width: 280px;
-        font-size: 160px;
-        line-height: 140px;
+        max-width: 170px;
+        font-size: 100px;
+        line-height: 100px;
         color: #333333;
     }
 
@@ -48,10 +48,11 @@
         text-align: center;
         color: #333333;
         margin-bottom: 17px;
+        padding: 0 15px;
     }
 
     a {
-        font-size: 36px;
+        font-size: 32px;
         border-bottom: 1px solid rgba(0, 102, 153, 0.25);
         text-decoration: none;
         color: #006699;
