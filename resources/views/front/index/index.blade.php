@@ -24,8 +24,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-cover hidden-xs"> <img data-src="img/pic-promo-01.jpg" class="img--fluid owl-lazy" /> </div>
-                        <div class="slide-cover visible-xs"> <img data-src="img/pic-promo-01-mobile.png" class="img--fluid owl-lazy" /> </div>
+                        <div class="slide-cover hidden-xs"> <img data-src="/img/pic-promo-01.jpg" class="img--fluid owl-lazy" /> </div>
+                        <div class="slide-cover visible-xs"> <img data-src="/img/pic-promo-01-mobile.png" class="img--fluid owl-lazy" /> </div>
                     </div>
                     <!-- /slide -->
                     <!-- slide -->
@@ -45,8 +45,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slide-cover hidden-xs"> <img data-src="img/pic-promo-02.jpg" class="img--fluid owl-lazy" /> </div>
-                        <div class="slide-cover visible-xs"> <img data-src="img/pic-promo-02-mobile.png" class="img--fluid owl-lazy" /> </div>
+                        <div class="slide-cover hidden-xs"> <img data-src="/img/pic-promo-02.jpg" class="img--fluid owl-lazy" /> </div>
+                        <div class="slide-cover visible-xs"> <img data-src="/img/pic-promo-02-mobile.png" class="img--fluid owl-lazy" /> </div>
                     </div>
                     <!-- /slide -->
                 </div>
@@ -68,7 +68,7 @@
                                         <a href="/utility#pregnant" class="link--block">
                                             <h5>Беременным<br /> и&nbsp;кормящим женщинам</h5>
                                             <div class="item-text hidden-xs">Сходство кобыльего молока с&nbsp;грудным дает основания и&nbsp;возможность рассматривать его в&nbsp;качестве альтернативы грудного молоку.</div>
-                                            <div class="item-img" data-img-loader> <img src="img/pic-cat-01.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
+                                            <div class="item-img" data-img-loader> <img src="/img/pic-cat-01.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
 									<span class="hidden-xs">@lang('index.more_info')</span> <span class="visible-xs-inline">@lang('index.learn_more')</span> </span>
                                         </a>
                                     </div>
@@ -80,7 +80,7 @@
                                         <a href="/utility#children" class="link--block">
                                             <h5>Детям<br /> и&nbsp;подросткам</h5>
                                             <div class="item-text hidden-xs">Употребление SAUMAL&reg;&nbsp;&mdash; хорошая основа для профилактики болезней и&nbsp;нарушений работы организма в&nbsp;первые годы жизни.</div>
-                                            <div class="item-img" data-img-loader> <img src="img/pic-cat-02.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
+                                            <div class="item-img" data-img-loader> <img src="/img/pic-cat-02.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
 									<span class="hidden-xs">@lang('index.more_info')</span> <span class="visible-xs-inline">@lang('index.learn_more')</span> </span>
                                         </a>
                                     </div>
@@ -92,7 +92,7 @@
                                         <a href="/utility#age" class="link--block">
                                             <h5>Пожилым людям</h5>
                                             <div class="item-text hidden-xs">Кобылье молоко не&nbsp;содержит трансизомеров жирных кислот, ослабляющих иммунитет и&nbsp;способствующих развитию сердечно-сосудистых и&nbsp;онкологических заболеваний.</div>
-                                            <div class="item-img" data-img-loader> <img src="img/pic-cat-03.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
+                                            <div class="item-img" data-img-loader> <img src="/img/pic-cat-03.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
 									<span class="hidden-xs">@lang('index.more_info')</span> <span class="visible-xs-inline">@lang('index.learn_more')</span> </span>
                                         </a>
                                     </div>
@@ -104,7 +104,7 @@
                                         <a href="/utility#sport" class="link--block">
                                             <h5>Спортсменам</h5>
                                             <div class="item-text hidden-xs">SAUMAL&reg; помогает набору мышечной массы и&nbsp;укреплению скелета, снижает риск накопления холестерина и&nbsp;повышает энергоемкость рациона.</div>
-                                            <div class="item-img" data-img-loader> <img src="img/pic-cat-04.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
+                                            <div class="item-img" data-img-loader> <img src="/img/pic-cat-04.png" class="img--fluid" /> </div> <span class="item-more text--center text--white">
 									<span class="hidden-xs">@lang('index.more_info')</span> <span class="visible-xs-inline">@lang('index.learn_more')</span> </span>
                                         </a>
                                     </div>
@@ -180,8 +180,8 @@
                             </div>
                         </div>
                         <div class="column column--right clearfix hidden-xs">
-                            <div class="column column--schema"> <img src="img/pic-nervous.png" class="img--fluid active" data-img="tab-nervous" /> <img src="img/pic-circulatory.png" class="img--fluid" data-img="tab-circulatory" /> <img src="img/pic-respiratory.png" class="img--fluid" data-img="tab-respiratory"
-                                /> <img src="img/pic-digestive.png" class="img--fluid" data-img="tab-digestive" /> <img src="img/pic-endocrine.png" class="img--fluid" data-img="tab-endocrine" /> <img src="img/pic-cover.png" class="img--fluid" data-img="tab-cover"
+                            <div class="column column--schema"> <img src="/img/pic-nervous.png" class="img--fluid active" data-img="tab-nervous" /> <img src="/img/pic-circulatory.png" class="img--fluid" data-img="tab-circulatory" /> <img src="/img/pic-respiratory.png" class="img--fluid" data-img="tab-respiratory"
+                                /> <img src="/img/pic-digestive.png" class="img--fluid" data-img="tab-digestive" /> <img src="/img/pic-endocrine.png" class="img--fluid" data-img="tab-endocrine" /> <img src="/img/pic-cover.png" class="img--fluid" data-img="tab-cover"
                                 /> </div>
                             <div class="column column--tab">
                                 <div class="tab-content">
@@ -261,7 +261,7 @@
                                 <div class="item item--accent">
                                     <div class="item-body">
                                         <div class="item-text">Для производства саумала<br /> используются казахские<br /> лошади породы <strong>Джабе</strong></div>
-                                        <div class="item-img"> <img src="img/pic-step1.png" class="img--fluid" /> </div>
+                                        <div class="item-img"> <img src="/img/pic-step1.png" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
@@ -292,7 +292,7 @@
                                 <div class="item item--accent">
                                     <div class="item-body">
                                         <div class="item-text">с <strong>1 литра</strong> молока<br /> сублимируется<br /> <strong>95 грамм</strong> продукта</div>
-                                        <div class="item-img"> <img src="img/pic-step2.png" class="img--fluid" /> </div>
+                                        <div class="item-img"> <img src="/img/pic-step2.png" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
@@ -323,7 +323,7 @@
                                 <div class="item item--accent">
                                     <div class="item-body">
                                         <div class="item-text">Из&nbsp;одной 500-граммовой<br /> банки SAUMAL получается<br /> <strong>4,5 литров</strong> молока</div>
-                                        <div class="item-img"> <img src="img/pic-step3.png" class="img--fluid" /> </div>
+                                        <div class="item-img"> <img src="/img/pic-step3.png" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
@@ -352,8 +352,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-01.png" data-src-retina="img/pic-news-01@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-01-mobile.png" srcset="img/pic-news-01-mobile.png 1x, img/pic-news-01-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-01.png" data-src-retina="/img/pic-news-01@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-01-mobile.png" srcset="/img/pic-news-01-mobile.png 1x, /img/pic-news-01-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Сходство кобыльего и&nbsp;грудного молока</div>
                                         </a>
@@ -365,8 +365,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-02.png" data-src-retina="img/pic-news-02@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-02-mobile.png" srcset="img/pic-news-02-mobile.png 1x, img/pic-news-02-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-02.png" data-src-retina="/img/pic-news-02@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-02-mobile.png" srcset="/img/pic-news-02-mobile.png 1x, /img/pic-news-02-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">SAUMAL&reg;&nbsp;&mdash; национальный бренд Казахстана</div>
                                         </a>
@@ -378,8 +378,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-03.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-03-mobile.png" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-03.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-03-mobile.png" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Польза саумала для детей</div>
                                         </a>
@@ -391,8 +391,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-04.png" data-src-retina="img/pic-news-04@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-04-mobile.png" srcset="img/pic-news-04-mobile.png 1x, img/pic-news-04-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-04.png" data-src-retina="/img/pic-news-04@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-04-mobile.png" srcset="/img/pic-news-04-mobile.png 1x, /img/pic-news-04-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Как правильно пить кобылье молоко?</div>
                                         </a>
@@ -404,8 +404,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-01.png" data-src-retina="img/pic-news-01@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-01-mobile.png" srcset="img/pic-news-01-mobile.png 1x, img/pic-news-01-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-01.png" data-src-retina="/img/pic-news-01@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-01-mobile.png" srcset="/img/pic-news-01-mobile.png 1x, /img/pic-news-01-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Сходство кобыльего и&nbsp;грудного молока</div>
                                         </a>
@@ -417,8 +417,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-02.png" data-src-retina="img/pic-news-02@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-02-mobile.png" srcset="img/pic-news-02-mobile.png 1x, img/pic-news-02-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-02.png" data-src-retina="/img/pic-news-02@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-02-mobile.png" srcset="/img/pic-news-02-mobile.png 1x, /img/pic-news-02-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">SAUMAL&reg;&nbsp;&mdash; национальный бренд Казахстана</div>
                                         </a>
@@ -430,8 +430,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-03.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-03-mobile.png" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-03.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-03-mobile.png" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Польза саумала для детей</div>
                                         </a>
@@ -443,8 +443,8 @@
                                     <div class="item">
                                         <a href="about.news.html" class="link--block">
                                             <div class="item-img">
-                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="img/pic-news-04.png" data-src-retina="img/pic-news-04@2x.png" class="img--fluid owl-lazy" /> </div>
-                                                <div class="ratio visible-xs" data-img-loader> <img src="img/pic-news-04-mobile.png" srcset="img/pic-news-04-mobile.png 1x, img/pic-news-04-mobile@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="ratio hidden-xs" data-img-loader> <img data-src="/img/pic-news-04.png" data-src-retina="/img/pic-news-04@2x.png" class="img--fluid owl-lazy" /> </div>
+                                                <div class="ratio visible-xs" data-img-loader> <img src="/img/pic-news-04-mobile.png" srcset="/img/pic-news-04-mobile.png 1x, /img/pic-news-04-mobile@2x.png 2x" class="img--fluid" /> </div>
                                             </div>
                                             <div class="item-title text--black">Как правильно пить кобылье молоко?</div>
                                         </a>
