@@ -1,8 +1,7 @@
 @section('main-menu')
     <section class="sidebar">
         <ul class="sidebar-menu">
-            <li class="header"></li>
-            <li class="header"></li>
+            <li class="header">Страницы редактирования</li>
             <li>
                 <a href="/adm/all">
                     <i class="fa fa-circle-o"></i> <span>Для всего сайта</span>
@@ -47,6 +46,11 @@
                     <li><a href="/adm/process"><i class="fa fa-circle-o"></i> <span>Процесс производства</span></a></li>
                     <li><a href="/adm/news"><i class="fa fa-circle-o"></i> <span>Новости</span></a></li>
                 </ul>
+            </li>
+            <li>
+                <a href="/adm/contacts">
+                    <i class="fa fa-circle-o"></i> <span>Контакты</span>
+                </a>
             </li>
         </ul>
     </section>

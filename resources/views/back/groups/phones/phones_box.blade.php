@@ -4,16 +4,14 @@
         <button type="submit" class="btn btn-primary pull-right remove-flat-item" data-id="{{$item->id_field}}"
                 data-block="phones">Удалить</button>
     </div>
-    <div class="box-body">
-
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Рус</a></li>
-                <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">Қаз</a></li>
-                <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">Eng</a></li>
+                <li class="active"><a href="#tab_{{$item->id_field.$item->sorter_field.'1'}}" data-toggle="tab" aria-expanded="true">Рус</a></li>
+                <li><a href="#tab_{{$item->id_field.$item->sorter_field.'2'}}" data-toggle="tab" aria-expanded="false">Қаз</a></li>
+                <li><a href="#tab_{{$item->id_field.$item->sorter_field.'3'}}" data-toggle="tab" aria-expanded="false">Eng</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="tab_1">
+                <div class="tab-pane active" id="tab_{{$item->id_field.$item->sorter_field.'1'}}">
                     <div class="form-group">
                         <label>Город</label>
                         <input class="form-control string"
@@ -25,7 +23,7 @@
                                data-id="{{$item->id_field}}">
                     </div>
                 </div>
-                <div class="tab-pane" id="tab_2">
+                <div class="tab-pane" id="tab_{{$item->id_field.$item->sorter_field.'2'}}">
                     <div class="form-group">
                         <label>Город</label>
                         <input class="form-control string"
@@ -37,7 +35,7 @@
                                data-id="{{$item->id_field}}">
                     </div>
                 </div>
-                <div class="tab-pane" id="tab_3">
+                <div class="tab-pane" id="tab_{{$item->id_field.$item->sorter_field.'3'}}">
                     <div class="form-group">
                         <label>Город</label>
                         <input class="form-control string"
@@ -52,6 +50,7 @@
             </div>
         </div>
 
+    <div class="box-body">
         <div class="form-group">
             <label>Номер телефона</label>
             <input class="form-control string"

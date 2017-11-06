@@ -25,9 +25,9 @@ return [
             'slide' => [
                 'image' => ['slide', 'mob_slide'],
                 'string' => [
-                    'slide_title_ru', 'btn_text_ru', 'btn_link_ru',
-                    'slide_title_kk', 'btn_text_kk', 'btn_link_kk',
-                    'slide_title_en', 'btn_text_en', 'btn_link_en'
+                    'slide_title_ru', 'btn_text_ru', 'btn_link',
+                    'slide_title_kk', 'btn_text_kk',
+                    'slide_title_en', 'btn_text_en',
                 ],
                 'text' => [
                     'slide_text_ru',
@@ -96,14 +96,14 @@ return [
 
     'about' => [
         'string' => [
-            'block_title1_ru', 'block_title2_ru', 'block_title3_ru',
-            'block_title1_kk', 'block_title2_kk', 'block_title3_kk',
-            'block_title1_en', 'block_title2_en', 'block_title3_en',
+            'item_title1_ru', 'item_title2_ru', 'item_title3_ru',
+            'item_title1_kk', 'item_title2_kk', 'item_title3_kk',
+            'item_title1_en', 'item_title2_en', 'item_title3_en',
         ],
         'text' => [
-            'block_text1_ru', 'block_text2_ru', 'block_text3_ru',
-            'block_text1_kk', 'block_text2_kk', 'block_text3_kk',
-            'block_text1_en', 'block_text2_en', 'block_text3_en',
+            'item_text1_ru', 'item_text2_ru', 'item_text3_ru',
+            'item_text1_kk', 'item_text2_kk', 'item_text3_kk',
+            'item_text1_en', 'item_text2_en', 'item_text3_en',
         ],
     ],
 
@@ -119,6 +119,8 @@ return [
             'block_text_en',
         ],
     ],
+
+
 
     'utility' => [
         'image' => ['img1', 'img2', 'img3', 'img4'],
@@ -164,14 +166,14 @@ return [
 
     'factory' => [
         'string' => [
-            'block1_title_ru', 'block2_title_ru', 'block3_title_ru', 'block4_title_ru', 'area', 'year', 'day', 'horses', 'workers',
-            'block1_title_kk', 'block2_title_kk', 'block3_title_kk', 'block4_title_kk',
-            'block1_title_en', 'block2_title_en', 'block3_title_en', 'block4_title_en',
+            'item_title1_ru', 'item_title2_ru', 'item_title3_ru', 'item_title4_ru', 'area', 'year', 'day', 'horses', 'workers',
+            'item_title1_kk', 'item_title2_kk', 'item_title3_kk', 'item_title4_kk',
+            'item_title1_en', 'item_title2_en', 'item_title3_en', 'item_title4_en',
         ],
         'text' => [
-            'block1_text_ru', 'block2_text_ru', 'center_text_ru', 'block3_text_ru', 'block4_text_ru',
-            'block1_text_kk', 'block2_text_kk', 'center_text_kk', 'block3_text_kk', 'block4_text_kk',
-            'block1_text_en', 'block2_text_en', 'center_text_en', 'block3_text_en', 'block4_text_en',
+            'item_text1_ru', 'item_text2_ru', 'center_text_ru', 'item_text3_ru', 'item_text4_ru',
+            'item_text1_kk', 'item_text2_kk', 'center_text_kk', 'item_text3_kk', 'item_text4_kk',
+            'item_text1_en', 'item_text2_en', 'center_text_en', 'item_text3_en', 'item_text4_en',
         ],
     ],
 

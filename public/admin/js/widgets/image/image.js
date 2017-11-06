@@ -55,7 +55,6 @@ var image = (function () {
                     '<img src="'+data+'" class="kv-preview-data file-preview-image" title="2.jpg" alt="2.jpg" style="width:auto;height:160px;">'+
                     '</div>'+
                     '<div class="file-thumbnail-footer">'+
-                    '<div class="file-footer-caption" title="2.jpg">2.jpg <br><samp>(425.24 KB)</samp></div>'+
                     '<div class="file-actions">'+
                     '<input type="text" class="form-control alt-text"' +
                     '                   data-block="'+this.blockName+'"' +

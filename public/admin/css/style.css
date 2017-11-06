@@ -27,6 +27,7 @@ textarea.form-control {
 
 .btn.btn-primary.btn-file {
     border-radius: 3px;
+    margin: 8px;
 }
 
 .form-group .file-preview-frame:not(.file-preview-error):hover {
