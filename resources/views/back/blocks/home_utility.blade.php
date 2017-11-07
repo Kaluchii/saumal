@@ -13,7 +13,6 @@
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="tab_1">
-                    <div class="box-body">
                         <div class="form-group">
                             <label>Заголовок блока</label>
                             <input class="form-control string"
@@ -24,10 +23,8 @@
                                    data-block="home_utility"
                                    data-id="0">
                         </div>
-                    </div>
                 </div>
                 <div class="tab-pane" id="tab_2">
-                    <div class="box-body">
                         <div class="form-group">
                             <label>Заголовок блока</label>
                             <input class="form-control string"
@@ -38,10 +35,8 @@
                                    data-block="home_utility"
                                    data-id="0">
                         </div>
-                    </div>
                 </div>
                 <div class="tab-pane" id="tab_3">
-                    <div class="box-body">
                         <div class="form-group">
                             <label>Заголовок блока</label>
                             <input class="form-control string"
@@ -52,7 +47,6 @@
                                    data-block="home_utility"
                                    data-id="0">
                         </div>
-                    </div>
                 </div>
             </div>
         </div>

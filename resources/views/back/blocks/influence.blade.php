@@ -3,6 +3,119 @@
     @include('back.content-top', ['title' => 'Воздействие на организм'])
     <div class="box box box-info">
         <div class="box-header with-border">
+            <h3 class="box-title">Поля для редактирования</h3>
+        </div>
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Рус</a></li>
+                <li><a href="#tab_2" data-toggle="tab" aria-expanded="false">Қаз</a></li>
+                <li><a href="#tab_3" data-toggle="tab" aria-expanded="false">Eng</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1">
+                    <div class="form-group">
+                        <label>Заголовок верхнего блока</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$influence->block_title_ru_field}}"
+                               data-name="block_title_ru"
+                               data-type="string"
+                               data-block="influence"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст в верхнем блоке</label>
+                        <textarea class="form-control text text-editor"
+                                  data-name="block_text_ru"
+                                  data-type="text"
+                                  data-block="influence"
+                                  data-id="0">{{$influence->block_text_ru_field}}</textarea>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_2">
+                    <div class="form-group">
+                        <label>Заголовок верхнего блока</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$influence->block_title_kk_field}}"
+                               data-name="block_title_kk"
+                               data-type="string"
+                               data-block="influence"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст в верхнем блоке</label>
+                        <textarea class="form-control text text-editor"
+                                  data-name="block_text_kk"
+                                  data-type="text"
+                                  data-block="influence"
+                                  data-id="0">{{$influence->block_text_kk_field}}</textarea>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_3">
+                    <div class="form-group">
+                        <label>Заголовок верхнего блока</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$influence->block_title_en_field}}"
+                               data-name="block_title_en"
+                               data-type="string"
+                               data-block="influence"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст в верхнем блоке</label>
+                        <textarea class="form-control text text-editor"
+                                  data-name="block_text_en"
+                                  data-type="text"
+                                  data-block="influence"
+                                  data-id="0">{{$influence->block_text_en_field}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label>Изображение (220 x 570 px)</label>
+                <div class="dropzone">
+                    <div class="file-input">
+                        <div class="file-preview">
+                            <div class="input-group file-caption-main">
+                                <div class="file-preview-frame">
+                                    <div class="kv-file-content">
+                                        <img src="{{$influence->block_img_field->link}}?{{$influence->block_img_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->block_img_field->alt}}" alt="{{$influence->block_img_field->alt}}">
+                                    </div>
+                                    <div class="file-thumbnail-footer">
+                                        <div class="file-actions">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->block_img_field->alt}}">
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-btn">
+                                <button type="button" tabindex="500" title="Clear selected files" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">Очистить</span></button>
+                                <button type="button" tabindex="500" title="Abort ongoing upload" class="btn btn-default hide fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i>  <span class="hidden-xs">Cancel</span></button>
+                                <div tabindex="500" class="btn btn-primary btn-file">
+                                    <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
+                                    <span class="hidden-xs">Выбрать изображение …</span>
+                                    <input type="file" class="form-control file"
+                                           data-block="influence"
+                                           data-name="block_img"
+                                           data-type="image"
+                                           data-id="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="box box box-info">
+        <div class="box-header with-border">
             <h3 class="box-title">1-ая система организма</h3>
         </div>
         <div class="nav-tabs-custom">
@@ -17,10 +130,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title1_ru_field}}"
+                                   value="{{$influence->item_title1_ru_field}}"
                                    data-name="item_title1_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -28,8 +141,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text1_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text1_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text1_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_5">
@@ -37,10 +150,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title1_kk_field}}"
+                                   value="{{$influence->item_title1_kk_field}}"
                                    data-name="item_title1_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -48,8 +161,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text1_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text1_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text1_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_6">
@@ -57,10 +170,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title1_en_field}}"
+                                   value="{{$influence->item_title1_en_field}}"
                                    data-name="item_title1_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -68,8 +181,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text1_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text1_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text1_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -83,11 +196,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img1_field->link}}?{{$home_influence->img1_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img1_field->alt}}" alt="{{$home_influence->img1_field->alt}}">
+                                        <img src="{{$influence->img1_field->link}}?{{$influence->img1_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img1_field->alt}}" alt="{{$influence->img1_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img1_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img1_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -100,7 +213,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img1"
                                            data-type="image"
                                            data-id="0">
@@ -130,10 +243,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title2_ru_field}}"
+                                   value="{{$influence->item_title2_ru_field}}"
                                    data-name="item_title2_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -141,8 +254,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text2_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text2_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text2_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_8">
@@ -150,10 +263,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title2_kk_field}}"
+                                   value="{{$influence->item_title2_kk_field}}"
                                    data-name="item_title2_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -161,8 +274,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text2_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text2_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text2_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_9">
@@ -170,10 +283,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title2_en_field}}"
+                                   value="{{$influence->item_title2_en_field}}"
                                    data-name="item_title2_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -181,8 +294,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text2_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text2_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text2_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -196,11 +309,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img2_field->link}}?{{$home_influence->img2_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img2_field->alt}}" alt="{{$home_influence->img2_field->alt}}">
+                                        <img src="{{$influence->img2_field->link}}?{{$influence->img2_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img2_field->alt}}" alt="{{$influence->img2_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img2_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img2_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -213,7 +326,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img2"
                                            data-type="image"
                                            data-id="0">
@@ -243,10 +356,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title3_ru_field}}"
+                                   value="{{$influence->item_title3_ru_field}}"
                                    data-name="item_title3_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -254,8 +367,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text3_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text3_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text3_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_11">
@@ -263,10 +376,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title3_kk_field}}"
+                                   value="{{$influence->item_title3_kk_field}}"
                                    data-name="item_title3_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -274,8 +387,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text3_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text3_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text3_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_12">
@@ -283,10 +396,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title3_en_field}}"
+                                   value="{{$influence->item_title3_en_field}}"
                                    data-name="item_title3_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -294,8 +407,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text3_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text3_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text3_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -309,11 +422,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img3_field->link}}?{{$home_influence->img3_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img3_field->alt}}" alt="{{$home_influence->img3_field->alt}}">
+                                        <img src="{{$influence->img3_field->link}}?{{$influence->img3_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img3_field->alt}}" alt="{{$influence->img3_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img3_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img3_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -326,7 +439,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img3"
                                            data-type="image"
                                            data-id="0">
@@ -356,10 +469,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title4_ru_field}}"
+                                   value="{{$influence->item_title4_ru_field}}"
                                    data-name="item_title4_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -367,8 +480,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text4_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text4_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text4_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_14">
@@ -376,10 +489,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title4_kk_field}}"
+                                   value="{{$influence->item_title4_kk_field}}"
                                    data-name="item_title4_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -387,8 +500,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text4_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text4_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text4_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_15">
@@ -396,10 +509,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title4_en_field}}"
+                                   value="{{$influence->item_title4_en_field}}"
                                    data-name="item_title4_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -407,8 +520,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text4_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text4_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text4_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -422,11 +535,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img4_field->link}}?{{$home_influence->img4_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img4_field->alt}}" alt="{{$home_influence->img4_field->alt}}">
+                                        <img src="{{$influence->img4_field->link}}?{{$influence->img4_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img4_field->alt}}" alt="{{$influence->img4_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img4_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img4_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -439,7 +552,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img4"
                                            data-type="image"
                                            data-id="0">
@@ -469,10 +582,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title5_ru_field}}"
+                                   value="{{$influence->item_title5_ru_field}}"
                                    data-name="item_title5_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -480,8 +593,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text5_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text5_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text5_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_17">
@@ -489,10 +602,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title5_kk_field}}"
+                                   value="{{$influence->item_title5_kk_field}}"
                                    data-name="item_title5_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -500,8 +613,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text5_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text5_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text5_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_18">
@@ -509,10 +622,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title5_en_field}}"
+                                   value="{{$influence->item_title5_en_field}}"
                                    data-name="item_title5_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -520,8 +633,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text5_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text5_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text5_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -535,11 +648,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img5_field->link}}?{{$home_influence->img5_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img5_field->alt}}" alt="{{$home_influence->img5_field->alt}}">
+                                        <img src="{{$influence->img5_field->link}}?{{$influence->img5_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img5_field->alt}}" alt="{{$influence->img5_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img5_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img5_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -552,7 +665,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img5"
                                            data-type="image"
                                            data-id="0">
@@ -582,10 +695,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title6_ru_field}}"
+                                   value="{{$influence->item_title6_ru_field}}"
                                    data-name="item_title6_ru"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -593,8 +706,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text6_ru"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text6_ru_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text6_ru_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_20">
@@ -602,10 +715,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title6_kk_field}}"
+                                   value="{{$influence->item_title6_kk_field}}"
                                    data-name="item_title6_kk"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -613,8 +726,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text6_kk"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text6_kk_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text6_kk_field}}</textarea>
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_21">
@@ -622,10 +735,10 @@
                             <label>Заголовок</label>
                             <input class="form-control string"
                                    type="text" placeholder=""
-                                   value="{{$home_influence->item_title6_en_field}}"
+                                   value="{{$influence->item_title6_en_field}}"
                                    data-name="item_title6_en"
                                    data-type="string"
-                                   data-block="home_influence"
+                                   data-block="influence"
                                    data-id="0">
                         </div>
                         <div class="form-group">
@@ -633,8 +746,8 @@
                             <textarea class="form-control text"
                                       data-name="item_text6_en"
                                       data-type="text"
-                                      data-block="home_influence"
-                                      data-id="0">{{$home_influence->item_text6_en_field}}</textarea>
+                                      data-block="influence"
+                                      data-id="0">{{$influence->item_text6_en_field}}</textarea>
                         </div>
                 </div>
             </div>
@@ -648,11 +761,11 @@
                             <div class="input-group file-caption-main">
                                 <div class="file-preview-frame">
                                     <div class="kv-file-content">
-                                        <img src="{{$home_influence->img6_field->link}}?{{$home_influence->img6_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$home_influence->img6_field->alt}}" alt="{{$home_influence->img6_field->alt}}">
+                                        <img src="{{$influence->img6_field->link}}?{{$influence->img6_field->cache_index}}" class="kv-preview-data file-preview-image" title="{{$influence->img6_field->alt}}" alt="{{$influence->img6_field->alt}}">
                                     </div>
                                     <div class="file-thumbnail-footer">
                                         <div class="file-actions">
-                                            <input type="text" class="form-control alt-text" data-block="home_influence" data-type="images" data-id="0" data-name="alt" value="{{$home_influence->img6_field->alt}}">
+                                            <input type="text" class="form-control alt-text" data-block="influence" data-type="images" data-id="0" data-name="alt" value="{{$influence->img6_field->alt}}">
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -665,7 +778,7 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
                                     <span class="hidden-xs">Выбрать изображение …</span>
                                     <input type="file" class="form-control file"
-                                           data-block="home_influence"
+                                           data-block="influence"
                                            data-name="img6"
                                            data-type="image"
                                            data-id="0">
