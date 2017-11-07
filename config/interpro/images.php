@@ -83,4 +83,13 @@ return [
     'news_item.preview_mob' => [
         'resizes' => ['preview']
     ],
+    'part1.img' => [
+        'resizes' => ['preview']
+    ],
+    'part2.img' => [
+        'resizes' => ['preview']
+    ],
+    'part3.img' => [
+        'resizes' => ['preview']
+    ],
 ];

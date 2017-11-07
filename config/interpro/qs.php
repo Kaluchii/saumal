@@ -188,6 +188,7 @@ return [
         ],
         'groups' => [
             'part1' => [
+                'image' => ['img'],
                 'string' => [
                     'item_title_ru',
                     'item_title_kk',
@@ -200,6 +201,7 @@ return [
                 ],
             ],
             'part2' => [
+                'image' => ['img'],
                 'string' => [
                     'item_title_ru',
                     'item_title_kk',
@@ -212,6 +214,7 @@ return [
                 ],
             ],
             'part3' => [
+                'image' => ['img'],
                 'string' => [
                     'item_title_ru',
                     'item_title_kk',
