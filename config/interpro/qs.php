@@ -232,7 +232,7 @@ return [
     'news' => [
         'groups' => [
             'news_item' => [
-                'image' => ['preview', 'preview_mob'],
+                'image' => ['preview', 'mob_preview'],
                 'string' => [
                     'item_title_ru', 'pub_date',
                     'item_title_kk',

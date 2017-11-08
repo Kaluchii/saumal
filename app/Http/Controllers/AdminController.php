@@ -44,6 +44,13 @@ class AdminController extends Controller
         ]);
     }
 
+    public function getSeo(){
+        $block = $this->extract->getBlock('slider');
+        return view('back.blocks.seo', [
+            'seo' => $block
+        ]);
+    }
+
     public function getHomeUtility(){
         $block = $this->extract->getBlock('home_utility');
         return view('back.blocks.home_utility', [

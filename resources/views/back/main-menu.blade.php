@@ -19,6 +19,7 @@
                     <li><a href="/adm/home-utility"><i class="fa fa-circle-o"></i> <span>Кому полезен</span></a></li>
                     <li><a href="/adm/home-influence"><i class="fa fa-circle-o"></i> <span>Воздействие организм</span></a></li>
                     <li><a href="/adm/home-process"><i class="fa fa-circle-o"></i> <span>Процесс производства</span></a></li>
+                    <li><a href="/adm/seo"><i class="fa fa-circle-o"></i> <span>Метаданные</span></a></li>
                 </ul>
             </li>
             <li class="treeview">

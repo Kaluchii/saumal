@@ -119,7 +119,7 @@
                    data-id="{{$item->id_field}}">
         </div>
 
-        <div class="form-group">
+        <div class="form-group col-md-6">
             <label>Десктопное изображение (1480 x 596 px)</label>
             <div class="dropzone">
                 <div class="file-input">
@@ -155,7 +155,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group col-md-6">
             <label>Мобильное изображение (320 x 660 px)</label>
             <div class="dropzone">
                 <div class="file-input">

@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/home-utility',     'AdminController@getHomeUtility');
     Route::get('/home-influence',   'AdminController@getHomeInfluence');
     Route::get('/home-process',     'AdminController@getHomeProcess');
+    Route::get('/seo',              'AdminController@getSeo');
     Route::get('/about',            'AdminController@getAbout');
     Route::get('/composition',      'AdminController@getComposition');
     Route::get('/utility',          'AdminController@getUtility');

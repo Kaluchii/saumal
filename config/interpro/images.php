@@ -80,7 +80,7 @@ return [
     'news_item.preview' => [
         'resizes' => ['preview']
     ],
-    'news_item.preview_mob' => [
+    'news_item.mob_preview' => [
         'resizes' => ['preview']
     ],
     'part1.img' => [

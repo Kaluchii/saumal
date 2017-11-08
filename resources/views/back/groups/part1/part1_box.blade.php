@@ -79,7 +79,7 @@
 
     <div class="box-body">
         <div class="form-group">
-            <label>Десктопное изображение (540 x 540 px)</label>
+            <label>Изображение (540 x 540 px)</label>
             <div class="dropzone">
                 <div class="file-input">
                     <div class="file-preview">
