@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group">
                     <label>Адреса продаж</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="item_text_ru"
                               data-type="text"
                               data-block="sellers"
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label>Адреса продаж</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="item_text_kk"
                               data-type="text"
                               data-block="sellers"
@@ -71,7 +71,7 @@
                 </div>
                 <div class="form-group">
                     <label>Адреса продаж</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="item_text_en"
                               data-type="text"
                               data-block="sellers"

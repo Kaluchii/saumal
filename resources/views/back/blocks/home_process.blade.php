@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="block_text_ru"
                                   data-type="text"
                                   data-block="home_process"
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст около кнопки (внизу)</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="bottom_text_ru"
                                   data-type="text"
                                   data-block="home_process"
@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="block_text_kk"
                                   data-type="text"
                                   data-block="home_process"
@@ -61,7 +61,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст около кнопки (внизу)</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="bottom_text_kk"
                                   data-type="text"
                                   data-block="home_process"
@@ -81,7 +81,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="block_text_en"
                                   data-type="text"
                                   data-block="home_process"
@@ -89,7 +89,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст около кнопки (внизу)</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="bottom_text_en"
                                   data-type="text"
                                   data-block="home_process"

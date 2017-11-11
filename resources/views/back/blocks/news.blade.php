@@ -25,9 +25,10 @@
                        data-block="news">
                     <thead>
                     <tr role="row">
-                        <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1"
-                            colspan="1" aria-sort="ascending"
-                            aria-label="">Название</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                            colspan="1" aria-label="">ID</th>
+                        <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                            colspan="1" aria-label="">Название</th>
                         <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                             colspan="1" aria-label="">Дата редактирования</th>
                         <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"

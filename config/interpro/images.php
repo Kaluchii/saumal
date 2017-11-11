@@ -92,4 +92,7 @@ return [
     'part3.img' => [
         'resizes' => ['preview']
     ],
+    'goods_item.img' => [
+        'resizes' => ['preview']
+    ],
 ];

@@ -45,4 +45,5 @@
 
     <script src="/admin/js/app.js"></script>
     <script src="/admin/js/dist/js/app.min.js"></script>
+    <script src="/admin/js/costil.js"></script>
 @endsection

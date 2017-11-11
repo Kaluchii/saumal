@@ -76,7 +76,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text1_ru"
                                       data-type="text"
                                       data-block="home_utility"
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text1_kk"
                                       data-type="text"
                                       data-block="home_utility"
@@ -116,7 +116,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text1_en"
                                       data-type="text"
                                       data-block="home_utility"
@@ -189,7 +189,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text2_ru"
                                       data-type="text"
                                       data-block="home_utility"
@@ -209,7 +209,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text2_kk"
                                       data-type="text"
                                       data-block="home_utility"
@@ -229,7 +229,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text2_en"
                                       data-type="text"
                                       data-block="home_utility"
@@ -302,7 +302,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text3_ru"
                                       data-type="text"
                                       data-block="home_utility"
@@ -322,7 +322,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text3_kk"
                                       data-type="text"
                                       data-block="home_utility"
@@ -342,7 +342,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text3_en"
                                       data-type="text"
                                       data-block="home_utility"
@@ -415,7 +415,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text4_ru"
                                       data-type="text"
                                       data-block="home_utility"
@@ -436,7 +436,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text4_kk"
                                       data-type="text"
                                       data-block="home_utility"
@@ -457,7 +457,7 @@
                         </div>
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control text"
+                            <textarea class="form-control text" data-reg="true"
                                       data-name="item_text4_en"
                                       data-type="text"
                                       data-block="home_utility"

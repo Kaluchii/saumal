@@ -21,5 +21,6 @@ return [
             'process',
             'news_item',
             'contacts',
+            'goods',
         ]
 ];

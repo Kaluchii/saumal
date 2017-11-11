@@ -1,5 +1,7 @@
 <tr role="row" class="odd" data-id="{{$item->id_field}}">
 
+    {{-- ID  --}}
+    <td>{{$item->id_field}}</td>
 
     {{-- Название  --}}
     <td class="sorting_1">

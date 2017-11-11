@@ -53,6 +53,16 @@
                     <i class="fa fa-circle-o"></i> <span>Контакты</span>
                 </a>
             </li>
+            <li>
+                <a href="/adm/goods">
+                    <i class="fa fa-circle-o"></i> <span>Товары</span>
+                </a>
+            </li>
+            <li>
+                <a href="/adm/post">
+                    <i class="fa fa-circle-o"></i> <span>Настройки почты</span>
+                </a>
+            </li>
         </ul>
     </section>
 

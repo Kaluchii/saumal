@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="item_text_ru"
                                   data-type="text"
                                   data-block="part2"
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="item_text_kk"
                                   data-type="text"
                                   data-block="part2"
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                         <label>Текст под заголовком</label>
-                        <textarea class="form-control text"
+                        <textarea class="form-control text" data-reg="true"
                                   data-name="item_text_en"
                                   data-type="text"
                                   data-block="part2"

@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_ru"
                                               data-type="text"
                                               data-block="mission"
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_kk"
                                               data-type="text"
                                               data-block="mission"
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_en"
                                               data-type="text"
                                               data-block="mission"

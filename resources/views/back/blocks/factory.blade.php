@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_ru"
                                               data-type="text"
                                               data-block="factory"
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_kk"
                                               data-type="text"
                                               data-block="factory"
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_en"
                                               data-type="text"
                                               data-block="factory"
@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_ru"
                                               data-type="text"
                                               data-block="factory"
@@ -130,7 +130,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_kk"
                                               data-type="text"
                                               data-block="factory"
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_en"
                                               data-type="text"
                                               data-block="factory"
@@ -235,7 +235,7 @@
                             <div class="tab-pane active" id="tab_19">
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text" data-reg="true"
                                               data-name="center_text_ru"
                                               data-type="text"
                                               data-block="factory"
@@ -245,7 +245,7 @@
                             <div class="tab-pane" id="tab_20">
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text" data-reg="true"
                                               data-name="center_text_kk"
                                               data-type="text"
                                               data-block="factory"
@@ -256,7 +256,7 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text" data-reg="true"
                                                   data-name="center_text_en"
                                                   data-type="text"
                                                   data-block="factory"
@@ -292,7 +292,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text3_ru"
                                                   data-type="text"
                                                   data-block="factory"
@@ -312,7 +312,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text3_kk"
                                                   data-type="text"
                                                   data-block="factory"
@@ -332,7 +332,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text3_en"
                                                   data-type="text"
                                                   data-block="factory"
@@ -368,7 +368,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text4_ru"
                                                   data-type="text"
                                                   data-block="factory"
@@ -388,7 +388,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text4_kk"
                                                   data-type="text"
                                                   data-block="factory"
@@ -408,7 +408,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Текст</label>
-                                        <textarea class="form-control text"
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text4_en"
                                                   data-type="text"
                                                   data-block="factory"

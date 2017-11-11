@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 1-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part1_text_ru"
                               data-type="text"
                               data-block="home_stages"
@@ -53,7 +53,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 2-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part2_text_ru"
                               data-type="text"
                               data-block="home_stages"
@@ -61,7 +61,7 @@
                 </div>
                 <div class="form-group">
                     <label>Завершающий строку факт</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="fact_ru"
                               data-type="text"
                               data-block="home_stages"
@@ -92,7 +92,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 1-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part1_text_kk"
                               data-type="text"
                               data-block="home_stages"
@@ -110,7 +110,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 2-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part2_text_kk"
                               data-type="text"
                               data-block="home_stages"
@@ -118,7 +118,7 @@
                 </div>
                 <div class="form-group">
                     <label>Завершающий строку факт</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="fact_kk"
                               data-type="text"
                               data-block="home_stages"
@@ -149,7 +149,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 1-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part1_text_en"
                               data-type="text"
                               data-block="home_stages"
@@ -167,7 +167,7 @@
                 </div>
                 <div class="form-group">
                     <label>Текст 2-го подэтапа</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="part2_text_en"
                               data-type="text"
                               data-block="home_stages"
@@ -175,7 +175,7 @@
                 </div>
                 <div class="form-group">
                     <label>Завершающий строку факт</label>
-                    <textarea class="form-control text"
+                    <textarea class="form-control text" data-reg="true"
                               data-name="fact_en"
                               data-type="text"
                               data-block="home_stages"

@@ -22,6 +22,7 @@ class AdminController extends Controller
         $this->extract->tuneSelection('cities')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('sellers')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('distributors')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('goods_item')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){
@@ -149,17 +150,16 @@ class AdminController extends Controller
         ]);
     }
 
-    public function getCatalog(){
-        $block = $this->extract->getBlock('example');
-        return view('back.blocks.example', [
-            'block' => $block
+    public function getGoods(){
+        $block = $this->extract->getBlock('goods');
+        return view('back.blocks.goods', [
+            'goods' => $block
         ]);
     }
 
-    public function getOrder(){
-        $block = $this->extract->getBlock('example');
-        return view('back.blocks.example', [
-            'block' => $block
-        ]);
+    public function getPost(){
+    }
+
+    public function getOrders(){
     }
 }

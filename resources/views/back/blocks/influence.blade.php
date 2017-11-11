@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст в верхнем блоке</label>
-                                    <textarea class="form-control text text-editor"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст в верхнем блоке</label>
-                                    <textarea class="form-control text text-editor"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст в верхнем блоке</label>
-                                    <textarea class="form-control text text-editor"
+                                    <textarea class="form-control text-editor"
                                               data-name="block_text_en"
                                               data-type="text"
                                               data-block="influence"
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -187,7 +187,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_en"
                                               data-type="text"
                                               data-block="influence"
@@ -260,7 +260,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -280,7 +280,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -300,7 +300,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_en"
                                               data-type="text"
                                               data-block="influence"
@@ -373,7 +373,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -393,7 +393,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -413,7 +413,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_en"
                                               data-type="text"
                                               data-block="influence"
@@ -486,7 +486,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text4_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -506,7 +506,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text4_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -526,7 +526,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text4_en"
                                               data-type="text"
                                               data-block="influence"
@@ -599,7 +599,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text5_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -619,7 +619,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text5_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -639,7 +639,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text5_en"
                                               data-type="text"
                                               data-block="influence"
@@ -712,7 +712,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text6_ru"
                                               data-type="text"
                                               data-block="influence"
@@ -732,7 +732,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text6_kk"
                                               data-type="text"
                                               data-block="influence"
@@ -752,7 +752,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text6_en"
                                               data-type="text"
                                               data-block="influence"

@@ -287,6 +287,20 @@ return [
                 ],
             ],
         ]
+    ],
+
+    'goods' => [
+        'groups' => [
+            'goods_item' => [
+                'image' => ['img'],
+                'string' => [
+                    'item_title_ru',
+                    'item_title_kk',
+                    'item_title_en',
+                ],
+                'float' => ['price']
+            ]
+        ]
     ]
 
 ];

@@ -29,7 +29,7 @@
                                 <div class="tab-pane active" id="tab_1">
                                     <div class="form-group">
                                         <label>Заголовок</label>
-                                        <input class="form-control string"
+                                        <input class="form-control string js-slug-source"
                                                type="text" placeholder=""
                                                value="{{$item->item_title_ru_field}}"
                                                data-name="item_title_ru"
@@ -92,6 +92,17 @@
                         </div>
 
                         <div class="box-body">
+                            <div class="form-group hide">
+                                <label>Slug</label>
+                                <input class="form-control slug"
+                                       type="text" placeholder=""
+                                       value="{{$item->slug_field}}"
+                                       data-name="slug"
+                                       data-type="string"
+                                       data-block="news_item"
+                                       data-id="{{$item->id_field}}">
+                            </div>
+
                             <div class="form-group">
                                 <label>Дата публикации</label>
                                 <input class="form-control string"

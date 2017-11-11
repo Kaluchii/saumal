@@ -25,7 +25,7 @@
                         <div class="tab-pane active" id="tab_1">
                             <div class="form-group">
                                 <label>Текст на вкладке "Адрес производства"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="prod_text_ru"
                                           data-type="text"
                                           data-block="contacts"
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Текст на вкладке "Дистрибьюторы"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="distr_text_ru"
                                           data-type="text"
                                           data-block="contacts"
@@ -43,7 +43,7 @@
                         <div class="tab-pane" id="tab_2">
                             <div class="form-group">
                                 <label>Текст на вкладке "Адрес производства"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="prod_text_kk"
                                           data-type="text"
                                           data-block="contacts"
@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Текст на вкладке "Дистрибьюторы"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="distr_text_kk"
                                           data-type="text"
                                           data-block="contacts"
@@ -61,7 +61,7 @@
                         <div class="tab-pane" id="tab_3">
                             <div class="form-group">
                                 <label>Текст на вкладке "Адрес производства"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="prod_text_en"
                                           data-type="text"
                                           data-block="contacts"
@@ -69,7 +69,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Текст на вкладке "Дистрибьюторы"</label>
-                                <textarea class="form-control text"
+                                <textarea class="form-control text" data-reg="true"
                                           data-name="distr_text_en"
                                           data-type="text"
                                           data-block="contacts"
@@ -104,9 +104,10 @@
                                    data-block="contacts">
                                 <thead>
                                 <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1"
-                                        colspan="1" aria-sort="ascending"
-                                        aria-label="">Название</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="">ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
+                                        colspan="1" aria-label="">Название</th>
                                     <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
                                         colspan="1" aria-label="">Дата редактирования</th>
                                     {{--<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"

@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="top_text_ru"
                                               data-type="text"
                                               data-block="process"
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="top_text_kk"
                                               data-type="text"
                                               data-block="process"
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="top_text_en"
                                               data-type="text"
                                               data-block="process"
@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_ru"
                                               data-type="text"
                                               data-block="process"
@@ -130,7 +130,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_kk"
                                               data-type="text"
                                               data-block="process"
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text1_en"
                                               data-type="text"
                                               data-block="process"
@@ -199,7 +199,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_ru"
                                               data-type="text"
                                               data-block="process"
@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_kk"
                                               data-type="text"
                                               data-block="process"
@@ -239,7 +239,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text2_en"
                                               data-type="text"
                                               data-block="process"
@@ -288,7 +288,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_ru"
                                               data-type="text"
                                               data-block="process"
@@ -308,7 +308,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_kk"
                                               data-type="text"
                                               data-block="process"
@@ -328,7 +328,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Текст</label>
-                                    <textarea class="form-control text"
+                                    <textarea class="form-control text-editor"
                                               data-name="item_text3_en"
                                               data-type="text"
                                               data-block="process"
