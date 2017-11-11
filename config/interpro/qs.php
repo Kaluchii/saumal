@@ -55,9 +55,9 @@ return [
     'home_influence' => [
         'image' => ['img1', 'img2', 'img3', 'img4', 'img5', 'img6'],
         'string' => [
-            'item_title1_ru', 'item_title2_ru', 'item_title3_ru', 'item_title4_ru', 'item_title5_ru', 'item_title6_ru',
-            'item_title1_kk', 'item_title2_kk', 'item_title3_kk', 'item_title4_kk', 'item_title5_kk', 'item_title6_kk',
-            'item_title1_en', 'item_title2_en', 'item_title3_en', 'item_title4_en', 'item_title5_en', 'item_title6_en',
+            'block_title_ru', 'mob_block_title_ru', 'item_title1_ru', 'item_title2_ru', 'item_title3_ru', 'item_title4_ru', 'item_title5_ru', 'item_title6_ru',
+            'block_title_kk', 'mob_block_title_kk', 'item_title1_kk', 'item_title2_kk', 'item_title3_kk', 'item_title4_kk', 'item_title5_kk', 'item_title6_kk',
+            'block_title_en', 'mob_block_title_en', 'item_title1_en', 'item_title2_en', 'item_title3_en', 'item_title4_en', 'item_title5_en', 'item_title6_en',
         ],
         'text' => [
             'item_text1_ru', 'item_text2_ru', 'item_text3_ru', 'item_text4_ru', 'item_text5_ru', 'item_text6_ru',

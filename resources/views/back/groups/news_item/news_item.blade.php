@@ -105,7 +105,7 @@
 
                             <div class="form-group">
                                 <label>Дата публикации</label>
-                                <input class="form-control string"
+                                <input class="form-control string pub_date"
                                        type="text" placeholder=""
                                        value="{{$item->pub_date_field}}"
                                        data-name="pub_date"
