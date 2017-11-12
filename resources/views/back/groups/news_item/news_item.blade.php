@@ -38,8 +38,8 @@
                                                data-id="{{$item->id_field}}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Текст под заголовком</label>
-                                        <textarea class="form-control text"
+                                        <label>Текст</label>
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text_ru"
                                                   data-type="text"
                                                   data-block="news_item"
@@ -59,8 +59,8 @@
                                                data-id="{{$item->id_field}}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Текст под заголовком</label>
-                                        <textarea class="form-control text"
+                                        <label>Текст</label>
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text_kk"
                                                   data-type="text"
                                                   data-block="news_item"
@@ -80,8 +80,8 @@
                                                data-id="{{$item->id_field}}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Текст под заголовком</label>
-                                        <textarea class="form-control text"
+                                        <label>Текст</label>
+                                        <textarea class="form-control text-editor"
                                                   data-name="item_text_en"
                                                   data-type="text"
                                                   data-block="news_item"
@@ -105,16 +105,21 @@
 
                             <div class="form-group">
                                 <label>Дата публикации</label>
-                                <input class="form-control string pub_date"
-                                       type="text" placeholder=""
-                                       value="{{$item->pub_date_field}}"
-                                       data-name="pub_date"
-                                       data-type="string"
-                                       data-block="news_item"
-                                       data-id="{{$item->id_field}}">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input class="form-control string pub_date"
+                                           type="text" placeholder="dd.mm.yyyy" maxlength="10"
+                                           value="{{$item->pub_date_field}}"
+                                           data-name="pub_date"
+                                           data-type="string"
+                                           data-block="news_item"
+                                           data-id="{{$item->id_field}}">
+                                </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Десктопное изображение (260 x 254 px)</label>
+                                <label>Десктопное превью изображение (260 x 254 px)</label>
                                 <div class="dropzone">
                                     <div class="file-input">
                                         <div class="file-preview">
@@ -159,7 +164,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Мобильное изображение (290 x 160 px)</label>
+                                <label>Мобильное превью изображение (290 x 160 px)</label>
                                 <div class="dropzone">
                                     <div class="file-input">
                                         <div class="file-preview">

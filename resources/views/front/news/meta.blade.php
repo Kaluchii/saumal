@@ -1,5 +1,5 @@
 @section('meta')
-    {{--<title>{{ $about->{'seotitle'.$lg} }}</title>
-    <meta name="description" content="{{ $about->seodescription }}">
-    <meta name="keywords" content="{{ $about->seokeywords }}">--}}
+    <title>{{ $news->{'seotitle'.$lg} }}</title>
+    <meta name="description" content="{{ $news->seodescription }}">
+    <meta name="keywords" content="{{ $news->seokeywords }}">
 @endsection

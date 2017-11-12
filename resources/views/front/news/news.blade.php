@@ -24,32 +24,13 @@
                         <div class="news-items-list">
                             <h3 class="title-3">@lang('about_comp.news')</h3>
                             <div class="block-in">
-                                <!-- news-item -->
-                                <div class="news-item"> <time class="item-date">03. 04. 2017</time>
-                                    <div class="item-title"> <a href="about.news.html">Сходство кобыльего и&nbsp;грудного молока</a> </div>
-                                </div>
-                                <!-- /news-item -->
-                                <!-- news-item -->
-                                <div class="news-item active"> <time class="item-date">03. 04. 2017</time>
-                                    <div class="item-title"> <a href="about.news.html">В Казахстане испытали новый сублимационный шкаф</a> </div>
-                                </div>
-                                <!-- /news-item -->
-                                <!-- news-item -->
-                                <div class="news-item"> <time class="item-date">03. 04. 2017</time>
-                                    <div class="item-title"> <a href="about.news.html">Польза саумала для детей</a> </div>
-                                </div>
-                                <!-- /news-item -->
-                                <!-- news-item -->
-                                <div class="news-item"> <time class="item-date">03. 04. 2017</time>
-                                    <div class="item-title"> <a href="about.news.html">Как правильно пить кобылье молоко?</a> </div>
-                                </div>
-                                <!-- /news-item -->
-                                <!-- news-item -->
-                                <div class="news-item"> <time class="item-date">03. 04. 2017</time>
-                                    <div class="item-title"> <a href="about.news.html">SAUMAL&reg;&nbsp;&mdash; новый национальный бренд Казахстана</a> </div>
-                                </div>
-                                <!-- /news-item -->
-                            </div>
+                                @foreach($news_list->news_item_group as $item)
+                                    <!-- news-item -->
+                                    <div class="news-item"> <time class="item-date">{{ $item->pub_date_field }}</time>
+                                        <div class="item-title"> <a href="news/{{ $item->slug_field }}" class="js_news_item">{!! $item->{'item_title'.$lg} !!}</a> </div>
+                                    </div>
+                                    <!-- /news-item -->
+                                @endforeach</div>
                         </div>
                         <!-- /news-items-list -->
                     </div>
@@ -57,27 +38,14 @@
                         <!-- section-default -->
                         <section class="section section--default">
                             <div class="section-content clearfix">
-                                <h1>В Казахстане испытали новый<br /> сублимационный шкаф</h1>
-                                <div class="section-cover"> <img src="img/pic-news-05.png" class="img--fluid" /> </div>
-                                <p>История, как и&nbsp;сама идея возрождения национального продукта, в&nbsp;равной степени удивительна и&nbsp;показательна. Оказавшийся в&nbsp;качестве военнопленного в&nbsp;казахской степи Рудольф Шторх заболел тяжелой формой туберкулеза
-                                    и&nbsp;был сочтен руководством лагеря обреченным на&nbsp;смерть, вследствие чего был отпущен умирать. Один из&nbsp;местных жителей взялся выхаживать находящегося в&nbsp;практически предсмертном состоянии Рудольфа Шторха, отпаивая
-                                    его саумалом. Именно знание о&nbsp;целебных свойствах саумала (кобыльего молока) помогло поставить бывшего военнопленного на&nbsp;ноги. Спустя некоторое время, Рудольф Шторх выздоровел и&nbsp;уехал в&nbsp;Германию.</p> <img src="img/pic-news-06.png"
-                                                                                                                                                                                                                                                                    class="img--fluid pull-left" />
-                                <h4>Профилактика</h4>
-                                <p>Уникальные и&nbsp;оздоравливающие свойства кобыльего молока и&nbsp;его производных известны людям давно. Издревле, кочевники называли парное кобылье молоко &laquo;саумал&raquo; (&laquo;мал&raquo;&nbsp;&mdash; по-казахски значит
-                                    &laquo;скот&raquo;, а&nbsp;&laquo;сау&raquo;&nbsp;&mdash; здоровый, целый, невредимый). Кроме традиций и&nbsp;преданий, подтверждения уникальных полезных свойств кобыльего молока и&nbsp;его производных отмечаются в&nbsp;древних
-                                    летописях и&nbsp;медицинских трактатах Гиппократа и&nbsp;Абу Али Ибн Сины, известного на&nbsp;западе как Авиценна. Труду Авиценны уже тысяча лет, большую часть которых он&nbsp;был основой медицинской науки Европы, Азии и&nbsp;Ближнего
-                                    Востока.</p>
-                                <p>История, как и&nbsp;сама идея возрождения национального продукта, в&nbsp;равной степени удивительна и&nbsp;показательна. Оказавшийся в&nbsp;качестве военнопленного в&nbsp;казахской степи Рудольф Шторх заболел тяжелой формой туберкулеза
-                                    и&nbsp;был сочтен руководством лагеря обреченным на&nbsp;смерть, вследствие чего был отпущен умирать. Один из&nbsp;местных жителей взялся выхаживать находящегося в&nbsp;практически предсмертном состоянии Рудольфа Шторха, отпаивая
-                                    его саумалом. Именно знание о&nbsp;целебных свойствах саумала (кобыльего молока) помогло поставить бывшего военнопленного на&nbsp;ноги. Спустя некоторое время, Рудольф Шторх выздоровел и&nbsp;уехал в&nbsp;Германию, где стал ярым
-                                    приверженцем полезных свойств кобыльего молока и&nbsp;основал его производство.</p>
+                                <h1>{!! $news->{'item_title'.$lg} !!}</h1>
+                                {!! $news->{'item_text'.$lg} !!}
                                 <!-- share-item -->
                                 <div class="share-item">
                                     <div class="social-likes">
-                                        <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Поделиться</div>
-                                        <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Поделиться</div>
-                                        <div class="twitter" title="Поделиться ссылкой в Твиттере">Твитнуть</div>
+                                        <div class="facebook" title="Поделиться ссылкой на Фейсбуке">@lang('news.share')</div>
+                                        <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">@lang('news.share')</div>
+                                        <div class="twitter" title="Поделиться ссылкой в Твиттере">@lang('news.twit')</div>
                                     </div>
                                 </div>
                                 <!-- /share-item -->

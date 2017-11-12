@@ -23,19 +23,17 @@
                     <div class="section-content">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-7">
-                                <h1 class="title-3">Миссия компании</h1>
-                                <p>Производство нашего продукта&nbsp;&mdash; это возвращение к&nbsp;истокам. Мы&nbsp;хотим показать всему миру, что Казахстан&nbsp;&mdash; это не&nbsp;просто нефтегазовая страна, а&nbsp;родина кобыльего молока. SAUMAL&reg; обязан
-                                    стать нашим новым национальным брендом, таким, как французское вино и&nbsp;немецкое пиво.</p>
-                                <p><big>Казахстан&nbsp;&mdash; не&nbsp;столько нефтяная страна, сколько страна, которая может производить собственный <strong>национальный продукт</strong>.</big></p>
+                                <h1 class="title-3">{!! $mission->{'block_title'.$lg} !!}</h1>
+                                {!! $mission->{'block_text'.$lg} !!}
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-5">
                                 <!-- item -->
                                 <div class="item text--center">
                                     <div class="item-img">
-                                        <div class="img--centered" data-img-loader> <img src="img/pic-author.png" class="img--fluid" /> </div>
+                                        <div class="img--centered" data-img-loader> <img src="{{$mission->img->link_field}}?{{$mission->img->cache_index}}" class="img--fluid" /> </div>
                                     </div>
-                                    <div class="item-title">Галымжан Мейрамбеков</div>
-                                    <div class="item-meta"> один из учредителей<br /> компании Saumal </div>
+                                    <div class="item-title">{!! $mission->{'name'.$lg} !!}</div>
+                                    <div class="item-meta">{!! $mission->{'under_name'.$lg} !!}</div>
                                 </div>
                                 <!-- /item -->
                             </div>

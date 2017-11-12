@@ -18,6 +18,7 @@ class FrontController extends Controller
     private $extract;
     public function __construct(ExtractAgent $ext){
         $this->extract = $ext;
+        $this->extract->tuneSelection('phones')->sortBy('sorter','ASC');
         $scripts = $this->extract->getBlock('scripts');
         $all_site = $this->extract->getBlock('all_site');
         $lg = '_' . App::getLocale() . '_field';
@@ -90,6 +91,9 @@ class FrontController extends Controller
     }
 
     public function getProcess(){
+        $this->extract->tuneSelection('part1')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('part2')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('part3')->sortBy('sorter','ASC');
         $process = $this->extract->getBlock('process');
         return view('front.process.process', [
             'process' => $process,
@@ -117,6 +121,9 @@ class FrontController extends Controller
     }
 
     public function getContacts(){
+        $this->extract->tuneSelection('cities')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('sellers')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('distributors')->sortBy('sorter','ASC');
         $contacts = $this->extract->getBlock('contacts');
         return view('front.contacts.contacts', [
             'contacts' => $contacts,
@@ -124,6 +131,7 @@ class FrontController extends Controller
     }
 
     public function getCatalog(){
+        $this->extract->tuneSelection('goods_item')->sortBy('sorter','ASC');
         $goods = $this->extract->getBlock('goods');
         return view('front.catalog.catalog', [
             'goods' => $goods,
@@ -131,7 +139,9 @@ class FrontController extends Controller
     }
 
     public function getOrder(){
+        $orders = $this->extract->getBlock('orders');
         return view('front.order.order', [
+            'orders' => $orders,
         ]);
     }
 }

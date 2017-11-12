@@ -20,16 +20,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <h3> Польза молока<br /> для жителей городов </h3>
-                        <p>Можно долго и&nbsp;с&nbsp;пристрастием рассказывать о&nbsp;том, насколько полезным может быть кобылье молоко. Каждый покупатель, которых пользуется этой продукцией, и&nbsp;так знает насколько оно полезно, а&nbsp;вот особенности именно
-                            нашего продукта следует раскрыть несколько подробнее.</p>
-                        <p>С&nbsp;нами все эти риски минимальны, ведь мы&nbsp;несем ответственность за&nbsp;качество и&nbsp;пользу своего товара, поэтому производим его на&nbsp;самом технологичном и&nbsp;эффективном оборудовании, сохраняя его состав в&nbsp;целости.</p>
-                        <p> <big>
-                                Произведенная нами <a href="#">сухая смесь</a> просто<br />
-                                разводится водой и&nbsp;полностью соответствует<br />
-                                по&nbsp;своей структуре, вкусу и&nbsp;пользе<br />
-                                <a href="#">свежему молоку</a>.
-                            </big> </p>
+                        <h3>{!! $utility->{'block_title'.$lg} !!}</h3>
+                        {!! $utility->{'block_text'.$lg} !!}
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <!-- preamble-items-list -->
@@ -39,10 +31,10 @@
                                     <!-- preamble-item -->
                                     <div class="preamble-item">
                                         <div class="item-icon">
-                                            <div class="img--centered"> <img src="img/icon-quality.png" srcset="img/icon-quality.png 1x, img/icon-quality@2x.png 2x" class="img--fluid" /> </div>
+                                            <div class="img--centered"> <img src="/img/icon-quality.png" srcset="/img/icon-quality.png 1x, /img/icon-quality@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <h4>Качество</h4>
-                                        <div class="item-text">Щадящая технология обработки сохраняет все микроэлементы в&nbsp;продукте без малейшей их&nbsp;утери.</div>
+                                        <h4>{!! $utility->{'fact_title1'.$lg} !!}</h4>
+                                        <div class="item-text">{!! $utility->{'fact_text1'.$lg} !!}</div>
                                     </div>
                                     <!-- /preamble-item -->
                                 </div>
@@ -50,10 +42,10 @@
                                     <!-- preamble-item -->
                                     <div class="preamble-item">
                                         <div class="item-icon">
-                                            <div class="img--centered"> <img src="img/icon-availability.png" srcset="img/icon-availability.png 1x, img/icon-availability@2x.png 2x" class="img--fluid" /> </div>
+                                            <div class="img--centered"> <img src="/img/icon-availability.png" srcset="/img/icon-availability.png 1x, /img/icon-availability@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <h4>Доступность</h4>
-                                        <div class="item-text">Нет необходимости выезжать за&nbsp;город в&nbsp;поиске свежего кобыльего молока. Теперь его можно купить в&nbsp;магазине</div>
+                                        <h4>{!! $utility->{'fact_title2'.$lg} !!}</h4>
+                                        <div class="item-text">{!! $utility->{'fact_text2'.$lg} !!}</div>
                                     </div>
                                     <!-- /preamble-item -->
                                 </div>
@@ -61,10 +53,10 @@
                                     <!-- preamble-item -->
                                     <div class="preamble-item">
                                         <div class="item-icon">
-                                            <div class="img--centered"> <img src="img/icon-expiry.png" srcset="img/icon-expiry.png 1x, img/icon-expiry@2x.png 2x" class="img--fluid" /> </div>
+                                            <div class="img--centered"> <img src="/img/icon-expiry.png" srcset="/img/icon-expiry.png 1x, /img/icon-expiry@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <h4>Срок годности</h4>
-                                        <div class="item-text">Свежее кобылье молоко утрачивает свои полезные свойства уже через 2&nbsp;часа.<br /> Сухое кобылье молоко может хранится более 2х&nbsp;лет</div>
+                                        <h4>{!! $utility->{'fact_title3'.$lg} !!}</h4>
+                                        <div class="item-text">{!! $utility->{'fact_text3'.$lg} !!}</div>
                                     </div>
                                     <!-- /preamble-item -->
                                 </div>
@@ -72,10 +64,10 @@
                                     <!-- preamble-item -->
                                     <div class="preamble-item">
                                         <div class="item-icon">
-                                            <div class="img--centered"> <img src="img/icon-economy.png" srcset="img/icon-economy.png 1x, img/icon-economy@2x.png 2x" class="img--fluid" /> </div>
+                                            <div class="img--centered"> <img src="/img/icon-economy.png" srcset="/img/icon-economy.png 1x, /img/icon-economy@2x.png 2x" class="img--fluid" /> </div>
                                         </div>
-                                        <h4>Экономия</h4>
-                                        <div class="item-text">Покупка Saumal обходится дешевле, чем выезд за&nbsp;город на&nbsp;поиски свежего молока.<br /> При этом полезные свойства у&nbsp;2х&nbsp;продуктов не&nbsp;отличаются.</div>
+                                        <h4>{!! $utility->{'fact_title4'.$lg} !!}</h4>
+                                        <div class="item-text">{!! $utility->{'fact_text4'.$lg} !!}</div>
                                     </div>
                                     <!-- /preamble-item -->
                                 </div>
@@ -92,16 +84,13 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-5">
                                     <div class="item-img">
-                                        <div class="img--centered" data-img-loader> <img src="img/pic-01.png" class="img--fluid" /> </div>
+                                        <div class="img--centered" data-img-loader> <img src="{{$utility->img1->link_field}}?{{$utility->img1->cache_index}}" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-7">
-                                    <h3>Детям и&nbsp;подросткам</h3>
+                                    <h3>{!! $utility->{'item_title1'.$lg} !!}</h3>
                                     <div class="item-text">
-                                        <p>Для тех, кто не&nbsp;мыслит своей жизни без спортзала, кобылье молоко станет отменным вспомогательным продуктом, улучшающим метаболизм, богатым на&nbsp;аминокислоты и&nbsp;ускоряющим восстановление организма после особо интенсивных
-                                            нагрузок.</p>
-                                        <p>В&nbsp;некоторых случаях наш натуральный продукт способен заменить многие медикаментозные средства, причем без малейшего вреда для организма спортсмена. Улучшение пищеварения при помощи нашего продукта позволяет лучше усваивать
-                                            прочие продукты, что тоже несомненный плюс.</p>
+                                        {!! $utility->{'item_text1'.$lg} !!}
                                     </div>
                                 </div>
                             </div>
@@ -112,16 +101,13 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-5">
                                     <div class="item-img">
-                                        <div class="img--centered" data-img-loader> <img src="img/pic-02.png" class="img--fluid" /> </div>
+                                        <div class="img--centered" data-img-loader> <img src="{{$utility->img2->link_field}}?{{$utility->img2->cache_index}}" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-7">
-                                    <h3>Спортсменам</h3>
+                                    <h3>{!! $utility->{'item_title2'.$lg} !!}</h3>
                                     <div class="item-text">
-                                        <p>Для тех, кто не&nbsp;мыслит своей жизни без спортзала, кобылье молоко станет отменным вспомогательным продуктом, улучшающим метаболизм, богатым на&nbsp;аминокислоты и&nbsp;ускоряющим восстановление организма после особо интенсивных
-                                            нагрузок.</p>
-                                        <p>В&nbsp;некоторых случаях наш натуральный продукт способен заменить многие медикаментозные средства, причем без малейшего вреда для организма спортсмена. Улучшение пищеварения при помощи нашего продукта позволяет лучше усваивать
-                                            прочие продукты, что тоже несомненный плюс.</p>
+                                        {!! $utility->{'item_text2'.$lg} !!}
                                     </div>
                                 </div>
                             </div>
@@ -132,16 +118,13 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-5">
                                     <div class="item-img">
-                                        <div class="img--centered" data-img-loader> <img src="img/pic-03.png" class="img--fluid" /> </div>
+                                        <div class="img--centered" data-img-loader> <img src="{{$utility->img3->link_field}}?{{$utility->img3->cache_index}}" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-7">
-                                    <h3>Беременным и<br /> кормящим женщинам</h3>
+                                    <h3>{!! $utility->{'item_title3'.$lg} !!}</h3>
                                     <div class="item-text">
-                                        <p>Беременным женщинам или&nbsp;же матерям, которые кормят грудью, кобылье молоко тоже крайне рекомендуется в&nbsp;качестве отменного вспомогательного продукта. Особенно важно это на&nbsp;последних этапах беременности, ведь в&nbsp;этот
-                                            период женский организм теряет очень много энергии, восстановить которую достаточно сложно.</p>
-                                        <p>В&nbsp;процессе кормления грудью SAUMAL&reg; зарекомендовал себя еще лучше, ведь его можно назвать универсальным продуктом для матери и&nbsp;ее&nbsp;новорожденного младенца, поскольку обоим необходим набор базовых полезных
-                                            элементов, которыми наш продукт так богат.</p>
+                                        {!! $utility->{'item_text3'.$lg} !!}
                                     </div>
                                 </div>
                             </div>
@@ -152,15 +135,13 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-5">
                                     <div class="item-img">
-                                        <div class="img--centered" data-img-loader> <img src="img/pic-04.png" class="img--fluid" /> </div>
+                                        <div class="img--centered" data-img-loader> <img src="{{$utility->img4->link_field}}?{{$utility->img4->cache_index}}" class="img--fluid" /> </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-7">
-                                    <h3>Пожилым людям</h3>
+                                    <h3>{!! $utility->{'item_title4'.$lg} !!}</h3>
                                     <div class="item-text">
-                                        <p>Для людей в&nbsp;возрасте правильное сбалансированное питание играет очень большую роль, поскольку организм уже не&nbsp;способен выдерживать пиковые нагрузки. Кобылье молоко укрепляет кости, нормализует работу желудка, улучшает
-                                            артериальное давление и&nbsp;стимулирует умственную деятельность, выступая своеобразной профилактикой многих старческих заболеваний.</p>
-                                        <p>Польза нашего продукта действительно внушительна, а&nbsp;стоимость вполне доступна, что для пожилых людей тоже чрезвычайно важно.</p>
+                                        {!! $utility->{'item_text4'.$lg} !!}
                                     </div>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="column column--logo">
                 <!-- logo --><a href="/" class="link--unstyled logo">
-                    <img src="img/logo-alt.png" srcset="img/logo-alt.png 1x, img/logo-alt@2x.png 2x, img/logo-alt@3x.png 3x" class="img--fluid" alt="logo" />
+                    <img src="/img/logo-alt.png" srcset="/img/logo-alt.png 1x, /img/logo-alt@2x.png 2x, /img/logo-alt@3x.png 3x" class="img--fluid" alt="logo" />
                 </a>
                 <!-- /logo -->
             </div>
@@ -59,8 +59,9 @@
                 <div class="column column--contacts">
                     <div class="header-contacts">
                         <ul class="list--unstyled">
-                            <li><span> Астана</span> <a href="tel:+77172925554">+7 (7172) 92-55-54</a></li>
-                            <li><span> Алматы</span> <a href="tel:+77272919477">+7 (727) 291-94-77</a></li>
+                            @foreach($all_site->phones_group as $item)
+                                <li><span> {!! $item->{'city'.$lg} !!}</span> <a href="tel:{{ str_replace([' ', '(', ')', '-',], '', $item->number_field) }}">{{ $item->number_field }}</a></li>
+                            @endforeach
                         </ul>
                     </div> <a href="/catalog" class="btn btn--brand btn--order hidden-xs">@lang('all_page.order_sau')</a>
                     <div class="hidden-xs">

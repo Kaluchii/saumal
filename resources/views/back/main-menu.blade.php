@@ -54,6 +54,11 @@
                 </a>
             </li>
             <li>
+                <a href="/adm/seo-orders">
+                    <i class="fa fa-circle-o"></i> <span>Метаданные стр. заказа</span>
+                </a>
+            </li>
+            <li>
                 <a href="/adm/goods">
                     <i class="fa fa-circle-o"></i> <span>Товары</span>
                 </a>

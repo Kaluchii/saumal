@@ -17,17 +17,48 @@ var texteditor = (function () {
             this.id        = $(this.elem).data('id');
 
             this.editorObj = $(this.elem).summernote({
-                height    : 400,
+                height    : 200,
                 lang      : 'ru-RU',
                 codemirror: {
                     theme: 'monokai'
                 },
                 toolbar   : [
-                    ['style', ['style', 'bold', 'italic', 'clear']],
-                    ['insert', ['picture', 'link', 'video', 'table']],
-                    ['paragraph', ['ul', 'ol', 'paragraph']],
-                    ['misc', ['fullscreen', 'codeview']]
+                    ['style', ['style', 'bold']],
+                    ['insert', ['picture', 'link']],
+                    ['paragraph', ['paragraph']],
+                    ['mybutton', ['template']],
+                    ['misc', ['fullscreen', 'codeview', 'cleaner']]
                 ],
+                template: {
+                    path: '/admin/plugins/summernote/tpls', // path to your template folder
+
+                    /*
+                     * list of your templates
+                     * key is the html file name (without .html extension)
+                     * value is the label shown in the editor
+                     */
+                    list: {
+                        'big':      'Больший размер текста',
+                        'strong':   'Синий текст',
+                        'l-img':    'Изображение слева',
+                        'r-img':    'Изображение справа',
+                        'f-img-t':  'Изображение (бол.)',
+                        'f-img':    'Изображение с текстом (бол.)',
+                        'f-img-sm': 'Изображение с текстом (мал.)'
+                    }
+                },
+                cleaner:{
+                    notTime: 2400, // Time to display Notifications.
+                    action: 'button', // both|button|paste 'button' only cleans via toolbar button, 'paste' only clean when pasting content, both does both options.
+                    newline: '<br>', // Summernote's default is to use '<p><br></p>'
+                    notStyle: 'position:absolute;top:0;right:0', // Position of Notification
+                    icon: '<i class="note-icon-eraser"></i> Очистка стилей',
+                    keepHtml: true, // Remove all Html formats
+                    keepOnlyTags: ['<p>', '<div>', '<br>', '<ul>', '<li>', '<big>', '<b>', '<strong>','<i>', '<a>', '<h1>', '<h2>', '<h3>', '<h4>', '<h5>', '<h6>', '<img>'], // If keepHtml is true, remove all tags except these
+                    keepClasses: false, // Remove Classes
+                    badTags: ['style', 'script', 'applet', 'embed', 'noframes', 'noscript', 'html'], // Remove full tags with contents
+                    badAttributes: ['style', 'start', 'dir'] // Remove attributes from remaining tags
+                },
                 callbacks : {
                     onImageUpload: function (files, editor, welEditable) {
                         sendFile(files[0], editor, welEditable);

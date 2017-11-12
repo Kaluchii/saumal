@@ -301,6 +301,8 @@ return [
                 'float' => ['price']
             ]
         ]
-    ]
+    ],
+
+    'orders' => []
 
 ];

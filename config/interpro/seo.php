@@ -22,5 +22,6 @@ return [
             'news_item',
             'contacts',
             'goods',
+            'orders',
         ]
 ];

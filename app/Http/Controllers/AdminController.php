@@ -157,6 +157,13 @@ class AdminController extends Controller
         ]);
     }
 
+    public function getOrdersSeo(){
+        $block = $this->extract->getBlock('orders');
+        return view('back.blocks.seo_orders', [
+            'seo' => $block
+        ]);
+    }
+
     public function getPost(){
     }
 

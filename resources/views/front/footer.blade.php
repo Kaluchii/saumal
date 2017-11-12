@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="column column--left">
                     <!-- logo --><a href="/" class="link--unstyled logo">
-                        <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" class="img--fluid" alt="logo" />
+                        <img src="/img/logo.png" srcset="/img/logo.png 1x, /img/logo@2x.png 2x" class="img--fluid" alt="logo" />
                     </a>
                     <!-- /logo -->
                     <!-- copyright -->
@@ -47,25 +47,21 @@
                 <div class="column column--right">
                     <!-- footer-contacts -->
                     <div class="footer-contacts">
-                        <div>
-                            <h6>Астана</h6>
-                            <ul class="list--unstyled">
-                                <li><a href="tel:+77172925554">+7 (7172) 92-55-54</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h6>Алматы</h6>
-                            <ul class="list--unstyled">
-                                <li><a href="tel:+77272919477">+7 (727) 291-94-77</a></li>
-                            </ul>
-                        </div>
+                        @foreach($all_site->phones_group as $item)
+                            <div>
+                                <h6>{!! $item->{'city'.$lg} !!}</h6>
+                                <ul class="list--unstyled">
+                                    <li><a href="tel:{{ str_replace([' ', '(', ')', '-',], '', $item->number_field) }}">{{ $item->number_field }}</a></li>
+                                </ul>
+                            </div>
+                        @endforeach
                     </div>
                     <!-- /footer-contacts -->
                     <!-- footer-share -->
                     <div class="footer-share">
                         <ul class="list--inline">
-                            <li><a href="#" target="_blank"><i class="icon icon-facebook"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="icon icon-instagram"></i></a></li>
+                            <li><a href="{{ $all_site->fb_field }}" target="_blank"><i class="icon icon-facebook"></i></a></li>
+                            <li><a href="{{ $all_site->inst_field }}" target="_blank"><i class="icon icon-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- /footer-share -->
@@ -76,13 +72,13 @@
             <div class="container">
                 <div class="column column--left">
                     <!-- copyright -->
-                    <div class="copyright">&copy;&nbsp;2016-2017 Saumal</div>
+                    <div class="copyright">{!! $all_site->copyright_field !!}</div>
                     <!-- /copyright -->
                 </div>
                 <div class="column column--right">
                     <!-- developer --><a href="http://www.wonderbar.kz/" target="_blank" class="link--unstyled developer">
                         <span>@lang('all_page.sales_help')</span>
-                        <img src="img/logo-wonderbar.png" srcset="img/logo-wonderbar.png 1x, img/logo-wonderbar@2x.png 2x" class="img--fluid" alt="logo" />
+                        <img src="/img/logo-wonderbar.png" srcset="/img/logo-wonderbar.png 1x, /img/logo-wonderbar@2x.png 2x" class="img--fluid" alt="logo" />
                     </a>
                     <!-- /develper -->
                 </div>
