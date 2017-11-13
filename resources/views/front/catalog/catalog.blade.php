@@ -22,40 +22,24 @@
                         <!-- items-list -->
                         <div class="items-list">
                             <div class="block-in" data-grid>
+                            <?php $i = 0 ?>
+                            @foreach($goods->goods_item_group as $item)
+                                <?php $i++ ?>
                                 <!-- item -->
-                                <div class="item item--large">
+                                <div class="item @if(($i - 1) % 3 == 0) item--large @elseif(($i - 2) % 3 == 0) item--medium @elseif(($i - 3) % 3 == 0) item--small @endif">
                                     <div class="item-body">
-                                        <div class="item-title">Сухое кобылье молоко Саумал 500 г</div>
-                                        <div class="item-price"> <strong>30 000</strong> <span class="tenge">n</span> </div>
+                                        <div class="item-title">{!! $item->{'item_title'.$lg} !!}</div>
+                                        <div class="item-price"> <strong>{{ number_format($item->price_field, 0, '', ' ') }}</strong> <span class="tenge">n</span> </div>
                                         <div class="item-img">
-                                            <div class="img--centered" data-img-loader> <img src="img/pic-good-01.png" srcset="img/pic-good-01.png 1x, img/pic-good-01@2x.png 2x" class="img--fluid" /> </div>
+                                            <div class="img--centered" data-img-loader> <img src="{{$item->img->link_field}}?{{$item->img->cache_index}}" class="img--fluid" /> </div>
                                         </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="1"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
-                                    </div>
-                                </div>
-                                <!-- /item -->
-                                <!-- item -->
-                                <div class="item item--medium">
-                                    <div class="item-body">
-                                        <div class="item-title">Сухое кобылье молоко Саумал 250 г</div>
-                                        <div class="item-price"> <strong>17 000</strong> <span class="tenge">n</span> </div>
-                                        <div class="item-img">
-                                            <div class="img--centered" data-img-loader> <img src="img/pic-good-02.png" srcset="img/pic-good-02.png 1x, img/pic-good-02@2x.png 2x" class="img--fluid" /> </div>
+                                        <div class="item-controls text--center">
+                                            <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="{{ $item->id_field }}"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>
                                         </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="2"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
                                     </div>
                                 </div>
                                 <!-- /item -->
-                                <!-- item -->
-                                <div class="item item--small">
-                                    <div class="item-body">
-                                        <div class="item-title">Сухое кобылье молоко Саумал 200 г</div>
-                                        <div class="item-price"> <strong>13 000</strong> <span class="tenge">n</span> </div>
-                                        <div class="item-img"> </div>
-                                        <div class="item-controls text--center"> <button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="3"><span>@lang('order.btn')</span></button> <a href="/order" class="btn btn--blue btn--shadow btn--large btn--rycle">@lang('order.already')</a>                              </div>
-                                    </div>
-                                </div>
-                                <!-- /item -->
+                            @endforeach
                             </div>
                         </div>
                         <!-- /items-list -->
