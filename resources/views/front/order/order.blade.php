@@ -28,7 +28,7 @@
                                 <div class="block-in">
                                     @foreach($orders as $item)
                                         <!-- item -->
-                                            <div class="item clearfix" data-price="30000" data-id="{{ $item[0]->id_field }}">
+                                            <div class="item clearfix" data-price="{{ $item[0]->price_field }}" data-id="{{ $item[0]->id_field }}">
                                                 <div class="column column--img">
                                                     <div class="item-img">
                                                         <div class="block-table">
