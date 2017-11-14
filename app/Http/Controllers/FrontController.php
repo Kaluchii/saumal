@@ -139,9 +139,17 @@ class FrontController extends Controller
     }
 
     public function getOrder(){
-        $orders = $this->extract->getBlock('orders');
+        $orders = [];
+        $cookie = $_COOKIE['goods'];
+        $goods = json_decode($cookie);
+        $meta = $this->extract->getBlock('orders');
+
+        foreach ($goods as $key=>$value) {
+            $orders[] = [$this->extract->getGroupItem('goods_item', $key), 'count' => $value];
+        }
         return view('front.order.order', [
             'orders' => $orders,
+            'meta' => $meta,
         ]);
     }
 }

@@ -296,7 +296,7 @@ function setGoodsCount(id, count) {
                 setGoodsCount(id, 0);
                 total = totalGoods();
                 $counter.text(total);
-                $informer.removeClass( (total>0?'rycle--empty':'') );
+                $informer.addClass( (total==0?'rycle--empty':'') );
 				//здесь запрос POST или GET на удаление товара
 				$item.slideUp(300, function() {
 					$(this).remove();

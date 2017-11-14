@@ -26,58 +26,34 @@
                             <!-- items-list -->
                             <div class="items-list">
                                 <div class="block-in">
-                                    <!-- item -->
-                                    <div class="item clearfix" data-price="30000" data-id="48">
-                                        <div class="column column--img">
-                                            <div class="item-img">
-                                                <div class="block-table">
-                                                    <div class="block-cell">
-                                                        <div class="img--centered" data-img-loader> <img src="img/pic-good-01.png" srcset="img/pic-good-01.png 1x, img/pic-good-01@2x.png 2x" class="img--fluid" /> </div>
+                                    @foreach($orders as $item)
+                                        <!-- item -->
+                                            <div class="item clearfix" data-price="30000" data-id="{{ $item[0]->id_field }}">
+                                                <div class="column column--img">
+                                                    <div class="item-img">
+                                                        <div class="block-table">
+                                                            <div class="block-cell">
+                                                                <div class="img--centered" data-img-loader> <img src="{{$item[0]->img->link_field}}?{{$item[0]->img->cache_index}}" class="img--fluid" /> </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="column column--in clearfix">
-                                            <div class="column column--title">
-                                                <div class="item-title">Сухое кобылье<br /> молоко Саумал<br /> 500 г</div>
-                                            </div>
-                                            <div class="column column--calc">
-                                                <div class="item-calc"> <label>@lang('order.count')</label>
-                                                    <div class="item-calc-in"> <button type="button" class="btn--unstyled btn--calc btn--minus"><i class="icon icon-minus"></i></button> <input type="text" class="form-control inp--calc" value="1" data-min="1" data-max="10" readonly /> <button type="button"
-                                                                                                                                                                                                                                                                                                    class="btn--unstyled btn--calc btn--plus"><i class="icon icon-plus"></i></button> </div>
-                                                </div>
-                                            </div>
-                                            <div class="column column--price">
-                                                <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
-                                            </div>
-                                        </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="1" /> </div>
-                                    <!-- /item -->
-                                    <!-- item -->
-                                    <div class="item clearfix" data-price="17000" data-id="49">
-                                        <div class="column column--img">
-                                            <div class="item-img">
-                                                <div class="block-table">
-                                                    <div class="block-cell">
-                                                        <div class="img--centered" data-img-loader> <img src="img/pic-good-02.png" srcset="img/pic-good-02.png 1x, img/pic-good-02@2x.png 2x" class="img--fluid" /> </div>
+                                                <div class="column column--in clearfix">
+                                                    <div class="column column--title">
+                                                        <div class="item-title">{!! $item[0]->{'item_title'.$lg} !!}</div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column column--in clearfix">
-                                            <div class="column column--title">
-                                                <div class="item-title">Сухое кобылье<br /> молоко Саумал<br /> 250 г</div>
-                                            </div>
-                                            <div class="column column--calc">
-                                                <div class="item-calc"> <label>@lang('order.count')</label>
-                                                    <div class="item-calc-in"> <button type="button" class="btn--unstyled btn--calc btn--minus"><i class="icon icon-minus"></i></button> <input type="text" class="form-control inp--calc" value="1" data-min="1" data-max="10" readonly /> <button type="button"
-                                                                                                                                                                                                                                                                                                    class="btn--unstyled btn--calc btn--plus"><i class="icon icon-plus"></i></button> </div>
-                                                </div>
-                                            </div>
-                                            <div class="column column--price">
-                                                <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
-                                            </div>
-                                        </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="2" /> </div>
-                                    <!-- /item -->
+                                                    <div class="column column--calc">
+                                                        <div class="item-calc"> <label>@lang('order.count')</label>
+                                                            <div class="item-calc-in"> <button type="button" class="btn--unstyled btn--calc btn--minus"><i class="icon icon-minus"></i></button> <input type="text" class="form-control inp--calc" value="{{ $item['count'] }}" data-min="1" data-max="10" readonly /> <button type="button"
+                                                                                                                                                                                                                                                                                                            class="btn--unstyled btn--calc btn--plus"><i class="icon icon-plus"></i></button> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column column--price">
+                                                        <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
+                                                    </div>
+                                                </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="{{ $item[0]->id_field }}" /> </div>
+                                            <!-- /item -->
+                                    @endforeach
                                 </div>
                                 <div class="list-amount clearfix">
                                     <div class="pull-left"> <label>@lang('order.pic')</label> <strong data-output="count"></strong> </div>
