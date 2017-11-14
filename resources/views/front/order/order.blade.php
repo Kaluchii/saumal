@@ -2,6 +2,9 @@
 @section('content')
     @include('front.order.meta')
     <!-- page -->
+    <script>
+        var declension = ['@lang('order.item1')', '@lang('order.item2')', '@lang('order.item3')']
+    </script>
     <div class="page">
         <div class="container">
             <!-- rycle-informer -->
@@ -24,7 +27,7 @@
                             <div class="items-list">
                                 <div class="block-in">
                                     <!-- item -->
-                                    <div class="item clearfix" data-price="30000" data-id="1">
+                                    <div class="item clearfix" data-price="30000" data-id="48">
                                         <div class="column column--img">
                                             <div class="item-img">
                                                 <div class="block-table">
@@ -50,7 +53,7 @@
                                         </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="1" /> </div>
                                     <!-- /item -->
                                     <!-- item -->
-                                    <div class="item clearfix" data-price="17000" data-id="2">
+                                    <div class="item clearfix" data-price="17000" data-id="49">
                                         <div class="column column--img">
                                             <div class="item-img">
                                                 <div class="block-table">

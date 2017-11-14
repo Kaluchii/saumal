@@ -34,6 +34,70 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
     return km + kw + kd;
 }
 
+
+// возвращает cookie с именем name, если есть, если нет, то undefined
+function getCookie(name) {
+    var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+/*
+function goodsCount(id) {
+    var prop = String(id),
+        cookie = getCookie("goods");
+    if (cookie === undefined){
+        return 0;
+    }
+    var goods = JSON.parse(cookie);
+    if (prop in goods) {
+        return goods[prop];
+    }
+}*/
+
+function totalGoods() {
+    var cookie = getCookie("goods");
+    if (cookie === undefined){
+        return 0;
+    }
+    var goods = JSON.parse(cookie);
+    var total = 0;
+    for (var key in goods) {
+        total += goods[key]
+    }
+    return total;
+}
+
+function inBasket(id) {
+    var prop = String(id),
+        cookie = getCookie("goods");
+
+    if (cookie === undefined){
+        return false;
+    }
+    var goods = JSON.parse(cookie);
+    return (prop in goods);
+}
+
+function setGoodsCount(id, count) {
+    var goods = {},
+        prop = String(id),
+        cookie = getCookie("goods");
+
+    if (cookie !== undefined){
+        goods = JSON.parse(cookie);
+    }
+    if (count === 0){
+        delete goods[prop];
+    } else {
+        goods[prop] = count;
+    }
+
+    var value = JSON.stringify(goods);
+    var date = new Date(new Date().getTime() + 72000000);
+    document.cookie = "goods=" + value + "; path=/; expires=" + date.toUTCString();
+}
+
 //# sourceMappingURL=_number-format.js.map
 
 
@@ -55,6 +119,9 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 	var $informer = $('.rycle-informer');
 	var $counter = $informer.find('[data-count]');
 
+    var startCount = totalGoods();
+    $counter.text(startCount);
+    $informer.removeClass( (startCount>0?'rycle--empty':'') );
 
 	//masonry layout
 	var grid = $grid.packery({
@@ -72,15 +139,22 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 		var $btn = $item.find('.btn--add');
 		var id = parseInt($btn.attr('data-id'), 10); //id товара, наверное необходим для добавления в корзину
 
-		$btn.on('click', function() {
+        if ( inBasket(id) ) {
+            $item.addClass('item--added');
+        }
 
+		$btn.on('click', function() {
+            var id = parseInt($(this).attr('data-id'), 10);
 			$btn
 				.attr('disabled', true)
 				.addClass('loading');
 
 			setTimeout(function() {//вместо этого будет какой-нибудь POST или GET запрос
 				var count = parseInt($counter.text(), 10);
-				count++;
+                if ( !inBasket(id) ) {
+                    setGoodsCount(id, 1);
+                    count = totalGoods();
+                }
 				$counter.text(count);
 				$informer.removeClass( (count>0?'rycle--empty':'') );
 				
@@ -115,7 +189,12 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 
 	var $inps = $form.find('input[type="text"], input[type="tel"], input[type="hidden"]');
 	var $btn = $form.find('.btn--submit');
+    var $informer = $('.rycle-informer');
+    var $counter = $informer.find('[data-count]');
+    var total = totalGoods();
 
+    $counter.text(total);
+    $informer.removeClass( (total>0?'rycle--empty':'') );
 
 	//маски
 	$inps.filter('[data-mask]').each(function() {
@@ -168,7 +247,7 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 
 		$form
 			.find('[data-output="amount"]').text( number_format( result, 2, '.', ' ' ) ).end()
-			.find('[data-output="count"]').text( number_format( items_count, 2, '.', ' ' ) + ' ' + getNumEnding( items_count,[' товар',' товара',' товаров'] ) );
+			.find('[data-output="count"]').text( number_format( items_count, 2, '.', ' ' ) + ' ' + getNumEnding( items_count, declension ) );
 
 	};
 
@@ -183,7 +262,7 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 		var count = parseInt($inp.val(), 10);
 		var min = parseInt($inp.attr('data-min'), 10);
 		var max = parseInt($inp.attr('data-max'), 10);
-
+        var id = parseInt($item.attr('data-id'), 10);
 		//проверка доступности кнопок Плюс/Минус
 		var check = function() {
 			$btns
@@ -201,7 +280,10 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 				count++;
 				if (count>=max) count = max;
 			}
-
+            setGoodsCount(id, count);
+            total = totalGoods();
+            $counter.text(total);
+            $informer.removeClass( (total>0?'rycle--empty':'') );
 			$inp.val( count );
 			calc();
 			check();
@@ -211,6 +293,10 @@ function number_format(number, decimals, dec_point, thousands_sep ) {
 		//удаление товара, наверное нужен будет id
 		$item
 			.find('.btn--remove').on('click', function() {
+                setGoodsCount(id, 0);
+                total = totalGoods();
+                $counter.text(total);
+                $informer.removeClass( (total>0?'rycle--empty':'') );
 				//здесь запрос POST или GET на удаление товара
 				$item.slideUp(300, function() {
 					$(this).remove();
