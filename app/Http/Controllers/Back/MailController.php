@@ -14,7 +14,6 @@ use Interpro\Core\Contracts\Taxonomy\Taxonomy;
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 use Interpro\Extractor\Contracts\Selection\Tuner;
 use Interpro\Feedback\Contracts\FeedbackAgent;
-use ReCaptcha\ReCaptcha;
 
 
 class MailController extends Controller
@@ -25,8 +24,23 @@ class MailController extends Controller
         $this->feedback = $feedback;
         // Объявляем все шаблоны писем для форм
 
-        $this->feedback->setBodyTemplate('sponsor_form', 'back/mail/sponsor_form_mail');
+        $this->feedback->setBodyTemplate('order', 'back/mail/order_mail');
+        $this->feedback->setBodyTemplate('client_notice', 'back/mail/client_notice_mail');
+    }
 
+    public function clientNotice($email = '', Request $request = []){
+        try{
+            $data = $request->all();
+            $form = 'client_notice';
+            if (empty($email) && !empty($request)) {
+                $email = $data['email'];
+            }
+
+            $this->feedback->mail($form, [], $email);
+            return ['error' => false];
+        }catch(\Exception $error){
+            return ['error' => true, 'error'=> $error->getMessage()];
+        }
     }
 
     public function send(Request $request){
@@ -36,6 +50,10 @@ class MailController extends Controller
             $form = array_pull($data, 'form');
 
             $this->feedback->mail($form, $data);
+
+            $email = $data['email'];
+            $this->clientNotice($email);
+
             return ['error' => false];
         }catch(\Exception $error){
             return ['error' => true, 'error'=> $error->getMessage()];

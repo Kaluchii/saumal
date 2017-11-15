@@ -70,8 +70,9 @@
                             <h3>@lang('order.ordering')</h3>
                             <div class="form-body">
                                 <div class="form-in">
+                                    <input type="hidden" name="form" value="order">
                                     <div class="form-group clearfix"> <label class="control-label">@lang('order.name')</label>
-                                        <div class="controls"> <input type="text" class="form-control" name="name" required /> </div>
+                                        <div class="controls"> <input type="text" class="form-control" name="client_name" required /> </div>
                                     </div>
                                     <div class="form-group clearfix"> <label class="control-label">@lang('order.email')</label>
                                         <div class="controls"> <input type="email" class="form-control" name="email" required /> </div>

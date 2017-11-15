@@ -214,6 +214,7 @@ function setGoodsCount(id, count) {
 			var value = $(this).val();
 			if (!value||value.indexOf('_')>0) enable = false;
 		});
+		enable = ( totalGoods() > 0 ) && enable;
 		$btn.attr('disabled', !enable);
 	};
 
@@ -298,6 +299,7 @@ function setGoodsCount(id, count) {
                 $counter.text(total);
                 $informer.addClass( (total==0?'rycle--empty':'') );
 				//здесь запрос POST или GET на удаление товара
+				check_submit();
 				$item.slideUp(300, function() {
 					$(this).remove();
 					calc();
