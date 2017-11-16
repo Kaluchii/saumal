@@ -283,7 +283,7 @@
                                                     <div class="ratio hidden-xs" data-img-loader> <img data-src="{{$item->preview->link_field}}?{{$item->preview->cache_index}}" data-src-retina="{{$item->preview->link_field}}?{{$item->preview->cache_index}}" class="img--fluid owl-lazy" /> </div>
                                                     <div class="ratio visible-xs" data-img-loader> <img src="{{$item->mob_preview->link_field}}?{{$item->mob_preview->cache_index}}" srcset="{{$item->mob_preview->link_field}}?{{$item->mob_preview->cache_index}} 1x, {{$item->mob_preview->link_field}}?{{$item->mob_preview->cache_index}} 2x" class="img--fluid" /> </div>
                                                 </div>
-                                                <div class="item-title text--black">{{ $item->{'item_title'.$lg} }}</div>
+                                                <div class="item-title text--black">{!! $item->{'item_title'.$lg} !!}</div>
                                             </a>
                                         </div>
                                         <!-- /item -->

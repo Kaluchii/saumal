@@ -38,7 +38,10 @@ return [
         ],
 
         'client_notice' => [
-            ''
-        ]
+            'text' => ['order_list'],
+            'string' => ['order_sum', 'address']
+        ],
+
+        'client_static_notice' => [],
     ]
 ];
