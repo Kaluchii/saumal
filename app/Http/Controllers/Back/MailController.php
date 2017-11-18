@@ -32,67 +32,122 @@ class MailController extends Controller
         $this->feedback->setBodyTemplate('client_static_notice', 'back/mail/client_static_notice_mail');
     }
 
-    public function clientStaticNotice(){
+    public function clientStaticNotice($email){
         try{
-            if ( !empty($_COOKIE['client']) ) {
-                $cookie = $_COOKIE['client'];
-                $client = json_decode($cookie);
-            } else return false;
-
             $form = 'client_static_notice';
-            $email = $client['email'];
 
             $this->feedback->mail($form, [], $email);
             return ['error' => false];
         }catch(\Exception $error){
-            return ['error' => true, 'error'=> $error->getMessage()];
+            return ['error' => true, 'text'=> $error->getMessage()];
         }
     }
 
-    public function clientNotice($data){
+    public function kkb_register(){
         try{
-            $lg = '_' . App::getLocale() . '_field';
-            $form = 'client_notice';
-            $email = $data['email'];
-            $address = $data['city'] . ', ' . $data['address'];
-            $fields = [];
-            $sum = 0;
-            $order = '';
+            if ( !empty($_COOKIE['client']) && !empty($_COOKIE['goods']) ) {
+                $cookie = $_COOKIE['client'];
+                $client = json_decode($cookie, true);
 
-            if ( !empty($_COOKIE['goods']) ) {
+                $form = array_pull($client, 'form');
+                array_pull($client, 'payment');
+                $data = $client;
+
+                $sum = 0;
+                $order = '<p>';
+
                 $cookie = $_COOKIE['goods'];
                 $goods = json_decode($cookie);
                 foreach ($goods as $key=>$value) {
                     $item = $this->extract->getGroupItem('goods_item', $key);
-                    $order .= '<p>' . $item->{'item_title'.$lg} . ' (' . $item->price_field . '₸) : ' . $value . '</p>';
+                    $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
                     $sum += $item->price_field * $value;
                 }
-            }
+                $order .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплачено через KKB Epay</p>';
 
-            $fields[] = ['order_list', $order];
-            $fields[] = ['order_sum', strval($sum)];
-            $fields[] = ['address', $address];
+                $data['goods'] = $order;
+
+                $this->feedback->mail($form, $data);
+
+                $email = $client['email'];
+                $this->clientStaticNotice($email);
+
+                setcookie('goods', null, -1, '/');
+                setcookie('client', null, -1, '/');
+
+                return redirect('thanks');
+            } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
+//            return ['error' => false];
+        }catch(\Exception $error){
+            return ['error' => true, 'text'=> $error->getMessage()];
+        }
+    }
+
+    public function clientNotice($client, $goods){
+        try{
+            $lg = '_' . App::getLocale() . '_field';
+            $form = 'client_notice';
+            $email = $client['email'];
+            $address = $client['city'] . ', ' . $client['address'];
+            $fields = [];
+            $sum = 0;
+            $order = '<p>';
+
+            foreach ($goods as $key=>$value) {
+                $item = $this->extract->getGroupItem('goods_item', $key);
+                $order .= $item->{'item_title'.$lg} . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . '<br>';
+                $sum += $item->price_field * $value;
+            }
+            $order .= '</p>';
+
+            $fields['order_list'] = $order;
+            $fields['order_sum'] = strval($sum);
+            $fields['address'] = $address;
 
             $this->feedback->mail($form, $fields, $email);
             return ['error' => false];
         }catch(\Exception $error){
-            return ['error' => true, 'error'=> $error->getMessage()];
+            return ['error' => true, 'text'=> $error->getMessage()];
         }
     }
 
-    public function send(Request $request){
+    public function send(){
         try{
-            $data = $request->all();
+            if ( !empty($_COOKIE['client']) && !empty($_COOKIE['goods']) ) {
+                $cookie = $_COOKIE['client'];
+                $client = json_decode($cookie, true);
+                if ( $client['payment'] == 'cash' ) {
+                    $form = array_pull($client, 'form');
+                    array_pull($client, 'payment');
+                    $data = $client;
 
-            $form = array_pull($data, 'form');
+                    $sum = 0;
+                    $order = '<p>';
 
-            $this->feedback->mail($form, $data);
+                    $cookie = $_COOKIE['goods'];
+                    $goods = json_decode($cookie);
+                    foreach ($goods as $key=>$value) {
+                        $item = $this->extract->getGroupItem('goods_item', $key);
+                        $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
+                        $sum += $item->price_field * $value;
+                    }
+                    $order .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплата наличными</p>';
 
-            $this->clientNotice($data);
+                    $data['goods'] = $order;
 
+                    $this->feedback->mail($form, $data);
+
+                    $this->clientNotice($client, $goods);
+
+                    setcookie('goods', null, -1, '/');
+                    setcookie('client', null, -1, '/');
+                } else {
+                    // Отправка на kkb epay или что то там
+                }
+            } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
             return ['error' => false];
         }catch(\Exception $error){
-            return ['error' => true, 'error'=> $error->getMessage()];
+            return ['error' => true, 'text'=> $error->getMessage()];
         }
     }
 

@@ -1,3 +1,4 @@
-<h4>SAUMAL.KZ</h4><br>
-<p style="font-weight: bold;">Благодарим за заказ!</p>
-<p>Если у Вас имеются какие-либо вопросы<br>вы можете связаться с нами по номеру указанному на сайте</p>
+<h2><a href="//saumal.kz">SAUMAL.KZ</a></h2><br>
+<p style="font-weight: bold;">@lang('order.thanks')</p>
+<p>@lang('order.soon')</p>
+<p>@lang('order.questions')</p><br><br>

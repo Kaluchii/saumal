@@ -154,4 +154,12 @@ class FrontController extends Controller
             'meta' => $meta,
         ]);
     }
+
+    public function getThanks(){
+        return view('front.status.success');
+    }
+
+    public function getFail(){
+        return view('front.status.fail');
+    }
 }

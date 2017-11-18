@@ -24,6 +24,8 @@ Route::get('/news/{slug}',      'FrontController@getNewsItem');
 Route::get('/contacts',         'FrontController@getContacts');
 Route::get('/catalog',          'FrontController@getCatalog');
 Route::get('/order',            'FrontController@getOrder');
+Route::get('/thanks',           'FrontController@getThanks');
+Route::get('/fail',             'FrontController@getFail');
 
 
 
@@ -39,6 +41,7 @@ Route::get('/setlocale/{locale}', function ($locale) {
 
 Route::post('/captcha',          'Back\MailController@Captcha');
 Route::post('/feedback/mail',    'Back\MailController@send');
+Route::post('/order_register',   'Back\MailController@kkb_register');
 
 
 Route::auth();

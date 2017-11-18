@@ -98,6 +98,21 @@ function setGoodsCount(id, count) {
     document.cookie = "goods=" + value + "; path=/; expires=" + date.toUTCString();
 }
 
+function setClientCookie(key, value) {
+	var client = {},
+		cookie = getCookie("client");
+
+	if (cookie !== undefined){
+		client = JSON.parse(cookie);
+	}
+
+	client[key] = value;
+
+	var cook_value = JSON.stringify(client);
+	var date = new Date(new Date().getTime() + 72000000);
+	document.cookie = "client=" + cook_value + "; path=/; expires=" + date.toUTCString();
+}
+
 //# sourceMappingURL=_number-format.js.map
 
 
@@ -187,7 +202,7 @@ function setGoodsCount(id, count) {
 
 	if (!$form.length) return false;
 
-	var $inps = $form.find('input[type="text"], input[type="tel"], input[type="hidden"]');
+	var $inps = $form.find('input[type="text"], input[type="email"], input[type="tel"], input[type="hidden"]');
 	var $btn = $form.find('.btn--submit');
     var $informer = $('.rycle-informer');
     var $counter = $informer.find('[data-count]');
@@ -224,6 +239,44 @@ function setGoodsCount(id, count) {
 	$inps.filter('[required]').on('keyup change blur focus change', function() {
 		check_submit();
 	});
+
+	function ajaxDataSend(type, url, data) {
+		return $.ajax(
+			{
+				type: type,
+				url: url,
+				dataType: 'json',
+				data: data,
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				}
+			}
+		);
+	}
+
+	$form.submit(function (e) {
+		$inps.filter('[required]').each(function() {
+			var value = $(this).val();
+			var key = $(this).attr('name');
+			setClientCookie(key, value)
+		});
+		// $btn.attr('disabled', true).addClass('loading');
+		setClientCookie('payment', $('input[name="payment"]:checked').val());
+		var response = ajaxDataSend('POST', '/feedback/mail', []);
+		response.success(function(data){
+			if(!data.error){
+				document.location.href="/thanks";
+			}
+			// $btn.attr('disabled', false).removeClass('loading');
+		});
+		response.error(function(data){
+			console.log(data);
+			// $btn.attr('disabled', false).removeClass('loading');
+			alert('Отправка заказа не удалась, попробуйте позже.');
+		});
+        e.stopPropagation();
+        e.preventDefault();
+    });
 
 
 	//калькуляция товаров

@@ -21,7 +21,7 @@
             <div class="container">
                 <!-- form-rycle -->
                 <div class="form--rycle">
-                    <form action="/">
+                    <form action="/feedback/mail">
                         <fieldset>
                             <!-- items-list -->
                             <div class="items-list">
@@ -51,7 +51,7 @@
                                                     <div class="column column--price">
                                                         <div class="item-price"> <label>@lang('order.price')</label> <strong data-output="price"></strong> <span class="tenge">n</span> </div>
                                                     </div>
-                                                </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> <input type="hidden" name="id" value="{{ $item[0]->id_field }}" /> </div>
+                                                </div> <button type="button" class="btn--unstyled btn--remove"><i class="icon icon-minus"></i></button> </div>
                                             <!-- /item -->
                                     @endforeach
                                 </div>
@@ -70,7 +70,7 @@
                             <h3>@lang('order.ordering')</h3>
                             <div class="form-body">
                                 <div class="form-in">
-                                    <input type="hidden" name="form" value="order">
+                                    <input type="hidden" name="form" value="order" required>
                                     <div class="form-group clearfix"> <label class="control-label">@lang('order.name')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="client_name" required /> </div>
                                     </div>
@@ -85,6 +85,12 @@
                                     </div>
                                     <div class="form-group clearfix group--address"> <label class="control-label">@lang('order.addr')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="address" required /> </div>
+                                    </div>
+                                    <div class="form-group clearfix group--payment"> <label class="control-label">Оплата (перевести)</label>
+                                        <div class="controls">
+                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="cash" required checked /> Наличными</label>
+                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="kkb" required /> KKB Epay</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-controls clearfix">
