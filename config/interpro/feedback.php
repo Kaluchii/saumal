@@ -33,7 +33,8 @@ return [
                 //Каждой форме добавляется подгруппа с именем имяформы_mails, здесь настраивать поля для этой подгруппы
                 //from, subject, host, port, encryption, to, username, email, body, mailed  -  по умолчанию +
                 //доп. поля формы в формате qs конфига - для значений полей от пользователя сайта
-                'string' => ['client_name', 'email', 'phone', 'city', 'address']
+                'string' => ['client_name', 'email', 'phone', 'city', 'address'],
+                'text' => ['goods']
             ]
         ],
 

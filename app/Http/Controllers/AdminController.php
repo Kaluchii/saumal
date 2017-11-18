@@ -165,6 +165,10 @@ class AdminController extends Controller
     }
 
     public function getPost(){
+        $order = $this->extract->getBlock('order');
+        return view('back.blocks.mails', [
+            'order' => $order
+        ]);
     }
 
     public function getOrders(){

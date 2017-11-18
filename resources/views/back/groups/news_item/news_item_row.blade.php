@@ -5,7 +5,7 @@
 
     {{-- Название  --}}
     <td class="sorting_1">
-        <a href="news/{{$item->id_field}}" class="">{{$item->item_title_ru_field}}</a>
+        <a href="news/{{$item->id_field}}" class="">{!! $item->item_title_ru_field !!}</a>
     </td>
 
     {{-- Дата последнего редактирования --}}
