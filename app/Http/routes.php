@@ -27,6 +27,8 @@ Route::get('/order',            'FrontController@getOrder');
 Route::get('/thanks',           'FrontController@getThanks');
 Route::get('/fail',             'FrontController@getFail');
 
+Route::get('/test',             'Back\MailController@kkb_register');
+
 
 
 Route::get('/setlocale/{locale}', function ($locale) {

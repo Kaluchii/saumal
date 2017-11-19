@@ -21,7 +21,7 @@
             <div class="container">
                 <!-- form-rycle -->
                 <div class="form--rycle">
-                    <form action="/feedback/mail">
+                    <form action="/test">
                         <fieldset>
                             <!-- items-list -->
                             <div class="items-list">

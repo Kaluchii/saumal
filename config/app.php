@@ -179,6 +179,7 @@ return [
         Interpro\ImageAggr\ImageAggrUseServiceProvider::class,
         Interpro\FileAggr\FileAggrUseServiceProvider::class,
         Interpro\Feedback\FeedbackUseServiceProvider::class,
+        Dosarkz\EPayKazCom\EpayServiceProvider::class,
         //============================================
 
         /*
@@ -234,7 +235,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Epay' => Dosarkz\EPayKazCom\Facades\Epay::class
 
     ],
 
