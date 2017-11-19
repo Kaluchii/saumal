@@ -86,9 +86,9 @@
                                     <div class="form-group clearfix group--address"> <label class="control-label">@lang('order.addr')</label>
                                         <div class="controls"> <input type="text" class="form-control" name="address" required /> </div>
                                     </div>
-                                    <div class="form-group clearfix group--payment"> <label class="control-label">Оплата (перевести)</label>
+                                    <div class="form-group clearfix group--payment"> <label class="control-label">@lang('order.payment')</label>
                                         <div class="controls">
-                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="cash" required checked /> Наличными</label>
+                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="cash" required checked />@lang('order.cash')</label>
                                             <label class="control-label"><input type="radio" class="form-control" name="payment" value="kkb" required /> KKB Epay</label>
                                         </div>
                                     </div>
