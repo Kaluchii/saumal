@@ -162,4 +162,11 @@ class FrontController extends Controller
     public function getFail(){
         return view('front.status.fail');
     }
+
+    public function getPayGo(){
+        $fields = session('data');
+        return view('front.goPay.goPay', [
+            'fields' => $fields,
+        ]);
+    }
 }

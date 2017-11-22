@@ -84,10 +84,15 @@ class MailController extends Controller
 
                 $sum = 0;
                 $order_goods = '<p>';
+                $kkb_appendix = '';
+                $i = 1;
                 foreach ($goods as $key=>$value) {
                     $item = $this->extract->getGroupItem('goods_item', $key);
                     $order_goods .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
-                    $sum += $item->price_field * $value;
+                    $kkb_sum = $item->price_field * $value;
+                    $kkb_appendix .= '<item number="' . $i . '" name="' . $item->item_title_ru_field . '" quantity="' . $value . '" amount="' . $kkb_sum . '"/>';
+                    $sum += $kkb_sum;
+                    $i++;
                 }
                 $order_goods .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплачено через KKB Epay</p>';
 
@@ -100,17 +105,19 @@ class MailController extends Controller
                 if ($lg == 'ru') $lg = 'rus';
                 if ($lg == 'en') $lg = 'eng';
                 if ($lg == 'kk') $lg = 'kaz';
+
                 $pay =  Epay::basicAuth([
                     'order_id' => $order_id,
                     'currency' => '398',
                     'amount' => $sum,
                     'email' => $client['email'],
+                    'Language' => $lg,
+                    'appendix' => $kkb_appendix,
                     'hashed' => true,
                 ]);
-                $url = $pay->generateUrl();
+                $data = $pay->generateFields();
 
-                // Отправка на kkb epay или что то там
-                return redirect('go-to-pay')->with('url', $url);
+                return redirect('go-to-pay')->with('data', $data);
 
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
         }catch(\Exception $error){

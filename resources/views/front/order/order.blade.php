@@ -23,6 +23,7 @@
                 <div class="form--rycle">
                     <form action="/order_register" method="post">
                         <fieldset>
+                            {{ csrf_field() }}
                             <!-- items-list -->
                             <div class="items-list">
                                 <div class="block-in">

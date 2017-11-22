@@ -94,7 +94,7 @@ function setGoodsCount(id, count) {
     }
 
     var value = JSON.stringify(goods);
-    var date = new Date(new Date().getTime() + 72000000);
+    var date = new Date(new Date().getTime() + 864000000);
     document.cookie = "goods=" + value + "; path=/; expires=" + date.toUTCString();
 }
 
@@ -109,7 +109,7 @@ function setClientCookie(key, value) {
 	client[key] = value;
 
 	var cook_value = JSON.stringify(client);
-	var date = new Date(new Date().getTime() + 72000000);
+	var date = new Date(new Date().getTime() + 864000000);
 	document.cookie = "client=" + cook_value + "; path=/; expires=" + date.toUTCString();
 }
 

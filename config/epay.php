@@ -1,6 +1,6 @@
 <?php
 return [
-    'pay_test_mode' => true,
+    'pay_test_mode' => false,
 
     'MERCHANT_CERTIFICATE_ID'   => 'c183dbbb',
     'MERCHANT_NAME'             => 'sau-med.com',
@@ -16,6 +16,8 @@ return [
     'EPAY_POST_LINK'            => 'http://saumal/order_notice',
     // Линк для отправки неудачного результата авторизации либо информации об ошибке в магазин.
     'EPAY_FAILURE_POST_LINK'    => 'http://saumal/fail',
+    // Линк для возврата покупателя на сайт после безуспешного проведения оплаты
+    'EPAY_FAILURE_BACK_LINK'    => 'http://saumal/fail',
 
     'EPAY_FORM_TEMPLATE'        => 'default.xsl',
 ];
