@@ -303,6 +303,15 @@ return [
         ]
     ],
 
-    'orders' => []
+    'orders' => [],
+
+    'kkb_orders' => [
+        'groups' => [
+            'kkb_orders_list' => [
+                'string' => ['order_id', 'client_name', 'email', 'phone', 'city', 'address'],
+                'text' => ['goods_info']
+            ]
+        ]
+    ]
 
 ];

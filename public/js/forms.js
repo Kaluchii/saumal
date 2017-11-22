@@ -261,21 +261,22 @@ function setClientCookie(key, value) {
 			setClientCookie(key, value)
 		});
 		// $btn.attr('disabled', true).addClass('loading');
-		setClientCookie('payment', $('input[name="payment"]:checked').val());
-		var response = ajaxDataSend('POST', '/feedback/mail', []);
-		response.success(function(data){
-			if(!data.error){
-				document.location.href="/thanks";
-			}
-			// $btn.attr('disabled', false).removeClass('loading');
-		});
-		response.error(function(data){
-			console.log(data);
-			// $btn.attr('disabled', false).removeClass('loading');
-			alert('Отправка заказа не удалась, попробуйте позже.');
-		});
-        e.stopPropagation();
-        e.preventDefault();
+        if ($('input[name="payment"]:checked').val() == 'cash') {
+            var response = ajaxDataSend('POST', '/feedback/mail', []);
+            response.success(function(data){
+                if(!data.error){
+                    document.location.href="/thanks";
+                }
+                // $btn.attr('disabled', false).removeClass('loading');
+            });
+            response.error(function(data){
+                console.log(data);
+                // $btn.attr('disabled', false).removeClass('loading');
+                alert('Отправка заказа не удалась, попробуйте позже.');
+            });
+            e.stopPropagation();
+            e.preventDefault();
+        }
     });
 
 

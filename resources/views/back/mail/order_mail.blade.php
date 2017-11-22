@@ -1,4 +1,4 @@
-<h2>Заказ</h2>
+<h2>Заказ {{ isset($order_id) }}</h2>
 <p>
     Имя: {{$client_name}}<br>
     Эл. почта: {{$email}}<br>

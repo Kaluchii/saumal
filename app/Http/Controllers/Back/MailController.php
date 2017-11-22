@@ -16,14 +16,20 @@ use Interpro\Extractor\Contracts\Selection\Tuner;
 use Interpro\Feedback\Contracts\FeedbackAgent;
 use Illuminate\Support\Facades\App;
 use Dosarkz\EPayKazCom\Facades\Epay;
+use Interpro\Entrance\Contracts\CommandAgent\InitAgent;
+use Interpro\Entrance\Agents\UpdateAgent;
 
 
 class MailController extends Controller
 {
+    private $init;
+    private $update;
     private $feedback;
     private $extract;
-    public function __construct( FeedbackAgent $feedback, ExtractAgent $ext){
+    public function __construct( FeedbackAgent $feedback, ExtractAgent $ext, InitAgent $int, UpdateAgent $upd){
 
+        $this->init    = $int;
+        $this->update = $upd;
         $this->extract = $ext;
         $this->feedback = $feedback;
         // Объявляем все шаблоны писем для форм
@@ -33,83 +39,88 @@ class MailController extends Controller
         $this->feedback->setBodyTemplate('client_static_notice', 'back/mail/client_static_notice_mail');
     }
 
-
-    public function test()
-    {
-    }
-
-
-    /*public function clientStaticNotice($email)
+    /*public function clientStaticNotice()
     {
         try{
             $form = 'client_static_notice';
-
             $this->feedback->mail($form, [], $email);
-            return ['error' => false];
+            return redirect('thanks');
         }catch(\Exception $error){
             return ['error' => true, 'text'=> $error->getMessage()];
         }
     }*/
 
-    /*public function kkb_notice( Request $request )
+    public function kkb_notice( Request $request )
     {
-        $order .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплачено через KKB Epay</p>';
+        $data = [];
+        $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $request['order_id']);
+        $orders = $this->extract->getBlock('kkb_orders');
+        $order = $orders->kkb_orders_list_group->first()->client_name_field;
 
-        $data['goods'] = $order;
-        $cookie = $_COOKIE['goods'];
-        $goods = json_decode($cookie);
+        $data['order_id'] = $order->order_id_field;
+        $data['client_name'] = $order->client_name_field;
+        $data['email'] = $order->email_field;
+        $data['phone'] = $order->phone_field;
+        $data['city'] = $order->city_field;
+        $data['address'] = $order->address_field;
+        $data['goods'] = $order->goods_field;
 
-        $this->feedback->mail($form, $data);
-        foreach ($goods as $key=>$value) {
-            $item = $this->extract->getGroupItem('goods_item', $key);
-            $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
-            $sum += $item->price_field * $value;
-        }
-        $email = $client['email'];
-        $this->clientStaticNotice($email);
-        return redirect('thanks');
-    }*/
+        $this->feedback->mail('order', $data);
+        $this->feedback->mail('client_static_notice', [], $data['email']);
+    }
 
     public function kkb_register(){
         try{
-            if ( true/*!empty($_COOKIE['client']) && !empty($_COOKIE['goods'])*/ ) {
+            if ( !empty($_COOKIE['client']) && !empty($_COOKIE['goods']) ) {
 
                 $client = json_decode($_COOKIE['client'], true);
                 $goods = json_decode($_COOKIE['goods']);
 
-                array_pull($client, 'form');
-                array_pull($client, 'payment');
-                $data = $client;
-
-                $sum = 0;
-                $order = '<p>';
-                foreach ($goods as $key=>$value) {
-                    $item = $this->extract->getGroupItem('goods_item', $key);
-                    $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
-                    $sum += $item->price_field * $value;
-                }
-                $email = $client['email'];
-                $order = date("YmdHis");
-                $pay =  Epay::basicAuth([
-                    'order_id' => $order,
-                    'currency' => '398',
-                    'amount' => 19999,
-                    'email' => $email,
-                    'hashed' => true,
-                ]);
-
-                $pay->generateUrl();
-                dd($pay);
-
 //                setcookie('goods', null, -1, '/');
 //                setcookie('client', null, -1, '/');
+
+                array_pull($client, 'form');
+                array_pull($client, 'payment');
+
+                $sum = 0;
+                $order_goods = '<p>';
+                foreach ($goods as $key=>$value) {
+                    $item = $this->extract->getGroupItem('goods_item', $key);
+                    $order_goods .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
+                    $sum += $item->price_field * $value;
+                }
+                $order_goods .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплачено через KKB Epay</p>';
+
+                $new_order = $this->init->init('kkb_orders_list', [ 'superior' => 0 ]);
+                $order_id = $new_order->id_field;
+                $order_id = date("Ymd") . $order_id;
+                $this->update->update('kkb_orders_list', ($new_order->id_field), [ 'order_id' => $order_id, 'goods_info' => $order_goods, 'client_name' => $client['client_name'], 'email' => $client['email'], 'phone' => $client['phone'], 'city' => $client['city'], 'address' => $client['address'] ]);
+
+                $lg = App::getLocale();
+                if ($lg == 'ru') $lg = 'rus';
+                if ($lg == 'en') $lg = 'eng';
+                if ($lg == 'kk') $lg = 'kaz';
+                $pay =  Epay::basicAuth([
+                    'order_id' => $order_id,
+                    'currency' => '398',
+                    'amount' => $sum,
+                    'email' => $client['email'],
+                    'hashed' => true,
+                ]);
+                $url = $pay->generateUrl();
+
+                // Отправка на kkb epay или что то там
+                return redirect('go-to-pay')->with('url', $url);
+
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
-            return ['error' => false];
         }catch(\Exception $error){
             return ['error' => true, 'text'=> $error->getMessage()];
         }
     }
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////
     public function clientNotice($client, $goods){
         try{
             $lg = '_' . App::getLocale() . '_field';
@@ -143,34 +154,30 @@ class MailController extends Controller
             if ( !empty($_COOKIE['client']) && !empty($_COOKIE['goods']) ) {
                 $cookie = $_COOKIE['client'];
                 $client = json_decode($cookie, true);
-                if ( $client['payment'] == 'cash' ) {
-                    $form = array_pull($client, 'form');
-                    array_pull($client, 'payment');
-                    $data = $client;
+                $form = array_pull($client, 'form');
+                array_pull($client, 'payment');
+                $data = $client;
 
-                    $sum = 0;
-                    $order = '<p>';
+                $sum = 0;
+                $order = '<p>';
 
-                    $cookie = $_COOKIE['goods'];
-                    $goods = json_decode($cookie);
-                    foreach ($goods as $key=>$value) {
-                        $item = $this->extract->getGroupItem('goods_item', $key);
-                        $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
-                        $sum += $item->price_field * $value;
-                    }
-                    $order .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплата наличными</p>';
-
-                    $data['goods'] = $order;
-
-                    $this->feedback->mail($form, $data);
-
-                    $this->clientNotice($client, $goods);
-
-                    setcookie('goods', null, -1, '/');
-                    setcookie('client', null, -1, '/');
-                } else {
-                    // Отправка на kkb epay или что то там
+                $cookie = $_COOKIE['goods'];
+                $goods = json_decode($cookie);
+                foreach ($goods as $key=>$value) {
+                    $item = $this->extract->getGroupItem('goods_item', $key);
+                    $order .= $item->item_title_ru_field . ' (' . $item->price_field . '<small> ₸</small>) : ' . $value . ' шт. <br>';
+                    $sum += $item->price_field * $value;
                 }
+                $order .= '</p><p>Сумма заказа: ' . strval($sum) . '<small> ₸</small></p><p style="font-weight: bold">Оплата наличными</p>';
+
+                $data['goods'] = $order;
+
+                $this->feedback->mail($form, $data);
+
+                $this->clientNotice($client, $goods);
+
+//                setcookie('goods', null, -1, '/');
+//                setcookie('client', null, -1, '/');
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
             return ['error' => false];
         }catch(\Exception $error){

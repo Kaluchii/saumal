@@ -21,7 +21,7 @@
             <div class="container">
                 <!-- form-rycle -->
                 <div class="form--rycle">
-                    <form action="/test">
+                    <form action="/order_register" method="post">
                         <fieldset>
                             <!-- items-list -->
                             <div class="items-list">

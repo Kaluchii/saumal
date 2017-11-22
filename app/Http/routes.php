@@ -27,8 +27,9 @@ Route::get('/order',            'FrontController@getOrder');
 Route::get('/thanks',           'FrontController@getThanks');
 Route::get('/fail',             'FrontController@getFail');
 
-Route::get('/test',             'Back\MailController@kkb_register');
+Route::get('/go-to-pay',        'FrontController@getPayGo');
 
+Route::get('/test',             'Back\MailController@kkb_register');
 
 
 Route::get('/setlocale/{locale}', function ($locale) {
@@ -44,6 +45,7 @@ Route::get('/setlocale/{locale}', function ($locale) {
 Route::post('/captcha',          'Back\MailController@Captcha');
 Route::post('/feedback/mail',    'Back\MailController@send');
 Route::post('/order_register',   'Back\MailController@kkb_register');
+Route::post('/order_notice',     'Back\MailController@kkb_notice');
 
 
 Route::auth();
