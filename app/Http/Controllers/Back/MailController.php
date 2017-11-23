@@ -83,7 +83,7 @@ class MailController extends Controller
         $data['phone'] = $order->phone_field;
         $data['city'] = $order->city_field;
         $data['address'] = $order->address_field;
-        $data['goods'] = $order->goods_field;
+        $data['goods'] = $order->goods_info_field;
 
         $this->feedback->mail('order', $data);
         $this->feedback->mail('client_static_notice', [], $data['email']);
