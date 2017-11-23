@@ -63,17 +63,16 @@ class MailController extends Controller
             return false;
         };
         if (in_array("DOCUMENT",$result)){
-            $epay = new Epay();
             $kkb = new KkbSign();
             $kkb->invert();
-            $fieldsFromBank = $epay->split_sign($xml,"BANK");
+            $fieldsFromBank = Epay::split_sign($xml,"BANK");
             Log::info($fieldsFromBank);
-            $check = $kkb->check_sign64($fieldsFromBank['LETTER'], $fieldsFromBank['RAWSIGN'], $epay->public_key_path());
+            $check = $kkb->check_sign64($fieldsFromBank['LETTER'], $fieldsFromBank['RAWSIGN'], Epay::public_key_path());
             if ($check != 1)
                 return false;
         } else { return false; };
 
-        if ( !($result['merchant_id'] == $epay->merchant_id()) ) return false;
+        if ( !($result['merchant_id'] == Epay::merchant_id()) ) return false;
 
         $data = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['order_id']);
