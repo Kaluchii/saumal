@@ -56,7 +56,6 @@ class MailController extends Controller
     {
         $xml = $request['response'];
 
-        Log::info($xml);
         $xml_parser = new Xml();
         $result = $xml_parser->parse($xml);
         if (in_array("ERROR",$result)){
@@ -72,10 +71,9 @@ class MailController extends Controller
                 return false;
         } else { return false; };
 
-        if ( !($result['merchant_id'] == Epay::merchant_id) ) return false;*/
-        Log::info($result);
+        if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;*/
         $data = [];
-        $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['order_id']);
+        $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['ORDER_ORDER_ID']);
         $orders = $this->extract->getBlock('kkb_orders');
         $order = $orders->kkb_orders_list_group->first()->client_name_field;
 
@@ -139,7 +137,6 @@ class MailController extends Controller
                 ]);
                 $data = $pay->generateFields();
 
-                Log::info($data);
                 return redirect('go-to-pay')->with('data', $data);
 
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
