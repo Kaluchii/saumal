@@ -75,10 +75,9 @@ class MailController extends Controller
         $data = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['ORDER_ORDER_ID']);
         $orders = $this->extract->getBlock('kkb_orders');
-        $order = $orders->kkb_orders_list_group->first()->client_name_field;
+        $order = $orders->kkb_orders_list_group->first();
 
-        Log::info($result['ORDER_ORDER_ID']);
-        Log::info($order->order_id_field);
+        Log::info($order);
         $data['order_id'] = $order->order_id_field;
         $data['client_name'] = $order->client_name_field;
         $data['email'] = $order->email_field;
