@@ -73,7 +73,7 @@ class MailController extends Controller
         } else { return false; };
 
         if ( !($result['merchant_id'] == Epay::merchant_id) ) return false;*/
-        Log::info($result['order_id']);
+        Log::info($result);
         $data = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['order_id']);
         $orders = $this->extract->getBlock('kkb_orders');
