@@ -6,18 +6,18 @@ use App\Http\Controllers\Controller;
 use Dosarkz\EPayKazCom\KkbSign;
 use Dosarkz\EPayKazCom\Xml;
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Bus\DispatchesJobs;
+/*use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\Log;
-use Interpro\Core\Contracts\Taxonomy\Taxonomy;
+use Interpro\Core\Contracts\Taxonomy\Taxonomy;*/
 use Interpro\Entrance\Contracts\Extract\ExtractAgent;
-use Interpro\Extractor\Contracts\Selection\Tuner;
+//use Interpro\Extractor\Contracts\Selection\Tuner;
 use Interpro\Feedback\Contracts\FeedbackAgent;
 use Illuminate\Support\Facades\App;
-use Dosarkz\EPayKazCom\Facades\Epay;
+use Dosarkz\EPayKazCom\Epay;
 use Interpro\Entrance\Contracts\CommandAgent\InitAgent;
 use Interpro\Entrance\Agents\UpdateAgent;
 
@@ -41,17 +41,6 @@ class MailController extends Controller
         $this->feedback->setBodyTemplate('client_static_notice', 'back/mail/client_static_notice_mail');
     }
 
-    /*public function clientStaticNotice()
-    {
-        try{
-            $form = 'client_static_notice';
-            $this->feedback->mail($form, [], $email);
-            return redirect('thanks');
-        }catch(\Exception $error){
-            return ['error' => true, 'text'=> $error->getMessage()];
-        }
-    }*/
-
     public function kkb_notice( Request $request )
     {
         $xml = $request['response'];
@@ -61,17 +50,16 @@ class MailController extends Controller
         if (in_array("ERROR",$result)){
             return false;
         };
-        /*if (in_array("DOCUMENT",$result)){
+        if (in_array("DOCUMENT",$result)){
             $kkb = new KkbSign();
             $kkb->invert();
             $fieldsFromBank = Epay::split_sign($xml,"BANK");
-            Log::info($fieldsFromBank);
             $check = $kkb->check_sign64($fieldsFromBank['LETTER'], $fieldsFromBank['RAWSIGN'], Epay::public_key_path);
             if ($check != 1)
                 return false;
         } else { return false; };
 
-        if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;*/
+        if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;
         $data = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['ORDER_ORDER_ID']);
         $orders = $this->extract->getBlock('kkb_orders');
