@@ -17,7 +17,7 @@ use Interpro\Entrance\Contracts\Extract\ExtractAgent;
 //use Interpro\Extractor\Contracts\Selection\Tuner;
 use Interpro\Feedback\Contracts\FeedbackAgent;
 use Illuminate\Support\Facades\App;
-use Dosarkz\EPayKazCom\Epay;
+use Dosarkz\EPayKazCom\Facades\Epay;
 use Interpro\Entrance\Contracts\CommandAgent\InitAgent;
 use Interpro\Entrance\Agents\UpdateAgent;
 
@@ -50,16 +50,17 @@ class MailController extends Controller
         if (in_array("ERROR",$result)){
             return false;
         };
-        if (in_array("DOCUMENT",$result)){
+        /*if (in_array("DOCUMENT",$result)){
             $kkb = new KkbSign();
             $kkb->invert();
             $fieldsFromBank = Epay::split_sign($xml,"BANK");
+            Log::info($fieldsFromBank);
             $check = $kkb->check_sign64($fieldsFromBank['LETTER'], $fieldsFromBank['RAWSIGN'], Epay::public_key_path);
             if ($check != 1)
                 return false;
         } else { return false; };
 
-        if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;
+        if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;*/
         $data = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['ORDER_ORDER_ID']);
         $orders = $this->extract->getBlock('kkb_orders');
