@@ -76,8 +76,8 @@ class MailController extends Controller
                 $client = json_decode($_COOKIE['client'], true);
                 $goods = json_decode($_COOKIE['goods']);
 
-//                setcookie('goods', null, -1, '/');
-//                setcookie('client', null, -1, '/');
+                setcookie('goods', null, -1, '/');
+                setcookie('client', null, -1, '/');
 
                 array_pull($client, 'form');
                 array_pull($client, 'payment');
@@ -183,8 +183,8 @@ class MailController extends Controller
 
                 $this->clientNotice($client, $goods);
 
-//                setcookie('goods', null, -1, '/');
-//                setcookie('client', null, -1, '/');
+                setcookie('goods', null, -1, '/');
+                setcookie('client', null, -1, '/');
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
             return ['error' => false];
         }catch(\Exception $error){
