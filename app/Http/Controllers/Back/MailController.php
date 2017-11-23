@@ -78,6 +78,7 @@ class MailController extends Controller
         $orders = $this->extract->getBlock('kkb_orders');
         $order = $orders->kkb_orders_list_group->first()->client_name_field;
 
+        Log::info('///////////////////////Suc///////////////////////');
         $data['order_id'] = $order->order_id_field;
         $data['client_name'] = $order->client_name_field;
         $data['email'] = $order->email_field;
