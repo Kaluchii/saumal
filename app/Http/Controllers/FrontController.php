@@ -165,6 +165,9 @@ class FrontController extends Controller
 
     public function getPayGo(){
         $fields = session('data');
+        if ( empty($fields) ) {
+            return redirect('catalog');
+        }
         return view('front.goPay.goPay', [
             'fields' => $fields,
         ]);

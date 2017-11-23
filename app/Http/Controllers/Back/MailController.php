@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use Dosarkz\EPayKazCom\KkbSign;
+use Dosarkz\EPayKazCom\Xml;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -52,8 +54,29 @@ class MailController extends Controller
 
     public function kkb_notice( Request $request )
     {
+        $xml = $request['response'];
+
+        Log::info($xml);
+        $xml_parser = new Xml();
+        $result = $xml_parser->parse($xml);
+        if (in_array("ERROR",$result)){
+            return false;
+        };
+        if (in_array("DOCUMENT",$result)){
+            $epay = new Epay();
+            $kkb = new KkbSign();
+            $kkb->invert();
+            $fieldsFromBank = $epay->split_sign($xml,"BANK");
+            Log::info($fieldsFromBank);
+            $check = $kkb->check_sign64($fieldsFromBank['LETTER'], $fieldsFromBank['RAWSIGN'], $epay->public_key_path());
+            if ($check != 1)
+                return false;
+        } else { return false; };
+
+        if ( !($result['merchant_id'] == $epay->merchant_id()) ) return false;
+
         $data = [];
-        $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $request['order_id']);
+        $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['order_id']);
         $orders = $this->extract->getBlock('kkb_orders');
         $order = $orders->kkb_orders_list_group->first()->client_name_field;
 
@@ -117,6 +140,7 @@ class MailController extends Controller
                 ]);
                 $data = $pay->generateFields();
 
+                Log::info($data);
                 return redirect('go-to-pay')->with('data', $data);
 
             } else return ['error' => true, 'text'=> 'Necessary cookies undefined'];
