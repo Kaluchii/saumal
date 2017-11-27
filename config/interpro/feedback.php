@@ -46,7 +46,9 @@ return [
         ],
 
         'client_static_notice' => [
-            'string' => ['lang']
+            'form_fields' => [
+                'string' => ['lang']
+            ]
         ],
     ]
 ];
