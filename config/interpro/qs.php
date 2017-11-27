@@ -308,7 +308,7 @@ return [
     'kkb_orders' => [
         'groups' => [
             'kkb_orders_list' => [
-                'string' => ['order_id', 'client_name', 'email', 'phone', 'city', 'address'],
+                'string' => ['order_id', 'client_name', 'email', 'phone', 'city', 'address', 'lang'],
                 'text' => ['goods_info']
             ]
         ]

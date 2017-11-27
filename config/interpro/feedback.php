@@ -45,6 +45,8 @@ return [
             ]
         ],
 
-        'client_static_notice' => [],
+        'client_static_notice' => [
+            'string' => ['lang']
+        ],
     ]
 ];

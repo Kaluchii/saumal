@@ -62,6 +62,7 @@ class MailController extends Controller
 
         if ( !($result['PAYMENT_MERCHANT_ID'] == Epay::merchant_id) ) return false;*/
         $data = [];
+        $client = [];
         $this->extract->tuneSelection('kkb_orders_list')->eq('order_id', $result['ORDER_ORDER_ID']);
         $orders = $this->extract->getBlock('kkb_orders');
         $order = $orders->kkb_orders_list_group->first();
@@ -74,8 +75,10 @@ class MailController extends Controller
         $data['address'] = $order->address_field;
         $data['goods'] = $order->goods_info_field;
 
+        $client['lang'] = $order->lang_field;
+
         $this->feedback->mail('order', $data);
-        $this->feedback->mail('client_static_notice', [], $data['email']);
+        $this->feedback->mail('client_static_notice', $client, $data['email']);
     }
 
     public function kkb_register(){
@@ -91,6 +94,7 @@ class MailController extends Controller
                 array_pull($client, 'form');
                 array_pull($client, 'payment');
 
+                $lg = App::getLocale();
                 $sum = 0;
                 $order_goods = '<p>';
                 $kkb_appendix = '';
@@ -108,9 +112,8 @@ class MailController extends Controller
                 $new_order = $this->init->init('kkb_orders_list', [ 'superior' => 0 ]);
                 $order_id = $new_order->id_field;
                 $order_id = date("Ymd") . $order_id;
-                $this->update->update('kkb_orders_list', ($new_order->id_field), [ 'order_id' => $order_id, 'goods_info' => $order_goods, 'client_name' => $client['client_name'], 'email' => $client['email'], 'phone' => $client['phone'], 'city' => $client['city'], 'address' => $client['address'] ]);
+                $this->update->update('kkb_orders_list', ($new_order->id_field), [ 'order_id' => $order_id, 'goods_info' => $order_goods, 'client_name' => $client['client_name'], 'email' => $client['email'], 'phone' => $client['phone'], 'city' => $client['city'], 'address' => $client['address'], 'lang' => $lg ]);
 
-                $lg = App::getLocale();
                 if ($lg == 'ru') $lg = 'rus';
                 if ($lg == 'en') $lg = 'eng';
                 if ($lg == 'kk') $lg = 'kaz';
