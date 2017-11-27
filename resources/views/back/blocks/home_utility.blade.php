@@ -423,25 +423,23 @@
                         </div>
                 </div>
                 <div class="tab-pane" id="tab_14">
-                    <div class="box-body">
-                        <div class="form-group">
-                            <label>Заголовок</label>
-                            <input class="form-control string"
-                                   type="text" placeholder=""
-                                   value="{{$home_utility->item_title4_kk_field}}"
-                                   data-name="item_title4_kk"
-                                   data-type="string"
-                                   data-block="home_utility"
-                                   data-id="0">
-                        </div>
-                        <div class="form-group">
-                            <label>Текст</label>
-                            <textarea class="form-control text" data-reg="true"
-                                      data-name="item_text4_kk"
-                                      data-type="text"
-                                      data-block="home_utility"
-                                      data-id="0">{{$home_utility->item_text4_kk_field}}</textarea>
-                        </div>
+                    <div class="form-group">
+                        <label>Заголовок</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$home_utility->item_title4_kk_field}}"
+                               data-name="item_title4_kk"
+                               data-type="string"
+                               data-block="home_utility"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст</label>
+                        <textarea class="form-control text" data-reg="true"
+                                  data-name="item_text4_kk"
+                                  data-type="text"
+                                  data-block="home_utility"
+                                  data-id="0">{{$home_utility->item_text4_kk_field}}</textarea>
                     </div>
                 </div>
                 <div class="tab-pane" id="tab_15">
