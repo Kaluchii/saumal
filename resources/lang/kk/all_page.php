@@ -2,7 +2,7 @@
 
 return [
     'lang' => 'Қаз',
-    'order_sau' => 'Саумалға тапсырыс беру',
+    'order_sau' => 'Тапсырыс беру',
     'product' => 'Өнім',
     'about_product' => 'Өнім жайлы',
     'influence' => 'Ағзаға әсері',

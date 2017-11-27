@@ -31,13 +31,13 @@
                                     <li> <a class="js-menu-item js-menu-item--top" href="/news">@lang('all_page.news')</a> </li>
                                 </ul>
                             </li>
-                            <li class="hidden-sm"> <a href="#">@lang('all_page.reviews')</a> </li>
+                            {{--<li class="hidden-sm"> <a href="#">@lang('all_page.reviews')</a> </li>--}}
                             <li class="li-dropdown">
                                 <h6 class="visible-sm">@lang('all_page.contacts')</h6> <a href="/contacts" class="hidden-sm">@lang('all_page.contacts')</a>
                                 <ul class="list--unstyled">
                                     <li> <a class="js-menu-item js-menu-item--top" href="/contacts">@lang('all_page.address_off')</a> </li>
                                     <li> <a class="js-menu-item js-menu-item--top" href="/contacts">@lang('all_page.address_sales')</a> </li>
-                                    <li> <a class="js-menu-item js-menu-item--top" href="#">@lang('all_page.reviews')</a> </li>
+                                    {{--<li> <a class="js-menu-item js-menu-item--top" href="#">@lang('all_page.reviews')</a> </li>--}}
                                 </ul>
                             </li>
                         </ul>
