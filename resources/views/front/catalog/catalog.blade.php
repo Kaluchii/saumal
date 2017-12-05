@@ -26,7 +26,7 @@
                             @foreach($goods->goods_item_group as $item)
                                 <?php $i++ ?>
                                 <!-- item -->
-                                <div class="item @if(($i - 1) % 3 == 0) item--large @elseif(($i - 2) % 3 == 0) item--medium @elseif(($i - 3) % 3 == 0) item--small @endif">
+                                <div class="item item--small">
                                     <div class="item-body">
                                         <div class="item-title">{!! $item->{'item_title'.$lg} !!}</div>
                                         <div class="item-price"> <strong>{{ number_format($item->price_field, 0, '', ' ') }}</strong> <span class="tenge">n</span> </div>
