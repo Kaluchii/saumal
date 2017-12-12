@@ -7,7 +7,10 @@
     <div class="page">
         <div class="page-content">
             <div class="container">
-                <p>Status SUCCESS</p>
+                <div class="pay-notice">
+                    <p class="pay-notice__title">@lang('order.thanks')</p>
+                    <p class="pay-notice__sub-title">@lang('order.soon')</p>
+                </div>
             </div>
         </div>
     </div>

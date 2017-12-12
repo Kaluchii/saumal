@@ -89,8 +89,8 @@
                                     </div>
                                     <div class="form-group clearfix group--payment"> <label class="control-label">@lang('order.payment')</label>
                                         <div class="controls">
-                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="cash" required checked />@lang('order.cash')</label>
-                                            <label class="control-label"><input type="radio" class="form-control" name="payment" value="kkb" required /> KKB Epay</label>
+                                            <label class="form-checkbox"><input type="radio" class="form-checkbox__input" name="payment" value="cash" required checked /><span class="form-checkbox__elipse"></span>@lang('order.cash')</label>
+                                            <label class="form-checkbox"><input type="radio" class="form-checkbox__input" name="payment" value="kkb" required /><span class="form-checkbox__elipse"></span>KKB Epay</label>
                                         </div>
                                     </div>
                                 </div>

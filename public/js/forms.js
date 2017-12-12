@@ -260,18 +260,18 @@ function setClientCookie(key, value) {
 			var key = $(this).attr('name');
 			setClientCookie(key, value)
 		});
-		// $btn.attr('disabled', true).addClass('loading');
+		$btn.attr('disabled', true).addClass('loading');
         if ($('input[name="payment"]:checked').val() == 'cash') {
             var response = ajaxDataSend('POST', '/feedback/mail', []);
             response.success(function(data){
                 if(!data.error){
                     document.location.href="/thanks";
                 }
-                // $btn.attr('disabled', false).removeClass('loading');
+                $btn.attr('disabled', false).removeClass('loading');
             });
             response.error(function(data){
                 console.log(data);
-                // $btn.attr('disabled', false).removeClass('loading');
+                $btn.attr('disabled', false).removeClass('loading');
                 alert('Отправка заказа не удалась, попробуйте позже.');
             });
             e.stopPropagation();
