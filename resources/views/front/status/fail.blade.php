@@ -8,8 +8,8 @@
         <div class="page-content">
             <div class="container">
                 <div class="pay-notice">
-                    <p class="pay-notice__title">Оплата не удалась!</p>
-                    <p class="pay-notice__sub-title">Возможно Вы неправильно указали данные карты</p>
+                    <p class="pay-notice__title">@lang('order.fail')</p>
+                    <p class="pay-notice__sub-title">@lang('order.fail_recomendation')</p>
                 </div>
             </div>
         </div>
