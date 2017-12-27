@@ -1,0 +1,48 @@
+{% set title = "Контакты" %} <!-- заголовок страницы -->
+{% set page = "contacts" %} <!-- идентификатор страницы -->
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+
+	<div class="container">
+
+		<div class="page-title text--center">
+			<h1 class="title-1">{{title}}</h1>
+		</div>
+
+		<div class="nav-content text--center">
+			<ul class="list--inline" role="tablist">
+				<li role="presentation" class="active">
+					<a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Места продаж</a>
+				</li>
+				<li role="presentation">
+					<a href="#address" aria-controls="address" role="tab" data-toggle="tab">Адрес производства</a>
+				</li>
+				<li role="presentation">
+					<a href="#distributors" aria-controls="distributors" role="tab" data-toggle="tab">Дистрибьюторы</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="page-content">
+
+		<div class="tab-content">
+	    <div role="tabpanel" class="tab-pane fade in active" id="locations">
+	    	{% include "section-locations/_section-locations.template" %}
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="address">
+	    	{% include "section-address/_section-address.template" %}
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="distributors">
+	    	{% include "section-distributors/_section-distributors.template" %}
+	    </div>
+	  </div>
+
+	</div>
+
+</div><!-- /page -->
+{% endblock %}

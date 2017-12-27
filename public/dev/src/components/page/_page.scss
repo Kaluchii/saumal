@@ -1,0 +1,59 @@
+.page {
+	position: relative;
+	padding-top: 63px;
+	padding-bottom: 40px;
+}
+
+.page-title {
+	margin-bottom: 36px;
+}
+
+.page-content {
+
+	.img {
+		margin-top: -8px;
+		position: relative;
+		text-align: center;
+		img {
+			display: inline-block;
+			border-radius: 3px;
+		}
+	}
+
+	h3 {
+		sup {
+			font-size: 18px;
+			top: -10px;
+		}
+	}
+
+}
+
+.page-promo {
+	position: relative;
+	height: 712px;
+	margin-top: -63px;
+	padding-top: 63px;
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.page-promo-cover {
+	@include stretch;
+	z-index: 0;
+}
+
+.page-promo-text {
+	font-weight: 100;
+	color: black;
+	padding-top: 67px;
+	p {
+		margin-bottom: 18px;
+	}
+}
+
+.page-preview {
+	margin-bottom: 75px;
+}

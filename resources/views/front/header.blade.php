@@ -28,7 +28,7 @@
                                     <li> <a class="js-menu-item js-menu-item--top" href="/mission">@lang('all_page.about_company')</a> </li>
                                     <li> <a class="js-menu-item js-menu-item--top" href="/factory">@lang('all_page.factory')</a> </li>
                                     <li> <a class="js-menu-item js-menu-item--top" href="/process">@lang('all_page.process')</a> </li>
-                                    <li> <a class="js-menu-item js-menu-item--top" href="/news">@lang('all_page.news')</a> </li>
+                                    {{--<li> <a class="js-menu-item js-menu-item--top" href="/news">@lang('all_page.news')</a> </li>--}}
                                 </ul>
                             </li>
                             {{--<li class="hidden-sm"> <a href="#">@lang('all_page.reviews')</a> </li>--}}

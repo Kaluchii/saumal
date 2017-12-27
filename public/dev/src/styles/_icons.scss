@@ -1,0 +1,139 @@
+// сгенерировано при помощи http://icomoon.io/
+// img/svg/selection.json
+
+// @font-face {
+//   font-family: 'icomoon';
+//   src:    url('#{$path-fonts}/icomoon.eot');
+//   src:    url('#{$path-fonts}/icomoon.eot#iefix') format('embedded-opentype'),
+//           url('#{$path-fonts}/icomoon.ttf') format('truetype'),
+//           url('#{$path-fonts}/icomoon.woff') format('woff'),
+//           url('#{$path-fonts}/icomoon.svg#icomoon') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$path-fonts}/icomoon.ttf') format('truetype'),
+  			url('#{$path-fonts}/icomoon.woff') format('woff'),
+  			url('#{$path-fonts}/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.link--zoom::after,
+.fancybox-close,
+.fancybox-nav,
+.social-likes__icon,
+.dropdown-toggle::after,
+.owl-nav,
+.icon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-toggle::after {
+  content: "\e904";
+}
+
+// .icon-arrow-up:before {
+//   content: "\e905";
+// }
+
+.fancybox-prev::before,
+.owl-prev::before {
+  content: "\e900";
+}
+
+.fancybox-next::before,
+.owl-next::before {
+  content: "\e901";
+}
+
+.social-likes__icon_facebook::before,
+.icon-facebook::before {
+  content: "\e902";
+}
+
+.icon-instagram::before {
+  content: "\e903";
+}
+
+.social-likes__icon_twitter::before,
+.icon-twitter::before {
+  content: "\e906";
+}
+
+.social-likes__icon_vkontakte::before,
+.icon-vk::before {
+  content: "\e907";
+}
+
+.icon-rycle {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-image: url(#{$path-img}/icon-rycle.png);
+  @include retina('#{$path-img}/icon-rycle@2x.png');
+}
+
+@each $icon in nervous, circulatory, respiratory, digestive, endocrine, cover {
+  .icon-#{$icon} {
+    background-image: url(#{$path-img}/icon-#{$icon}.png);
+    background-size: cover;
+    @include retina('#{$path-img}/icon-#{$icon}@2x.png');
+    li.active & {
+      background-image: url(#{$path-img}/icon-#{$icon}-white.png);
+      @include retina('#{$path-img}/icon-#{$icon}-white@2x.png');
+    }
+  }
+  .mode--2 {
+    .icon-#{$icon} {
+      background-image: url(#{$path-img}/icon-#{$icon}-white.png);
+      @include retina('#{$path-img}/icon-#{$icon}-white@2x.png');
+    }
+    a:active .icon-#{$icon},
+    li.active .icon-#{$icon} {
+      background-image: url(#{$path-img}/icon-#{$icon}.png);
+      @include retina('#{$path-img}/icon-#{$icon}@2x.png');
+    }
+  }
+}
+
+.icon-back::before {
+  content: "\e908";
+  font-size: 19px;
+}
+
+.icon-minus::before {
+  content: "\e90b";
+}
+
+.icon-plus::before {
+  content: "\e90c";
+}
+
+// .icon-arrow-right-alt:before {
+//   content: "\e909";
+// }
+
+.fancybox-close::before,
+.icon-close:before {
+  content: "\e90a";
+}
+
+.link--zoom::after,
+.icon-zoom::before {
+  content: "\e90d";
+}
+
+.icon-phone::before {
+  content: "\e90e";
+}

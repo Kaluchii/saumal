@@ -1,0 +1,46 @@
+$links-offset: 20px;
+
+.nav-content {
+	font-size: 0;
+	margin-bottom: 90px;
+
+	a {
+		@extend .link--block;
+		font-size: 15px;
+		line-height: 1;
+		padding: 12px 20px 11px;
+		color: black;
+		background: white;
+		transition: box-shadow .2s;
+		border-radius: 19px;
+		box-shadow: 3px 5px 9px 0 rgba(#093064, .04);
+		font-weight: 300;
+		&:hover {
+			box-shadow: 1px 2px 0px 0px rgba(#093064, .06);
+		}
+		&:active {
+			box-shadow: inset 0 3px 5px rgba(black, .125), 1px 2px 0px 0px rgba(#093064, .06);
+		}
+	}
+
+	ul {
+		margin: 0 (-$links-offset/2);
+	}
+
+	li {
+		padding-left: $links-offset/2;
+		padding-right: $links-offset/2;
+	}
+
+	li.active a {
+		box-shadow: 3px 4px 18px 0px rgba(#2991ed, .52);
+		background: #177dd7;
+		color: white;
+	}
+
+
+	.page--news & {
+		margin-bottom: 70px;
+	}
+
+}

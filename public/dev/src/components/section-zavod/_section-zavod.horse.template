@@ -1,0 +1,30 @@
+<!-- section-zavod -->
+<section class="section section--zavod section--zavod-horse">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+
+				<div class="section-title">
+					<h3 class="title-3">
+						Бережное отношение<br /> 
+						к лошадям
+					</h3>
+				</div>
+
+				<div class="section-content">
+					<p>Завод SAUMAL&reg; в&nbsp;Карагандинской области&nbsp;&mdash; это сочетание бережного отношенияк животным и&nbsp;самых современных технологий. В&nbsp;отличие от&nbsp;конезаводов, где предполагается стойловое содержание, наши лошади находятся в&nbsp;естественной среде обитания, что является большим преимуществом и&nbsp;сказывается на&nbsp;выращивании лошадей и&nbsp;получении кобыльего молока превосходного качества.</p>
+				</div>
+
+			</div>
+			<div class="col-lg-6 col-md-6">
+
+				<div class="section-tip" data-animate>
+					<p>Лошади на&nbsp;нашем предприятии используются исключительно для молочного производства.</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section><!-- /section-zavod -->

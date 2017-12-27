@@ -1,0 +1,84 @@
+<!-- section-news -->
+<section class="section section--news">
+	<div class="container">
+
+		<div class="section-title text--center">
+			<h3 class="title-1">Новости</h3>
+		</div>
+
+		<div class="section-content">
+
+			<!-- items-list -->
+			<div class="items-list">
+				<div class="row block-in carousel">
+					{% for item in [
+						{
+							title: "Сходство кобыльего и&nbsp;грудного молока",
+							img: "img/pic-news-01.png",
+							img@2x: "img/pic-news-01@2x.png",
+							img_mobile: "img/pic-news-01-mobile.png",
+							img_mobile@2x: "img/pic-news-01-mobile@2x.png"
+						}, {
+							title: "SAUMAL&reg;&nbsp;&mdash; национальный бренд Казахстана",
+							img: "img/pic-news-02.png",
+							img@2x: "img/pic-news-02@2x.png",
+							img_mobile: "img/pic-news-02-mobile.png",
+							img_mobile@2x: "img/pic-news-02-mobile@2x.png"
+						}, {
+							title: "Польза саумала для детей",
+							img: "img/pic-news-03.png",
+							img_mobile: "img/pic-news-03-mobile.png"
+						}, {
+							title: "Как правильно пить кобылье молоко?",
+							img: "img/pic-news-04.png",
+							img@2x: "img/pic-news-04@2x.png",
+							img_mobile: "img/pic-news-04-mobile.png",
+							img_mobile@2x: "img/pic-news-04-mobile@2x.png"
+						}, {
+							title: "Сходство кобыльего и&nbsp;грудного молока",
+							img: "img/pic-news-01.png",
+							img@2x: "img/pic-news-01@2x.png",
+							img_mobile: "img/pic-news-01-mobile.png",
+							img_mobile@2x: "img/pic-news-01-mobile@2x.png"
+						}, {
+							title: "SAUMAL&reg;&nbsp;&mdash; национальный бренд Казахстана",
+							img: "img/pic-news-02.png",
+							img@2x: "img/pic-news-02@2x.png",
+							img_mobile: "img/pic-news-02-mobile.png",
+							img_mobile@2x: "img/pic-news-02-mobile@2x.png"
+						}, {
+							title: "Польза саумала для детей",
+							img: "img/pic-news-03.png",
+							img_mobile: "img/pic-news-03-mobile.png"
+						}, {
+							title: "Как правильно пить кобылье молоко?",
+							img: "img/pic-news-04.png",
+							img@2x: "img/pic-news-04@2x.png",
+							img_mobile: "img/pic-news-04-mobile.png",
+							img_mobile@2x: "img/pic-news-04-mobile@2x.png"
+						}
+					] -%}
+					<div class="col-lg-3 col-md-3">
+						<!-- item -->
+						<div class="item">
+							<a href="about.news.html" class="link--block">
+								<div class="item-img">
+									<div class="ratio hidden-xs" data-img-loader>
+										<img data-src="{{item.img}}"{% if item.img@2x %} data-src-retina="{{item.img@2x}}"{% endif %} class="img--fluid owl-lazy" />
+									</div>
+									<div class="ratio visible-xs" data-img-loader>
+										<img src="{{item.img_mobile}}"{% if item.img_mobile@2x %} srcset="{{item.img_mobile}} 1x, {{item.img_mobile@2x}} 2x" {% endif %} class="img--fluid" />
+									</div>
+								</div>
+								<div class="item-title text--black">{{item.title|safe}}</div>
+							</a>
+						</div><!-- /item -->
+					</div>
+					{%- endfor %}
+				</div>
+			</div><!-- /items-list -->
+
+		</div>
+
+	</div>
+</section><!-- /section-news -->

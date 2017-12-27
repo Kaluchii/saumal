@@ -1,0 +1,104 @@
+// @font-face {
+//   font-family: 'regular';
+//   src:  url('#{$path-fonts}/NAME.eot');
+//   src: 	url('#{$path-fonts}/NAME.eot?#iefix') format('embedded-opentype'),
+//   			url('#{$path-fonts}/NAME.woff2') format('woff2'),
+//   			url('#{$path-fonts}/NAME.woff') format('woff'),
+//   			url('#{$path-fonts}/NAME.ttf') format('truetype'),
+//   			url('#{$path-fonts}/NAME.svg#regular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@font-face {//thin
+  font-family: 'Museo Sans';
+  src: 	url('#{$path-fonts}/MuseoSansThin.woff2') format('woff2'),
+  			url('#{$path-fonts}/MuseoSansThin.woff') format('woff'),
+  			url('#{$path-fonts}/MuseoSansThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {//light
+  font-family: 'Museo Sans';
+  src: 	url('#{$path-fonts}/MuseoSansLight.woff2') format('woff2'),
+  			url('#{$path-fonts}/MuseoSansLight.woff') format('woff'),
+  			url('#{$path-fonts}/MuseoSansLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {//medium
+  font-family: 'Museo Sans';
+  src: 	url('#{$path-fonts}/MuseoSansMedium.woff2') format('woff2'),
+  			url('#{$path-fonts}/MuseoSansMedium.woff') format('woff'),
+  			url('#{$path-fonts}/MuseoSansMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {//bold
+  font-family: 'Museo Sans';
+  src: 	url('#{$path-fonts}/MuseoSansBold.woff2') format('woff2'),
+  			url('#{$path-fonts}/MuseoSansBold.woff') format('woff'),
+  			url('#{$path-fonts}/MuseoSansBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// @font-face {//black
+//   font-family: 'Museo Sans';
+//   src: 	url('#{$path-fonts}/MuseoSansBlack.woff2') format('woff2'),
+//   			url('#{$path-fonts}/MuseoSansBlack.woff') format('woff'),
+//   			url('#{$path-fonts}/MuseoSansBlack.ttf') format('truetype');
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+// **********************************************************************
+// a — arial regular
+// A — arial italic
+// b — arial bold
+// B — arial bold italic
+// c — arial black
+// C — arial black italic
+// d — arial narrow
+// D — arial narrow italic
+// e — arial narrow bold
+// E — arial narrow bold italic
+// f — georgia regular
+// F — georgia italic
+// g — georgia bold
+// G — georgia bold italic
+// h — tahoma regular
+// i — tahoma bold
+// j — itc officina serif book
+// J — itc officina serif book italic
+// k — itc officina serif bold
+// K — itc officina serif bold italic
+// l — itc officina sans book
+// L — itc officina sans book italic
+// m — itc officina sans bold
+// M — itc officina sans bold italic
+// n — verdana regular
+// N — verdana italic
+// o — verdana bold
+// O — verdana bold italic
+// p — times regular
+// P — times italic
+// q — times bold
+// Q — times bold italic
+
+@font-face {
+  font-family: "Tenge";
+  src:  url("#{$path-fonts}/tenge.woff2") format("woff2"),
+        url("#{$path-fonts}/tenge.woff") format("woff"),
+        url('#{$path-fonts}/tenge.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tenge {
+  font-family: "Tenge";
+  text-transform: none !important;
+}

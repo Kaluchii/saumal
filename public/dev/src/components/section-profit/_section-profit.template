@@ -1,0 +1,87 @@
+<!-- section-profit -->
+<section class="section section--profit">
+	<div class="container">
+
+		<div class="section-title text--center">
+			<h3 class="title-1 hidden-xs">Воздействие на организм</h3>
+			<h3 class="title-1 visible-xs">Воздействие<br /> SAUMAL<sup>&reg;</sup><br /> <span>на организм</span></h3>
+		</div>
+
+		<div class="section-content clearfix">
+
+			<div class="column column--left">
+
+				<div class="hidden-xs">
+					{% include "nav-category/_nav-category.tabs.template" %}
+				</div>
+
+				<div class="visible-xs">
+					{% include "nav-category/_nav-category.links.template" %}
+				</div>
+
+			</div>
+
+			<div class="column column--right clearfix hidden-xs">
+
+				<div class="column column--schema">
+					<img src="img/pic-nervous.png" class="img--fluid active" data-img="tab-nervous" />
+					<img src="img/pic-circulatory.png" class="img--fluid" data-img="tab-circulatory" />
+					<img src="img/pic-respiratory.png" class="img--fluid" data-img="tab-respiratory" />
+					<img src="img/pic-digestive.png" class="img--fluid" data-img="tab-digestive" />
+					<img src="img/pic-endocrine.png" class="img--fluid" data-img="tab-endocrine" />
+					<img src="img/pic-cover.png" class="img--fluid" data-img="tab-cover" />
+				</div>
+
+				<div class="column column--tab">
+					<div class="tab-content">
+	    			<div role="tabpanel" class="tab-pane fade in active" id="tab-nervous">
+	    				<h3>Нервная<br /> система</h3>
+	    				<p>
+	    					Кобылье молоко положительно влияет на&nbsp;нервную систему человека.<br /> 
+	    					После начала приема продукта снижается раздражительность и&nbsp;хроническая усталость. Также повышается уровень серотонина&nbsp;&mdash; так называемого &laquo;гормона счастья&raquo;, помогающего избежать депрессии.
+	    				</p>
+	    				<p>Крайне полезные аминокислоты кобыльего молока оказывают положительное влияние на&nbsp;настроение, аппетит и&nbsp;половое влечение.</p>
+	    				<a href="product.vliyaniye-na-organizm.html#nervous" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    			<div role="tabpanel" class="tab-pane fade" id="tab-circulatory">
+	    				<h3>Кровеносная<br /> система</h3>
+	    				<p>Кобылье молоко нормализует число лейкоцитов, являющихся надежными защитниками организма человека.</p>
+	    				<p>Постоянное употребление кобыльего молока, в&nbsp;целом, снижает уровень холестерина в&nbsp;крови.</p>
+	    				<a href="product.vliyaniye-na-organizm.html#circulatory" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    			<div role="tabpanel" class="tab-pane fade" id="tab-respiratory">
+	    				<h3>Дыхательная<br /> система</h3>
+	    				<p>Рекомендуется употреблять кобылье молоко при заболеваниях органов дыхания, в&nbsp;частности при бронхите, пневмонии, плеврите.</p>
+	    				<p>
+	    					Кобылье молоко также выступает в&nbsp;качестве эффективного дополнительного средства при лечении коклюша и&nbsp;туберкулеза.<br /> 
+	    					Оно укрепляет иммунитет, тем самым предупреждает простудные заболевания.
+	    				</p>
+	    				<a href="product.vliyaniye-na-organizm.html#respiratory" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    			<div role="tabpanel" class="tab-pane fade" id="tab-digestive">
+	    				<h3>Пищеварительная<br /> система</h3>
+	    				<p>Употребление кобыльего молоко позволяет укрепить кишечную микрофлору и&nbsp;повысить защитную функцию печени. Оно обладает бактерицидными свойствами в&nbsp;отношении патогенной микрофлоры, т.к. уменьшает процессы брожения и&nbsp;гниения в&nbsp;кишечнике.</p>
+	    				<p>Кобылье молоко также способствует улучшению пищеварения, ведь оно нормализует выделительную деятельность желудка и&nbsp;поджелудочной железы, регулирует образование желчи.</p>
+	    				<a href="product.vliyaniye-na-organizm.html#digestive" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    			<div role="tabpanel" class="tab-pane fade" id="tab-endocrine">
+	    				<h3>Эндокринная<br /> система</h3>
+	    				<p>К&nbsp;эндокринной системе человека относятся органы внутренней секреции. Они вырабатывают около сотни видов гормонов, необходимых для поддержания организма в&nbsp;здоровом состоянии. Нарушение выработки даже одного гормона может привести к&nbsp;серьезным заболеваниям.</p>
+	    				<p>Постоянное употребление кобыльего молока укрепляет иммунитет, вследствие чего нормализуется работа надпочечников. Это приводит к&nbsp;стабилизации гормонального фона.</p>
+	    				<a href="product.vliyaniye-na-organizm.html#endocrine" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    			<div role="tabpanel" class="tab-pane fade" id="tab-cover">
+	    				<h3>Благотворное<br /> влияние на кожу</h3>
+	    				<p>Сегодня кобылье молоко применяется и&nbsp;при лечении таких кожных заболеваний, как: псориаз, экзема, нейродермит, дерматит и&nbsp;другие кожные заболевания.</p>
+	    				<p>Уникальный состав кобыльего молока способствует регенерации и&nbsp;увлажнению кожи, помогает надолго сохранить ее&nbsp;молодость и&nbsp;свежесть, замедляет процесс старения клеток организма.</p>
+	    				<a href="product.vliyaniye-na-organizm.html#cover" class="btn btn--blue btn--shadow btn--large btn--more">Узнать больше о пользе</a>
+	    			</div>
+	    		</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</section><!-- /section-profit-->

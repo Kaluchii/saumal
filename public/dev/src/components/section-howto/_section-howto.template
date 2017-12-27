@@ -1,0 +1,53 @@
+<!-- section-howto -->
+<section class="sectio section--howto">
+	<div class="container">
+
+		<div class="section-content">
+
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+
+					<h3 class="title-1">
+						Как приготовить<br /> 
+						SAUMAL<sup>&reg;</sup>?
+					</h3>
+
+					<p>Чтобы восстановить естественный состав кобыльего молока, рекомендуется разбавить SAUMAL<sup>&reg;</sup> с&nbsp;водой в&nbsp;следующих пропорциях</p>
+
+					<!-- items-list -->
+					<div class="items-list">
+						<div class="row block-in">
+							{% for item in [
+								{
+									text: "3 столовые<br /> ложки порошка<br /> <b>20-22 г.</b>",
+									img: "img/pic-how-01.png"
+								}, {
+									text: "1 стакан<br /> тёплой воды (36<sup>0</sup>)<br /> <b>200 мл.</b>",
+									img: "img/pic-how-02.png"
+								}, {
+									text: "Готовый<br /> SAUMAL<sup>&reg;</sup>",
+									img: "img/pic-how-03.png"
+								}
+							] -%}
+							<div class="col-lg-4 col-md-4 col-sm-4">
+								<!-- item -->
+								<div class="item">
+									<div class="item-img">
+										<div class="img--centered">
+											<img src="{{item.img}}" class="img--fluid" />
+										</div>
+									</div>
+									<div class="item-text text--center">{{item.text|safe}}</div>
+								</div><!-- /item -->
+							</div>
+							{%- endfor %}
+						</div>
+					</div><!-- /items-list -->
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section><!-- /section-howto -->

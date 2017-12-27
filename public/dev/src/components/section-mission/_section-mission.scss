@@ -1,0 +1,39 @@
+.section--mission {
+	position: static;
+	padding-bottom: 320px;
+	&::before {
+		content: '';
+		@include stretch;
+		bottom: -1px;
+		z-index: -1;
+		background-image: url(#{$path-img}/section-mission-bg.png);
+		background-size: cover;
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.item {
+		line-height: 21px;
+		margin: 0 auto;
+		position: relative;
+		top: -18px;
+		left: 20px;
+	}
+
+	.item-img {
+		width: 255px;
+		margin: 0 auto 18px;
+	} 
+
+	.img--centered {
+		height: 255px;
+		line-height: 253px;
+		border-radius: 50%;
+	}
+
+	.item-title {
+		font-weight: 300;
+		color: black;
+	}
+
+}

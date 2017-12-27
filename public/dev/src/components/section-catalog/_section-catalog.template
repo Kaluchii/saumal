@@ -1,0 +1,55 @@
+<!-- section-catalog -->
+<section class="section section--catalog">
+	<div class="section-content">
+
+		<!-- items-list -->
+		<div class="items-list">
+			<div class="block-in" data-grid>
+				{% for item in [
+					{
+						id: "1",
+						title: "Сухое кобылье молоко Саумал 500 г",
+						price: "30 000",
+						img: "img/pic-good-01.png",
+						img@2x: "img/pic-good-01@2x.png",
+						size: "small"
+					}, {
+						id: "2",
+						title: "Сухое кобылье молоко Саумал 250 г",
+						price: "17 000",
+						img: "img/pic-good-02.png",
+						img@2x: "img/pic-good-02@2x.png",
+						size: "small"
+					}, {
+						id: "3",
+						title: "Сухое кобылье молоко Саумал 200 г",
+						price: "13 000",
+						size: "small"
+					}
+				] -%}
+				<!-- item -->
+				<div class="item item--{{item.size}}">
+					<div class="item-body">
+						<div class="item-title">{{item.title}}</div>
+						<div class="item-price">
+							<strong>{{item.price}}</strong> <span class="tenge">n</span>
+						</div>
+						<div class="item-img">
+							{% if item.img %}
+							<div class="img--centered" data-img-loader>
+								<img src="{{item.img}}"{% if item.img@2x %} srcset="{{item.img}} 1x, {{item.img@2x}} 2x"{% endif %} class="img--fluid" />
+							</div>
+							{% endif %}
+						</div>
+						<div class="item-controls text--center">
+							<button type="button" class="btn btn--blue btn--shadow btn--large btn--add" data-id="{{item.id}}"><span>Добавить в корзину</span></button>
+							<a href="rycle.html" class="btn btn--blue btn--shadow btn--large btn--rycle">Уже в корзине</a>
+						</div>
+					</div>
+				</div><!-- /item -->
+				{%- endfor %}
+			</div>
+		</div><!-- /items-list -->
+
+	</div>
+</section><!-- /section-catalog -->

@@ -1,0 +1,44 @@
+<!-- nav-category -->
+<div class="nav-category mode--2">
+
+	<ul class="list--unstyled" role="tablist">
+
+		<li role="presentation" class="active">
+			<a href="#tab-nervous" aria-controls="tab-nervous" role="tab" data-toggle="tab">
+				<i class="icon icon-nervous"></i> <span>Нервная система</span>
+			</a>
+		</li>
+
+		<li role="presentation">
+			<a href="#tab-circulatory" aria-controls="tab-circulatory" role="tab" data-toggle="tab">
+				<i class="icon icon-circulatory"></i> <span>Кровеносная система</span>
+			</a>
+		</li>
+
+		<li role="presentation">
+			<a href="#tab-respiratory" aria-controls="tab-respiratory" role="tab" data-toggle="tab">
+				<i class="icon icon-respiratory"></i> <span>Дыхательная система</span>
+			</a>
+		</li>
+
+		<li role="presentation">
+			<a href="#tab-digestive" aria-controls="tab-digestive" role="tab" data-toggle="tab">
+				<i class="icon icon-digestive"></i> <span>Пищеварительная система</span>
+			</a>
+		</li>
+
+		<li role="presentation">
+			<a href="#tab-endocrine" aria-controls="tab-endocrine" role="tab" data-toggle="tab">
+				<i class="icon icon-endocrine"></i> <span>Эндокринная система</span>
+			</a>
+		</li>
+
+		<li role="presentation">
+			<a href="#tab-cover" aria-controls="tab-cover" role="tab" data-toggle="tab">
+				<i class="icon icon-cover"></i> <span>Покровная система</span>
+			</a>
+		</li>
+
+	</ul>
+
+</div><!-- /nav-category -->

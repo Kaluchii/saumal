@@ -1,0 +1,11 @@
+<!-- nav-lang -->
+<div class="nav-lang">
+	<div class="dropdown">
+  	<button class="btn btn--unstyled dropdown-toggle" type="button" id="language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Рус</button>
+  	<ul class="dropdown-menu" aria-labelledby="language">
+    	<li><a href="#">Қаз</a></li>
+    	<li class="active"><a href="#">Рус</a></li>
+    	<li><a href="#">Eng</a></li>
+  	</ul>
+	</div>
+</div><!-- /nav-lang -->

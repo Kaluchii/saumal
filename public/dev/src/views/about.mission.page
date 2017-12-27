@@ -1,0 +1,29 @@
+{% set title = "Миссия компании" %} <!-- заголовок страницы -->
+{% set page = "about" %} <!-- идентификатор страницы -->
+{% set mode = "mission" %}
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+
+	<div class="container">
+
+		<div class="page-title text--center">
+			<h2 class="title-1">О компании</h2>
+		</div>
+
+		{% include "nav-content/_nav-content.about.template" %}
+	
+	</div>
+
+	<div class="page-content">
+		<div class="container">
+
+			{% include "section-mission/_section-mission.template" %}
+
+		</div>
+	</div>
+
+</div><!-- /page -->
+{% endblock %}

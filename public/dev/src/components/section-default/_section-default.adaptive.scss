@@ -1,0 +1,208 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--default {
+
+		.section-img {
+			left: 0;
+			top: -10px;
+		}
+
+		.section-content {
+			padding: 40px 20px 20px;
+		}
+
+		.section-cover {
+			margin-left: -20px;
+			margin-right: -20px;
+			br {
+				display: none;
+			}
+			big {
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+
+		.block-cell {
+			padding-left: 40%;
+		}
+
+		.section-cover + h3 {
+			margin-top: 40px;
+		}
+
+		img {
+			&.pull-left,
+			&.pull-right {
+				max-width: 200px;
+			}
+			&.pull-left {
+				margin-left: -20px;
+				margin-right: 20px;
+			}
+			&.pull-right {
+				margin-right: -20px;
+				margin-left: 20px;
+			}
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--default {
+		color: black;
+
+		.section-img {
+			left: auto;
+			top: auto;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 20px;
+			float: none;
+			text-align: center;
+			img {
+				display: inline-block;
+			}
+		}
+
+		.section-content {
+			display: none;
+			border-radius: 0;
+			padding: 40px $layout-offset-phone 20px;
+			margin: 0 (-$layout-offset-phone) 40px;
+		}
+
+		&.toggled .section-content {
+			display: block;
+		}
+
+		.section-cover {
+			margin: 0 (-$layout-offset-phone) 20px;
+			big {
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+
+		.mode--text {
+			min-height: 200px;
+			color: black;
+			.block-table {
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.block-cell {
+				position: absolute;
+				display: block;
+				top: auto;
+				bottom: 20px;
+				left: 15px;
+				right: 15px;
+				padding-left: 0;
+				width: auto;
+			}
+			img {
+				position: relative;
+				left: -60px;
+				max-width: initial;
+				object-fit: contain;
+				opacity: .5;
+			}
+		}
+
+		br + br {
+			display: none;
+		}
+
+		.block-cell {
+			top: auto;
+			padding-left: 100px;
+		}
+
+		.section-cover + h3 {
+			margin-top: 40px;
+		}
+
+		.title-1,
+		h1 + .section-cover {
+			margin-bottom: 20px;
+		}
+
+		// p + .section-cover {
+		// 	margin-bottom: 52px;
+		// }
+
+		.title-1,
+		h1 {
+			font-size: 20px;
+		  line-height: 25px;
+		  margin-bottom: 25px;
+		}
+
+		h2 {
+			margin-bottom: 20px;
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+		// p + h4 {
+		// 	margin-top: 32px;
+		// }
+
+		img {
+			&.pull-left,
+			&.pull-right {
+				float: none;
+				margin: 10px auto 20px;
+			}
+			&.pull-left,
+			&.pull-right {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+	}
+
+}

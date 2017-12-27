@@ -1,0 +1,75 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--zavod-horse {
+		height: 700px;
+		padding-top: 60px;
+
+		.section-tip {
+			left: auto;
+			top: 20px;
+			margin: 0 auto;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--zavod-horse {
+		height: auto;
+		padding-bottom: 140px;
+		padding-top: 40px;
+
+		.section-tip {
+			width: 100%;
+			padding: 15px 70px 15px 15px;
+			background-position: 120% 0;
+			background-size: auto 100%;
+			top: auto;
+			left: auto;
+			font-size: 14px;
+			&::after {
+				bottom: -14px;
+			}
+		}
+
+	}
+
+}

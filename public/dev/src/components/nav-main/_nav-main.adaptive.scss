@@ -1,0 +1,183 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-header-1) {
+
+	$links-offset: 30px;
+
+	.nav-main {
+		a {
+			padding-left: $links-offset/2;
+			padding-right: $links-offset/2;
+		}	
+		> ul {
+			margin-left: -$links-offset/2;
+			margin-right: -$links-offset/2;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	$links-offset: 20px;
+
+	.nav-main {
+		a {
+			padding-left: $links-offset/2;
+			padding-right: $links-offset/2;
+		}	
+		> ul {
+			margin-left: -$links-offset/2;
+			margin-right: -$links-offset/2;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.nav-main {
+
+		h6 {
+			font-size: 15px;
+			line-height: 1;
+			text-transform: uppercase;
+			color: white;
+			letter-spacing: 0.1em;
+			font-weight: 100;
+			margin: 0 0 26px;
+		}
+
+		> ul {
+			margin: 0 0 0 -130px;
+			padding: 0;
+			> li {
+				display: inline-block;
+				vertical-align: top;
+				margin-left: 130px;
+			}
+		}
+
+		.li-dropdown {
+			> a {
+				&::after {
+					display: none;
+				}
+			}
+			ul {
+				position: relative;
+				z-index: auto;
+				top: auto;
+				left: auto;
+				padding: 0;
+				background: none;
+				border-radius: 0;
+				display: block;
+				min-width: auto;
+			}
+			li {
+				margin-bottom: 21px;
+				a {
+					display: inline;
+					color: rgba(white, .5);
+					padding: 0;
+					white-space: normal;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.nav-main {
+		margin-bottom: 29px;
+
+		a {
+			font-size: 20px;
+			padding: 0;
+		}	
+
+		> ul {
+			margin-left: 0;
+			margin-right: 0;
+			display: flex;
+			flex-direction: column;
+			> li {
+				display: block;
+				padding-right: 80px;
+				&:nth-child(1) {
+					order: 2;
+				}
+				&:nth-child(2) {
+					order: 1;
+				}
+				&:nth-child(3) {
+					order: 3;
+				}
+				&:nth-child(4) {
+					order: 4;
+				}
+				> a {
+					color: rgba(white, .5);
+					padding: 14px 0 14px 28px;
+				}
+				&.active > a,
+				> a:hover {
+					color: white;
+				}
+			}
+		}
+
+		.li-dropdown {
+			position: relative;
+			> a {
+				// pointer-events: auto;
+				&::after {
+					display: none;
+				}
+			}
+			&:hover {
+				ul {
+					display: none;
+				}
+			}
+		}
+	}
+
+}

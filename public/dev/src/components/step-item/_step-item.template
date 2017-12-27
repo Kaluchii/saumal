@@ -1,0 +1,76 @@
+<!-- step-item -->
+<div class="step-item">
+	<div class="row">
+
+		<div class="col-lg-6 col-md-6 col-sm-5">
+
+			<h3 class="visible-xs"><span>{{item.index}}</span> {{item.title}}</h3>
+			
+			<div class="item-viewport">
+
+				<div class="item-slider">
+					<div class="carousel owl-carousel">
+
+						{% if item.slide1 %}
+						<div class="slide">
+							<div class="slide-img">
+								<div class="img--centered">
+									<img data-src="{{item.slide1_img}}"{% if item.slide1_img@2x %} srcset="{{item.slide1_img}} 1x, {{item.slide1_img@2x}} 2x"{% endif %} class="img--fluid owl-lazy" />
+								</div>
+							</div>
+							<div class="hidden" data-source="desc">
+								<div class="slide-in text--center">
+									<div class="slide-index">{{item.slide1_index}}</div>
+									<div class="slide-title text--uppercase">{{item.slide1_title}}</div>
+									<div class="slide-text">{{item.slide1_text|safe}}</div>
+								</div>
+							</div>
+						</div>
+						{% endif %}
+
+						{% if item.slide2 %}
+						<div class="slide">
+							<div class="slide-img">
+								<div class="img--centered">
+									<img data-src="{{item.slide2_img}}"{% if item.slide2_img@2x %} srcset="{{item.slide2_img}} 1x, {{item.slide2_img@2x}} 2x"{% endif %} class="img--fluid owl-lazy" />
+								</div>
+							</div>
+							<div class="hidden" data-source="desc">
+								<div class="slide-in text--center">
+									<div class="slide-index">{{item.slide2_index}}</div>
+									<div class="slide-title text--uppercase">{{item.slide2_title}}</div>
+									<div class="slide-text">{{item.slide2_text|safe}}</div>
+								</div>
+							</div>
+						</div>
+						{% endif %}
+
+					</div>
+				</div>
+
+				<div class="item-desc">
+					<div class="carousel owl-carousel"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-7">
+
+			<div class="item-in">
+			
+				<h3 class="hidden-xs"><span>{{item.index}}</span> {{item.title}}</h3>
+				
+				<div class="item-text">{{item.text|safe}}</div>
+				
+				<div class="item-meta">
+					<big>{{item.meta|safe}}</big>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+</div><!-- /step-item -->

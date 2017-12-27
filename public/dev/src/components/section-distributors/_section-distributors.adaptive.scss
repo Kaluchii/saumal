@@ -1,0 +1,71 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--distributors {
+		.buttons {
+			margin-bottom: 40px;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--distributors {
+		margin: 0 -15px -40px;
+
+		.section-content {
+			border-radius: 0;
+		}
+
+		.buttons {
+			margin: 0 0 20px;
+		}
+
+		.section-in {
+			padding: 20px 15px;
+		}
+
+		.section-map {
+			height: 320px;
+			border-radius: 0;
+		}
+
+	}
+
+}

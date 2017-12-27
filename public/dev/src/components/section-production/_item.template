@@ -1,0 +1,18 @@
+<!-- item -->
+<div class="item{% if item.accent %} item--accent{% else %} hidden-xs{% endif %}">
+	<div class="item-body">
+		
+		{% if item.title %}
+		<div class="item-title text--uppercase text--blue">{{item.title}}</div>
+		{% endif %}
+		
+		<div class="item-text">{{item.text|safe}}</div>
+		
+		{% if item.img %}
+		<div class="item-img">
+			<img src="{{item.img}}" class="img--fluid" />
+		</div>
+		{% endif %}
+
+	</div>
+</div><!-- /item -->

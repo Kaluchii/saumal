@@ -1,0 +1,166 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-point-1) {
+
+	.section--promo {
+
+		.slide-cover {
+			img {
+				height: 100%;
+			}
+		}
+
+		.owl-nav {
+			width: 100%;
+		}
+
+		.owl-prev {
+			left: 20px;
+		}
+
+		.owl-next {
+			right: 20px;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	.section--promo {
+		.slide-in {
+			br {
+				display: none;
+			}
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--promo {
+		margin-top: -63px;
+
+		.carousel,
+		.slide,
+		.block-table {
+			height: 596px;
+		}
+
+		.slide-cover {
+			img {
+				object-fit: cover;
+			}
+		}
+
+		p br {
+			display: none;
+		}
+
+		.slide-in {
+			padding-left: 0;
+		}
+
+		.owl-nav {
+			left: 0;
+			right: 0;
+			width: auto;
+			transform: translate(0, -50%);
+		}
+
+		.owl-prev {
+			left: 20px;
+		}
+
+		.owl-next {
+			right: 20px;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--promo {
+		margin-top: -40px;
+
+		.carousel,
+		.slide,
+		.block-table {
+			height: 660px;
+		}
+
+		.block-cell {
+			top: auto;
+			@include stretch-x;
+			bottom: 52px;
+			display: block;
+			padding: 0 $layout-offset-phone;
+		}
+
+		.title-1 {
+			margin-bottom: 19px;
+			font-size: 45px;
+			line-height: 50px;
+		}
+
+		.slide-in {
+			padding-left: 0;
+		}
+
+		p br {
+			display: none;
+		}
+
+		.btn--large {
+			margin-top: -5px;
+		}
+
+		.owl-nav {
+			display: none;
+		}
+
+		.slide-cover {
+			background: $blue;
+		}
+
+	}
+
+}

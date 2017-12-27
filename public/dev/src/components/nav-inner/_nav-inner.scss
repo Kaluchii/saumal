@@ -1,0 +1,53 @@
+$max: 720px;
+$column-1: fluid(275px, $max);
+$column-2: fluid(225px, $max);
+$column-3: 100% - $column-1 - $column-2;
+
+.nav-inner {
+
+	a {
+		@extend .link--unstyled;
+	}
+
+	h6 {
+		text-transform: uppercase;
+		font-weight: 300;
+		margin-bottom: 16px;
+		color: white;
+		font-size: $font-size-base;
+		letter-spacing: .1em;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin-bottom: 11px;
+	}
+
+	li.active a {
+		pointer-events: none;
+		cursor: default;
+		background-image: none;
+		color: white;
+	}
+
+	.column {
+		width: (100%/3);
+		&:nth-child(1) {
+			width: $column-1;
+		}
+		&:nth-child(2) {
+			width: $column-2;
+		}
+		&:nth-child(3) {
+			width: $column-3;
+		}
+	}
+
+	.footer & {
+		padding-top: 4px;
+	}
+	
+}

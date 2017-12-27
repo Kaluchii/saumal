@@ -1,0 +1,26 @@
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+
+body {
+	min-width: 320PX;
+}
+
+.wrapper-in { // wrapper
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.section {
+	position: relative;
+}
+
+.section--white {
+	.section-content {
+		background: white;
+		border-radius: 5px;
+	}
+}

@@ -1,0 +1,35 @@
+$links-offset: 2px;
+
+.nav-subcontent {
+	font-size: 0;
+	border-bottom: 1px solid rgba(#0a365d, .11);
+
+	a {
+		@extend .link--block;
+		color: black;
+		border: 1px dashed transparent;
+		border-radius: 3px;
+		padding: 11px 16px 10px;
+		font-size: $font-size-base;
+		line-height: 1;
+		transition: background .2s, border-color .2s;
+		font-weight: normal;
+	}
+
+	ul {
+		margin: 0 (-$links-offset/2) 0 (-$links-offset/2 - 15px);
+	}
+
+	li {
+		margin-bottom: 22px;
+		padding-left: $links-offset/2;
+		padding-right: $links-offset/2;
+	}
+
+	li.active a {
+		border-color: $blue;
+		background: rgba($blue, .06);
+		color: $blue;
+	}
+
+}

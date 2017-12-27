@@ -1,0 +1,48 @@
+.section--zavod-location {
+	padding-top: 123px;
+	padding-bottom: 60px;
+
+	.section-map {
+		position: relative;
+		height: 380px;
+		background-color: white;
+		overflow: hidden;
+		border-radius: 5px;
+		top: -10px;
+		filter: contrast(1) sepia(0%) hue-rotate(185deg) brightness(1) saturate(1.5);
+	}
+
+	.map {
+		@include stretch;
+		background-color: white;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 70px;
+			height: 70px;
+			transform: translate(-50%, -50%);
+			background-size: 100% 100%;
+			background-image: inline('#{$path-inline}/spinner-blue.svg');
+		}
+	}
+
+	.map--loaded::after {
+		display: none;
+	}
+
+	.section-title,
+	.section-content {
+		padding-left: 80px;
+		position: relative;
+	}
+
+	// .section-content {
+	// }
+
+	p {
+		margin-bottom: 18px;
+	}
+
+}

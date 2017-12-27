@@ -1,0 +1,55 @@
+<!-- nav-inner -->
+<div class="nav-inner clearfix">
+
+	<div class="column">
+		<h6>Продукт</h6>
+		<ul class="list--unstyled">
+			<li{% if mode == 'vliyaniye-na-organizm' %} class="active"{% endif %}>
+				<a href="product.vliyaniye-na-organizm.html">Воздействие на организм</a>
+			</li>
+			<li{% if mode == 'sostav' %} class="active"{% endif %}>
+				<a href="product.sostav.html">Состав</a>
+			</li>
+			<li{% if mode == 'komu-polezen-saumal' %} class="active"{% endif %}>
+				<a href="product.komu-polezen-saumal.html">Кому полезен</a>
+			</li>
+			<li>
+				<a href="#">Инструкция</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="column">
+		<h6>Компания</h6>
+		<ul class="list--unstyled">
+			<li{% if mode == 'mission' %} class="active"{% endif %}>
+				<a href="about.mission.html">О компании</a>
+			</li>
+			<li{% if mode == 'zavod' %} class="active"{% endif %}>
+				<a href="about.zavod.html">Завод</a>
+			</li>
+			<li{% if mode == 'process' %} class="active"{% endif %}>
+				<a href="about.process.html">Производство</a>
+			</li>
+			<li{% if mode == 'news' %} class="active"{% endif %}>
+				<a href="about.news.html">Новости</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="column">
+		<h6>Контакты</h6>
+		<ul class="list--unstyled">
+			<li>
+				<a href="contacts.html">Адрес офисов</a>
+			</li>
+			<li>
+				<a href="contacts.html">Адреса продаж</a>
+			</li>
+			<li>
+				<a href="#">Отзывы</a>
+			</li>
+		</ul>
+	</div>
+
+</div><!-- /nav-inner -->

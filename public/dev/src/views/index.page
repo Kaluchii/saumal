@@ -1,0 +1,22 @@
+{% set title = "Главная" %} <!-- заголовок страницы -->
+{% set page = "mainpage" %} <!-- идентификатор страницы -->
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+	<div class="page-content">
+
+		{% include "section-promo/_section-promo.template" %}
+
+		{% include "section-target/_section-target.template" %}
+
+		{% include "section-profit/_section-profit.template" %}
+
+		{% include "section-production/_section-production.template" %}
+
+		{% include "section-news/_section-news.template" %}
+
+	</div>
+</div><!-- /page -->
+{% endblock %}

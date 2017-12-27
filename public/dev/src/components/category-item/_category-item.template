@@ -1,0 +1,16 @@
+<!-- category-item -->
+<div class="category-item" id="{{item.type}}">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-5">
+			<div class="item-img">
+				<div class="img--centered" data-img-loader>
+					<img src="{{item.img}}" class="img--fluid" />
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-7">
+			<h3>{{item.title|safe}}</h3>
+			<div class="item-text">{{item.text|safe}}</div>
+		</div>
+	</div>
+</div><!-- /category-item -->

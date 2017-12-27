@@ -1,0 +1,120 @@
+.elements-item {
+	background-color: #afcfd8;
+	background-image: url(#{$path-img}/elements-bg.png);
+	background-repeat: no-repeat;
+	@include retina('#{$path-img}/elements-bg@2x.png');
+	background-position: 50% 100%;
+	background-size: 100% 100%;
+	border-radius: 5px;
+	padding: 40px 20px 40px 40px;
+	color: rgba(white, .6);
+	text-align: left;
+	max-width: 500px;
+	display: inline-block;
+	line-height: 21px;
+	min-height: 1014px;
+	margin-top: -8px;
+	margin-bottom: 85px;
+
+	h3 {
+		line-height: 30px;
+		margin-bottom: 29px;
+		color: white;
+	}
+
+	.block-in {
+		margin-bottom: 27px;
+	}
+
+	label {
+		display: block;
+		font-weight: 300;
+		margin-bottom: 0;
+		color: white;
+	}
+
+	ul {
+		font-size: 0;
+		padding: 0;
+	}
+
+	li {
+		> * {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: $font-size-base;
+			line-height: 1;
+		}
+	}
+
+	.el {
+		border-radius: 50%;
+		font-size: 18px;
+		text-align: center;
+		color: white;
+		background: #4f79a8;
+		position: relative;
+	}
+
+	.list--vitamins {
+		$offset: 15px;
+		.el {
+			width: 44px;
+			height: 44px;
+			line-height: 46px;
+			}
+		sub {
+			font-size: 12px;
+			top: 0;
+		}
+		margin: 10px (-$offset/2) 0;
+		li {
+			padding-left: $offset/2;
+			padding-right: $offset/2;
+			margin: 0;
+		}
+	}
+
+	.list--micro {
+		margin: 16px -20px 0 5px;
+		li {
+			margin-bottom: 12px;
+			padding-left: 0;
+			padding-right: 20px;
+			width: (100%/3);
+		}
+		.el {
+			width: 34px;
+			height: 34px;
+			margin-right: -34px;
+			top: -2px;
+			line-height: 36px;
+		}
+		.name {
+			padding-left: 34px + 10px;
+		}
+	}
+
+	.item--c .el {
+		background: #d1aa2e;
+	}
+	.item--b1 .el {
+		background: #1d8ed0;
+	}
+	.item--b6 .el {
+		background: #4ed0aa;
+	}
+	.item--a .el {
+		background: #bd6632;
+	}
+	.item--b2 .el {
+		background: #884bc6;
+	}
+	.item--b12 .el {
+		background: #9bb73a;
+	}
+	.item--b9 .el {
+		background: #d45f64;
+	}
+
+}

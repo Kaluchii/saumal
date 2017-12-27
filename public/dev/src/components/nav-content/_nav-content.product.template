@@ -1,0 +1,21 @@
+<div class="nav-content text--center">
+	<ul class="list--inline">
+
+		<li{% if mode == 'o-produkte' %} class="active"{% endif %}>
+			<a href="product.o-produkte.html">О продукте</a>
+		</li>
+
+		<li{% if mode == 'sostav' %} class="active"{% endif %}>
+			<a href="product.sostav.html">Состав</a>
+		</li>
+
+		<li{% if mode == 'komu-polezen-saumal' %} class="active"{% endif %}>
+			<a href="product.komu-polezen-saumal.html">Кому полезен Саумал</a>
+		</li>
+
+		<li{% if mode == 'vliyaniye-na-organizm' %} class="active"{% endif %}>
+			<a href="product.vliyaniye-na-organizm.html">Влияние на организм</a>
+		</li>
+
+	</ul>
+</div>

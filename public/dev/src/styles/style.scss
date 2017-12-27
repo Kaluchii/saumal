@@ -1,0 +1,202 @@
+/*!
+ * rustemtastanov@gmail.com, 2017
+ */
+
+@import "node_modules/normalize-css/normalize";
+@import "node_modules/owl.carousel/dist/assets/owl.carousel";
+@import "node_modules/fancybox/dist/css/jquery.fancybox";
+
+@import "variables";
+@import "variables-responsive";
+@import "variables-colours";
+
+@import "mixins/text";
+@import "mixins/utils";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/text-overflow";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/reset-text";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/responsive-visibility";
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+
+@import "reboot";
+@import "fonts";
+@import "typography";
+@import "typography.adaptive";
+@import "icons";
+@import "links";
+@import "buttons";
+@import "buttons.adaptive";
+@import "forms";
+@import "forms.adaptive";
+@import "helpers";
+// @import "modal";
+// @import "modal.adaptive";
+@import "tabs";
+@import "table";
+@import "table.adaptive";
+@import "dropdowns";
+@import "fancybox";
+
+@import "layout";
+@import "layout.adaptive";
+
+@import "../components/header/header";
+@import "../components/header/header.adaptive";
+
+@import "../components/footer/footer";
+@import "../components/footer/footer.adaptive";
+
+@import "../components/nav-main/nav-main";
+@import "../components/nav-main/nav-main.adaptive";
+
+@import "../components/nav-lang/nav-lang";
+@import "../components/nav-lang/nav-lang.adaptive";
+
+@import "../components/nav-inner/nav-inner";
+@import "../components/nav-inner/nav-inner.adaptive";
+
+@import "../components/nav-content/nav-content";
+@import "../components/nav-content/nav-content.adaptive";
+
+@import "../components/nav-category/nav-category";
+@import "../components/nav-category/nav-category.adaptive";
+
+@import "../components/nav-subcontent/nav-subcontent";
+@import "../components/nav-subcontent/nav-subcontent.adaptive";
+
+@import "../components/page/page";
+@import "../components/page/page.adaptive";
+
+@import "../components/object-item/object-item";
+@import "../components/object-item/object-item.adaptive";
+
+@import "../components/elements-item/elements-item";
+@import "../components/elements-item/elements-item.adaptive";
+
+@import "../components/category-item/category-item";
+@import "../components/category-item/category-item.adaptive";
+
+@import "../components/preamble-item/preamble-item";
+@import "../components/preamble-item/preamble-item.adaptive";
+
+@import "../components/news-item/news-item";
+@import "../components/news-item/news-item.adaptive";
+
+@import "../components/step-item/step-item";
+@import "../components/step-item/step-item.adaptive";
+
+@import "../components/share-item/share-item";
+@import "../components/share-item/share-item.adaptive";
+
+@import "../components/rycle-informer/rycle-informer";
+@import "../components/rycle-informer/rycle-informer.adaptive";
+
+/* page MAINPAGE */
+@import "../components/section-promo/section-promo";
+@import "../components/section-promo/section-promo.adaptive";
+
+@import "../components/section-target/section-target";
+@import "../components/section-target/section-target.adaptive";
+
+@import "../components/section-profit/section-profit";
+@import "../components/section-profit/section-profit.adaptive";
+
+@import "../components/section-production/section-production";
+@import "../components/section-production/section-production.adaptive";
+
+@import "../components/section-news/section-news";
+@import "../components/section-news/section-news.adaptive";
+
+/* page CONTACTS */
+@import "../components/section-locations/section-locations";
+@import "../components/section-locations/section-locations.adaptive";
+
+@import "../components/section-address/section-address";
+@import "../components/section-address/section-address.adaptive";
+
+@import "../components/section-distributors/section-distributors";
+@import "../components/section-distributors/section-distributors.adaptive";
+
+/* page PRODUCT */
+@import "../components/section-howto/section-howto";
+@import "../components/section-howto/section-howto.adaptive";
+
+/* page ABOUT */
+@import "../components/section-mission/section-mission";
+@import "../components/section-mission/section-mission.adaptive";
+
+@import "../components/section-default/section-default";
+@import "../components/section-default/section-default.adaptive";
+
+@import "../components/section-zavod/section-zavod.info";
+@import "../components/section-zavod/section-zavod.info.adaptive";
+
+@import "../components/section-zavod/section-zavod.remark";
+@import "../components/section-zavod/section-zavod.remark.adaptive";
+
+@import "../components/section-zavod/section-zavod.horse";
+@import "../components/section-zavod/section-zavod.horse.adaptive";
+
+@import "../components/section-zavod/section-zavod.location";
+@import "../components/section-zavod/section-zavod.location.adaptive";
+
+/* page RYCLE */
+@import "../components/section-catalog/section-catalog";
+@import "../components/section-catalog/section-catalog.adaptive";
+
+@import "../components/form-rycle/form-rycle";
+@import "../components/form-rycle/form-rycle.adaptive";
+
+
+/*
+	styles for Large screen
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	styles for Large and Desktop
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop-up) {}
+
+
+
+/*
+	styles for Desktop
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	styles for Desktop and Tablet
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	styles for Tablet
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet) {}
+
+
+
+/*
+	styles for Tablet and Phone
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-phone) {}

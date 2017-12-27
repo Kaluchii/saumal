@@ -1,0 +1,17 @@
+{% set title = "Cообщение" %} <!-- заголовок страницы -->
+{% set page = "message" %} <!-- идентификатор страницы -->
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+	<div class="page-content">
+        <div class="container">
+            <div class="pay-notice">
+                <p class="pay-notice__title">Благодарим за заказ!</p>
+                <p class="pay-notice__sub-title">В скором времени наш менеджер свяжется с вами.</p>
+            </div>
+		</div>
+	</div>
+</div><!-- /page -->
+{% endblock %}

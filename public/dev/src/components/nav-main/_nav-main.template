@@ -1,0 +1,66 @@
+<!-- nav-main -->
+<nav class="nav-main">
+
+	<ul class="list--inline">
+
+		<li class="li-dropdown{% if page == 'product' %} active{% endif %}">
+			<h6 class="visible-sm">Продукт</h6>
+			<a href="product.o-produkte.html" class="hidden-sm">О продукте</a>
+			<ul class="list--unstyled">
+				<li{% if mode == 'vliyaniye-na-organizm' %} class="active"{% endif %}>
+					<a href="product.vliyaniye-na-organizm.html">Воздействие на организм</a>
+				</li>
+				<li{% if mode == 'sostav' %} class="active"{% endif %}>
+					<a href="product.sostav.html">Состав</a>
+				</li>
+				<li{% if mode == 'komu-polezen-saumal' %} class="active"{% endif %}>
+					<a href="product.komu-polezen-saumal.html">Кому полезен</a>
+				</li>
+				<li>
+					<a href="#">Инструкция</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="li-dropdown{% if page == 'about' %} active{% endif %}">
+			<h6 class="visible-sm">Компания</h6>
+			<a href="about.mission.html" class="hidden-sm">О компании</a>
+			<ul class="list--unstyled">
+				<li{% if mode == 'mission' %} class="active"{% endif %}>
+					<a href="about.mission.html">О компании</a>
+				</li>
+				<li{% if mode == 'zavod' %} class="active"{% endif %}>
+					<a href="about.zavod.html">Завод</a>
+				</li>
+				<li{% if mode == 'process' %} class="active"{% endif %}>
+					<a href="about.process.html">Производство</a>
+				</li>
+				<li{% if mode == 'news' %} class="active"{% endif %}>
+					<a href="about.news.html">Новости</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="hidden-sm">
+			<a href="#">Отзывы</a>
+		</li>
+
+		<li class="li-dropdown{% if page == 'contacts' %} active{% endif %}">
+			<h6 class="visible-sm">Контакты</h6>
+			<a href="contacts.html" class="hidden-sm">Контакты</a>
+			<ul class="list--unstyled">
+				<li>
+					<a href="contacts.html">Адрес офисов</a>
+				</li>
+				<li>
+					<a href="contacts.html">Адреса продаж</a>
+				</li>
+				<li>
+					<a href="#">Отзывы</a>
+				</li>
+			</ul>
+		</li>
+
+	</ul>
+
+</nav><!-- /nav-main -->

@@ -1,0 +1,75 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.preamble-items-list {
+		padding-top: 20px;
+		padding-left: 0;
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.preamble-item {
+		margin-bottom: 40px;
+
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		[class^="col-"] {
+			display: block;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.item-text {
+			br {
+				display: none;
+			}
+			padding-right: 0;
+		}
+
+	}
+
+	.preamble-items-list {
+		padding: 20px 0 0 0;
+	}
+
+}

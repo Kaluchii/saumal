@@ -1,0 +1,137 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	h1,
+	.title-1 {
+	  font-size: 40px;
+	  line-height: 48px;
+	}
+
+	h2,
+	.title-2 {
+	  font-size: 30px;
+	  line-height: 36px;
+	}
+
+	h3,
+	.title-3 {
+	  font-size: 25px;
+	  line-height: 30px;
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	h1,
+	.title-1 {
+	  font-size: 30px;
+	  line-height: 36px;
+	}
+
+	h3,
+	.title-3 {
+	  font-size: 20px;
+	  line-height: 25px;
+	}
+
+	big {
+	  font-size: 18px;
+	  line-height: 28px;
+	  br {
+	  	display: none;
+	  }
+	}
+
+}
+
+@include respond-to("(max-width: 767px) and (min-width: 640px)") {
+	$size: 640 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 639px) and (min-width: 600px)") {
+	$size: 600 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 599px) and (min-width: 414px)") {
+	$size: 414 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 413px) and (min-width: 412px)") {
+	$size: 412 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 411px) and (min-width: 384px)") {
+	$size: 384 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 383px) and (min-width: 375px)") {
+	$size: 375 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 374px) and (min-width: 360px)") {
+	$size: 360 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}
+
+@include respond-to("(max-width: 359px) and (min-width: 321px)") {
+	$size: 321 * 16 / 320;
+	html {
+		font-size: $size + 0PX;
+	}
+}

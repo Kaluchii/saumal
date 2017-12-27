@@ -1,0 +1,44 @@
+{
+  "folders":
+  [
+    {
+      "follow_symlinks": true,
+      "path": "/",
+      "name": "setup",
+      "folder_exclude_patterns": ["*"],
+      "file_include_patterns": ["*.json","*.js","*.md"]
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/scripts"
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/styles/mixins",
+      "folder_exclude_patterns": ["*"]
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/styles"
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/components"
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/views",
+      "folder_exclude_patterns": ["*"],
+      "file_include_patterns": ["*.page"]
+    },
+    {
+      "follow_symlinks": true,
+      "path": "src/views/layouts",
+      "folder_exclude_patterns": ["*"],
+      "file_include_patterns": ["*.layout"]
+    },
+  ],
+  "settings": {
+    "tab_size": 2
+  },
+}

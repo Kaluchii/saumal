@@ -1,0 +1,110 @@
+.fancybox-overlay {
+	background: rgba(black, .8);	
+}
+
+.fancybox-skin {
+	border-radius: 5px;
+	// background: none;
+}
+
+.fancybox-image {
+	border-radius: 5px;
+}
+
+// .fancybox-outer {
+// }
+
+.fancybox-close {
+	right: -30px;
+	top: -30px;
+	width: auto;
+	height: auto;
+	text-decoration: none !important;
+	transition: color .3s;
+	background: none;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: white;
+	&:hover {
+		color: rgba(white, .7);
+	}
+}
+
+.fancybox-nav {
+  background: none;
+}
+
+.fancybox-prev,
+.fancybox-next {
+	width: 70px;
+	background: none;
+	color: white;
+	font-size: 27px;
+	span {
+		background: none;
+		display: none;
+	}
+	&::before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: transform .3s ease-in-out;
+	}
+	&:hover {
+		color: white;
+	}
+}
+
+.fancybox-prev {
+	left: -70px;
+	&:hover::before {
+		transform: translate(calc(-50% - 3px), -50%);
+	}
+}
+
+.fancybox-next {
+	right: -70px;
+	&:hover::before {
+		transform: translate(calc(-50% + 3px), -50%);
+	}
+}
+
+#fancybox-loading {
+	background: none;
+	margin: 0;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	> div {
+		background-image: inline('#{$path-inline}/spinner-blue.svg');
+		background-position: 0 0;
+		background-size: cover;
+		width: 70px;
+		height: 70px;
+	}
+}
+
+
+// .fancybox-opened .fancybox-skin {
+//   box-shadow: none;
+// }
+
+/*Retina graphics!*/
+@media 	only screen and (-webkit-min-device-pixel-ratio: 1.5),
+				only screen and (min--moz-device-pixel-ratio: 1.5),
+				only screen and (min-device-pixel-ratio: 1.5) {
+  
+  #fancybox-loading,
+  .fancybox-close,
+  .fancybox-prev span,
+  .fancybox-next span {
+  	background: none;
+  }
+  
+  #fancybox-loading div {
+		background-image: inline('#{$path-inline}/spinner-blue.svg');
+		background-size: cover;
+  }
+
+}

@@ -1,0 +1,21 @@
+<div class="nav-content text--center">
+	<ul class="list--inline">
+
+		<li{% if mode == 'mission' %} class="active"{% endif %}>
+			<a href="about.mission.html">Миссия компании</a>
+		</li>
+
+		<li{% if mode == 'zavod' %} class="active"{% endif %}>
+			<a href="about.zavod.html">Завод</a>
+		</li>
+
+		<li{% if mode == 'process' %} class="active"{% endif %}>
+			<a href="about.process.html">Процесс производства</a>
+		</li>
+
+		<li{% if mode == 'news' %} class="active"{% endif %}>
+			<a href="about.news.html">Новости</a>
+		</li>
+
+	</ul>
+</div>

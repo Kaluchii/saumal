@@ -1,0 +1,34 @@
+.section--locations {
+	margin-top: -50px;
+	
+	.tab-pane {
+		color: #828282;
+		line-height: 20px;
+	}
+
+	.section-in {
+		padding: 54px 40px 20px;
+	}
+
+	.title-3 {
+	  margin-bottom: 17px;
+	}
+
+	.nav-subcontent {
+		margin: 0 -40px 32px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	h6 {
+		font-size: $font-size-base;
+		margin-bottom: 0;
+		color: black;
+		font-weight: normal;
+	}
+
+}

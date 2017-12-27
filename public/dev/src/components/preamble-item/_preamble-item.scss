@@ -1,0 +1,44 @@
+$col-offset: 60px;
+
+.preamble-item {
+	margin-bottom: 35px;
+
+	.row {
+		margin-left: -$col-offset/2;
+		margin-right: -$col-offset/2;
+		font-size: 0;
+	}
+
+	[class^="col-"] {
+		font-size: $font-size-base;
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: $col-offset/2;
+		padding-right: $col-offset/2;
+	}
+
+	.item-icon {
+		margin: 0 0 10px 2px;
+	}
+
+	.img--centered {
+		text-align: left;
+		height: 52px;
+		line-height: 50px;
+		overflow: visible;
+	}
+
+	.item-text {
+		padding-right: 20px;
+	}
+
+	h4 {
+		margin-bottom: 6px;
+	}
+
+}
+
+.preamble-items-list {
+	padding: 5px 0 0 20px;
+}

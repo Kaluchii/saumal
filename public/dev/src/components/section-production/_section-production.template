@@ -1,0 +1,103 @@
+<!-- section-production -->
+<section class="section section--production">
+	<div class="container">
+
+		<div class="section-content">
+
+			<div class="section-hero">
+				<div class="block-table">
+					<div class="block-cell">
+						<div class="section-title">
+							<h3 class="title-1">
+								Европейская<br /> 
+								технология<br /> 
+								производства
+							</h3>
+						</div>
+						<p>
+							Современные технологии сублимации позволяют донести<br /> 
+							полезные свойства свежевыдоинного кобыльего молока<br /> 
+							(саумала) до&nbsp;потребителя
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- items-list -->
+			<div class="items-list step--1">
+				<h3><span>1</span> Подготовка молока</h3>
+				<div class="block-in">
+					{% for item in [
+						{
+							title: "Доение кобылиц",
+							text: "Cовременным доильным аппаратом<br /> без доступа кислорода к&nbsp;продукту<br /> во&nbsp;избежание его окисления"
+						}, {
+							title: "Пастеризация",
+							text: "Проводится в&nbsp;щедящем режиме для<br /> обеспечения безопасности конечного<br /> продукта"
+						}, {
+							accent: "true",
+							text: "Для производства саумала<br /> используются казахские<br /> лошади породы <strong>Джабе</strong>",
+							img: "img/pic-step1.png"
+						}
+					] -%}
+					{% include "section-production/_item.template" %}
+					{%- endfor %}
+				</div>
+			</div><!-- /items-list -->
+
+			<!-- items-list -->
+			<div class="items-list step--2">
+				<h3><span>2</span> Процесс сублимации</h3>
+				<div class="block-in">
+					{% for item in [
+						{
+							title: "замораживание",
+							text: "Противень с&nbsp;жидким сырьём помещают<br /> в&nbsp;скороморозильный шкаф и&nbsp;замораживают<br /> при температуре &minus;500&nbsp;С в&nbsp;течении 2&nbsp;часов"
+						}, {
+							title: "Сушка под давлением",
+							text: "Замороженное сырьё высушивают в&nbsp;камере<br /> при температуре +250 под давлением 60-75&nbsp;Па<br /> в&nbsp;течении 10-15 часов"
+						}, {
+							accent: "true",
+							text: "с <strong>1 литра</strong> молока<br /> сублимируется<br /> <strong>95 грамм</strong> продукта",
+							img: "img/pic-step2.png"
+						}
+					] -%}
+					{% include "section-production/_item.template" %}
+					{%- endfor %}
+				</div>
+			</div><!-- /items-list -->
+
+			<!-- items-list -->
+			<div class="items-list step--3">
+				<h3><span>3</span> Упаковка</h3>
+				<div class="block-in">
+					{% for item in [
+						{
+							title: "Вакуумная упаковка",
+							text: "Защищает продукт от&nbsp;воздействия кислорода,<br /> влаги и&nbsp;проникновения бактерий; обеспечивает<br /> длительный и&nbsp;безопасный срок хранения"
+						}, {
+							title: "Конечная упаковка",
+							text: "Дополнительно защищает вакуумную<br /> упаковку от&nbsp;внешних повреждений<br /> и&nbsp;содержит информацию о&nbsp;продукте"
+						}, {
+							accent: "true",
+							text: "Из&nbsp;одной 500-граммовой<br /> банки SAUMAL получается<br /> <strong>4,5 литров</strong> молока",
+							img: "img/pic-step3.png"
+						}
+					] -%}
+					{% include "section-production/_item.template" %}
+					{%- endfor %}
+				</div>
+			</div><!-- /items-list -->
+
+			<div class="section-controls">
+				<a href="about.process.html" class="btn btn--blue btn--shadow btn--large">Подробнее о производстве</a>
+				<div class="hidden-xs">
+					Современные технологии производства помогает донести<br /> 
+					всю пользу свежего кобыльего молока до&nbsp;потребителя
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section><!-- /section-production -->

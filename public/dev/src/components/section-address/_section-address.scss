@@ -1,0 +1,39 @@
+.section--address {
+	margin-top: -50px;
+
+	.section-in {
+		padding: 54px 40px 20px;
+	}
+
+	.section-map {
+		position: relative;
+		height: 520px;
+		border-radius: 0 3px 3px 0;
+		overflow: hidden;
+	}
+
+	.title-3 {
+		margin-bottom: 12px;
+	}
+
+	.map {
+		@include stretch;
+		background-color: #fafafa;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 70px;
+			height: 70px;
+			transform: translate(-50%, -50%);
+			background-size: 100% 100%;
+			background-image: inline('#{$path-inline}/spinner-blue.svg');
+		}
+	}
+
+	.map--loaded::after {
+		display: none;
+	}
+
+}

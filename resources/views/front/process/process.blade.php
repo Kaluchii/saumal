@@ -13,7 +13,7 @@
                         <li> <a href="/mission">@lang('about_comp.mission')</a> </li>
                         <li> <a href="/factory">@lang('about_comp.factory')</a> </li>
                         <li class="active"> <a href="/process">@lang('about_comp.process')</a> </li>
-                        <li> <a href="/news">@lang('about_comp.news')</a> </li>
+                        {{--<li> <a href="/news">@lang('about_comp.news')</a> </li>--}}
                     </ul>
                 </div>
                 <div class="page-promo-text">

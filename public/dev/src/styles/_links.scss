@@ -1,0 +1,55 @@
+a {
+  color: $link-color;
+  text-decoration: none;
+  outline: none !important;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+
+}
+
+.link--unstyled { // ссылка без форматирования
+  text-decoration: none !important;
+}
+
+.link--block { // блочная ссылка
+  @extend .link--unstyled;
+  display: block;
+}
+
+a[href^="tel"] {
+  @extend .link--unstyled;
+  cursor: default;
+}
+
+.link--zoom {
+  position: relative;
+  &::before {
+    content: '';
+    @include stretch;
+    background: rgba($blue, 0);
+    z-index: 1;
+    transition: background .4s ease-in-out;
+  }
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s;
+    z-index: 1;
+    font-size: 40px;
+    color: rgba(white, .8);
+  }
+  &:hover {
+    &::before {
+      background: rgba($blue, .2);
+    }
+    &::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}

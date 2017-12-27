@@ -1,0 +1,86 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet) {}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.table {
+		border-radius: 0;
+		margin: 20px -16px 40px;
+		max-width: auto;
+		// overflow: auto;
+		// overflow-y: hidden;
+		// -webkit-overflow-scrolling: touch;
+		// &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		th, td {
+			padding-left: 0;
+			padding-right: 0;
+			width: 22%;
+			&:first-child {
+				padding-left: 15px;
+				width: 34%;
+			}
+		}
+
+		th {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			font-size: 13px;
+			line-height: 15px;
+		}
+
+		td {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 12px;
+			// white-space: nowrap;
+		}
+
+	}
+
+}

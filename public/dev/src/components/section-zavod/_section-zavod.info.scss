@@ -1,0 +1,124 @@
+.section--zavod-info {
+	padding-bottom: 265px;
+	background-image: url(#{$path-img}/section-zavod-info-bg.png);
+	background-size: 100% auto;
+	background-position: 50% 100%;
+	background-repeat: no-repeat;
+	padding-top: 25px;
+
+	p {
+		margin-bottom: 18px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.section-block {
+		margin-bottom: 96px;
+		&:nth-child(even) {
+			.section-text {
+				left: 80px;
+			}
+		}
+	}
+
+	.section-text {
+		position: relative;
+		max-width: 460px;
+	}
+
+	.section-gallery {
+		$items-offset: $grid-gutter-width;
+		position: relative;
+		top: -10px;
+		.block-in {
+			position: relative;
+			font-size: 0;
+			margin-left: -$items-offset/2;
+			margin-right: -$items-offset/2;
+		}
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 $items-offset/2;
+			margin-bottom: $items-offset;
+			overflow: hidden;
+			width: fluid(320px, 560px);
+			&:nth-child(2n+1) {
+				> * {
+					display: inline-block;
+					vertical-align: top;
+				}
+				width: fluid(240px, 560px);
+				text-align: right;
+			}
+		}
+		img {
+			border-radius: 5px;
+		}
+	}
+
+	.section-stats {
+		position: relative;
+		top: -27px;
+		$items-offset: 80px;
+		.row {
+			font-size: 0;
+			margin-left: -$items-offset/2;
+			margin-right: -$items-offset/2;
+		}
+		[class^="col-"] {
+			float: none;
+			display: inline-block;
+			vertical-align: top;
+			padding-left: $items-offset/2;
+			padding-right: $items-offset/2;
+		}
+		strong {
+			display: block;
+			white-space: nowrap;
+			color: #1b70c9;
+			font-weight: 300;
+			font-size: 80px;
+			line-height: 1;
+			letter-spacing: .02em;
+			margin-bottom: 7px;
+			position: relative;
+			left: -2px;
+			> span:not(:first-child) {
+				@include stretch;
+			}
+			> span:first-child {
+				opacity: 0;
+			}
+		}
+		small {
+			font-size: 40px;
+			letter-spacing: 0;
+			font-weight: 500;
+			margin-left: 10px;
+		}
+		.item {
+			font-size: $font-size-base;
+			line-height: 22px;
+			font-weight: 300;
+			color: black;
+			margin-bottom: 39px;
+		}
+		.item--large {
+			margin-bottom: 42px;
+			strong {
+				left: -8px;
+				font-size: 150px;
+				font-weight: 100;
+				letter-spacing: 0;
+				margin-bottom: -2px;
+			}
+			small {
+				font-weight: 500;
+				margin-left: 2px;
+			}
+		}
+	}
+
+}

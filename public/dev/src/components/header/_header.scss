@@ -1,0 +1,105 @@
+// шапка сайта
+$height: $header-height;
+$column-logo: 250px;
+$column-contacts: 370px;
+// *************************************************************************
+
+.header-wrapper { // блок-обёртка для компонента
+	position: relative;
+	margin-bottom: -$height;
+}
+
+.header {
+	@include stretch-x;
+	background: white;
+	top: 0;
+	z-index: 9;
+	transition: box-shadow .3s ease-in-out;
+
+	.container {
+		line-height: $height + 2px;
+		font-size: 0;
+	}
+
+	.column {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+	}
+
+	.column--logo {
+		width: $column-logo;
+		margin-right: -$column-logo;
+		position: relative;
+	}
+
+	.column--in {
+		width: 100%;
+		padding-left: $column-logo;
+	}
+
+	.column--contacts {
+		width: $column-contacts;
+		margin-left: -$column-contacts;
+		text-align: right;
+		> * {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.column--nav {
+		width: 100%;
+		padding-right: $column-contacts;
+	}
+
+	.logo {
+		position: relative;
+		top: 1px;
+	}
+
+	.btn--order {
+		top: -2px;
+	}
+
+}
+
+.header-wrapper,
+.header {
+	height: $height;
+}
+
+.content {
+	padding-top: $height;
+}
+
+.header-contacts {
+	padding-right: 25px;
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		font-size: 14px;
+		line-height: 20px;
+		color: #06101f;
+		font-weight: 500;
+	}
+	a[href^="tel"] {
+		color: inherit;
+	}
+	span {
+		font-size: 12px;
+		text-align: right;
+		color: #828282;
+		font-weight: 300;
+		min-width: 55px;
+		padding-right: 5px;
+	}
+}
+
+.header--fixed {
+	position: fixed;
+	box-shadow: 1px 2px 8px 0 rgba(#000103, .045);
+}

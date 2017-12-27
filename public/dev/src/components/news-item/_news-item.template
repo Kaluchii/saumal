@@ -1,0 +1,7 @@
+<!-- news-item -->
+<div class="news-item{% if item.active %} active{% endif %}">
+	<time class="item-date">{{item.date}}</time>
+	<div class="item-title">
+		<a href="about.news.html">{{item.title|safe}}</a>
+	</div>
+</div><!-- /news-item -->

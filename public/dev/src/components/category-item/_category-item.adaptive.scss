@@ -1,0 +1,133 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	$col-offset: 40px;
+
+	.category-item {
+
+		.item-img {
+			left: 5px;
+		}
+
+		.img--centered {
+			width: 270px;
+			height: 270px;
+			line-height: 268px;
+		}
+
+		.row {
+			margin-left: -$col-offset/2;
+			margin-right: -$col-offset/2;
+		}
+
+		[class^="col-"] {
+			padding-left: $col-offset/2;
+			padding-right: $col-offset/2;
+		}
+
+		&:nth-child(even) {
+			[class^="col-"] {
+				.item-img {
+					left: 0;
+				}
+				&:nth-child(1) {
+					left: 58.3333333333%;
+				}
+				&:nth-child(2) {
+					right: 41.6666666667%;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.category-item {
+		margin-bottom: 40px;
+
+		.item-img {
+			top: auto;
+			left: auto;
+			margin-bottom: 20px;
+		}
+
+		.img--centered {
+			width: 260px;
+			height: 260px;
+			line-height: 258px;
+		}
+
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		[class^="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+			display: block;
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		&:nth-child(even) {
+			[class^="col-"] {
+				.item-img {
+					left: auto;
+				}
+				&:nth-child(1) {
+					left: auto;
+				}
+				&:nth-child(2) {
+					right: auto;
+				}
+			}
+		}
+
+	}
+
+	.category-items-list  {
+		padding-top: 40px;
+	}
+
+}

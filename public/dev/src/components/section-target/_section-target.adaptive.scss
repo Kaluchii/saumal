@@ -1,0 +1,204 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-desktop-up) {
+
+	.section--target {
+		.item-img {
+			transition: transform .6s;
+		}
+		.item:hover .item-img {
+			transform: scale(1.05);
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	.section--target {
+
+		.item {
+			height: 250px;
+		}
+
+		.item-text {
+			font-size: 14px;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--target {
+
+		.item-text {
+			max-width: 50%;
+		}
+
+		.item-img {
+			left: auto;
+		}
+
+		.item-more {
+			top: auto;
+			bottom: 20px;
+			background: none;
+			opacity: 1;
+			transition: none;
+			text-align: left;
+			font-size: $font-size-base;
+			padding: 0 28px;
+			span {
+				position: relative;
+				left: auto;
+				right: auto;
+				top: auto;
+				transform: none;
+				transition: none;
+				color: $blue;
+				border-bottom: 1px dashed;
+			}
+		}
+
+		a:hover .item-more {
+			span {
+				transform: none;
+			}
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--target {
+		padding-top: 38px;
+		padding-bottom: 38px;
+
+		.title-1 {
+			margin-bottom: 0;
+			sup {
+				font-size: 18px;
+				top: -10px;
+			}
+		}
+
+		.section-title {
+			margin-bottom: 17px;
+		}
+
+		.item {
+			margin-bottom: 10px;
+			padding: 13px 13px 20px;
+			height: 137px;
+		}
+
+		.item-more {
+			top: auto;
+			bottom: 17px;
+			background: none;
+			opacity: 1;
+			transition: none;
+			text-align: left;
+			font-size: 12px;
+			padding: 0 13px;
+			span {
+				position: relative;
+				left: auto;
+				right: auto;
+				top: auto;
+				transform: none;
+				transition: none;
+				color: $blue;
+				border-bottom: 1px dashed;
+			}
+		}
+
+		a:hover .item-more {
+			span {
+				transform: none;
+			}
+		}
+
+		.item-img {
+		}
+
+		img {
+			position: absolute;
+		}
+
+		.item--pregnant img {
+			width: 310px;
+			max-width: 310px;
+			right: 0;
+			bottom: -22px;
+		}
+
+		.item--children img {
+			width: 290px;
+			max-width: 290px;
+			right: -15px;
+			bottom: 0;
+		}
+
+		.item--age img {
+			width: 300px;
+			max-width: 300px;
+			right: 8px;
+			bottom: -15px;
+		}
+
+		.item--sport img {
+			width: 300px;
+			max-width: 300px;
+			right: 0;
+			bottom: -15px;
+		}
+
+		h5 {
+			font-size: 15px;
+			line-height: 18px;
+			margin-bottom: 11px;
+			max-width: 120px;
+		}
+
+	}
+
+}

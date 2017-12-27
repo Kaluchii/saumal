@@ -1,0 +1,56 @@
+<!-- section-promo -->
+<section class="section section--promo">
+
+	<div class="carousel owl-carousel" data-interval="7000">
+		{% for item in [
+			{
+				title: "",
+				text: "",
+				cover: "img/pic-promo-01.jpg",
+				cover_mobile: "img/pic-promo-01-mobile.png",
+				index: "1"
+			}, {
+				cover: "img/pic-promo-02.jpg",
+				cover_mobile: "img/pic-promo-02-mobile.png",
+				index: "2"
+			}
+		] -%}
+		<!-- slide -->
+		<div class="slide">
+			<div class="slide-body">
+				<div class="container">
+					<div class="slide-in">
+						<div class="block-table">
+							<div class="block-cell">
+								<div class="row">
+									{% if item.index == '1' %}
+									<div class="col-lg-5 col-lg-offset-7 col-md-5 col-md-offset-7 col-sm-5 col-sm-offset-6">
+									{% endif %}
+									{% if item.index == '2' %}
+									<div class="col-lg-5 col-lg-offset-7 col-md-6 col-md-offset-6 col-sm-7 col-sm-offset-5">
+									{% endif %}
+										<h2 class="title-1">
+											Здоровое<br /> 
+											и полезное<br /> 
+											питание
+										</h2>
+										<p>SAUMAL&reg; производится с&nbsp;помощью современных<br /> немецких технологий, которые позволяют сохранять полезные свойства свежего кобыльего молока.</p>
+										<a href="product.o-produkte.html" class="btn btn--blue btn--shadow btn--large">Подробнее о продукте</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide-cover hidden-xs">
+				<img data-src="{{item.cover}}" class="img--fluid owl-lazy" />
+			</div>
+			<div class="slide-cover visible-xs">
+				<img data-src="{{item.cover_mobile}}" class="img--fluid owl-lazy" />
+			</div>
+		</div><!-- /slide -->
+		{%- endfor %}
+	</div>
+
+</section><!-- /section-promo -->

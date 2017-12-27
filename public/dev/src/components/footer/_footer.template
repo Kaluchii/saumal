@@ -1,0 +1,75 @@
+<!-- .footer -->
+<footer class="footer">
+
+	<div class="footer-sup">
+		<div class="container">
+			<div class="column column--left">
+
+				<!-- logo -->
+				<a href="index.html" class="link--unstyled logo">
+					<img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" class="img--fluid" alt="logo" />
+				</a><!-- /logo -->
+
+				<!-- copyright -->
+				<div class="copyright">
+					Производитель:<br /> 
+					ТОО &laquo;ЕвразияИнвест Ltd&raquo;.
+				</div><!-- /copyright -->
+
+			</div>
+			<div class="column column--center">
+
+				{% include "nav-inner/_nav-inner.template" %}
+
+			</div>
+			<div class="column column--right">
+
+				<!-- footer-contacts -->
+				<div class="footer-contacts">
+					<div>
+						<h6>Астана</h6>
+						<ul class="list--unstyled">
+							<li><a href="tel:+77172925554">+7 (7172) 92-55-54</a></li>
+						</ul>
+					</div>
+					<div>
+						<h6>Алматы</h6>
+						<ul class="list--unstyled">
+							<li><a href="tel:+77272919477">+7 (727) 291-94-77</a></li>
+						</ul>
+					</div>
+				</div><!-- /footer-contacts -->
+
+				<!-- footer-share -->
+				<div class="footer-share">
+					<ul class="list--inline">
+						<li><a href="#" target="_blank"><i class="icon icon-facebook"></i></a></li>
+						<li><a href="#" target="_blank"><i class="icon icon-instagram"></i></a></li>
+					</ul>
+				</div><!-- /footer-share -->
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-sub">
+		<div class="container">
+			<div class="column column--left">
+
+				<!-- copyright -->
+				<div class="copyright">&copy;&nbsp;2016-2017 Saumal</div><!-- /copyright -->
+
+			</div>
+			<div class="column column--right">
+
+				<!-- developer -->
+				<a href="http://www.wonderbar.kz/" target="_blank" class="link--unstyled developer">
+					<span>Помогает<br /> продавать</span>
+					<img src="img/logo-wonderbar.png" srcset="img/logo-wonderbar.png 1x, img/logo-wonderbar@2x.png 2x" class="img--fluid" alt="logo" />
+				</a><!-- /develper -->
+
+			</div>
+		</div>
+	</div>
+
+</footer><!-- /.footer -->

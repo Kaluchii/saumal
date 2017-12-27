@@ -1,0 +1,392 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-header-1) {
+
+	$column-logo: 250px;
+	$column-contacts: 370px + 48px;
+
+	.header {
+
+		.column--logo {
+			width: $column-logo;
+			margin-right: -$column-logo;
+			padding-right: 0;
+		}
+
+		.column--in {
+			padding-left: $column-logo;
+		}
+
+		.column--contacts {
+			width: $column-contacts;
+			margin-left: -$column-contacts;
+		}
+
+		.column--nav {
+			padding-right: $column-contacts;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	$column-logo: 180px;
+	$column-contacts: 370px;
+
+	.header {
+
+		.column--logo {
+			width: $column-logo;
+			margin-right: -$column-logo;
+			padding-right: 30px;
+		}
+
+		.column--in {
+			padding-left: $column-logo;
+		}
+
+		.column--contacts {
+			width: $column-contacts;
+			margin-left: -$column-contacts;
+		}
+
+		.column--nav {
+			padding-right: $column-contacts;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.header {
+
+		.column--logo {
+			width: 187px + 50px;
+			margin-right: -(187px + 50px);
+			padding-left: 50px;
+		}
+
+		.column--in {
+			padding-left: 187px + 50px;
+			padding-right: 48px + 14px;
+			text-align: right;
+		}
+
+		.column--contacts {
+			width: $column-contacts;
+			margin-left: -$column-contacts;
+			text-align: right;
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.column--nav {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 84px;
+			background: #1174cc;
+			padding-right: 0;
+			text-align: left;
+			display: none;
+			padding: 63px 40px 95px;
+			&::before {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 8px 8px 8px;
+				border-color: transparent transparent #1174cc transparent;
+				position: absolute;
+				top: -7px;
+				left: 17px;
+			}
+		}
+
+	}
+
+	.btn--nav {
+		width: 50px;
+		height: 84px;
+		position: absolute;
+		top: 0;
+		border-radius: 0;
+		left: 0;
+		> span,
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: calc(50% + 2px);
+			height: 2px;
+			background: #e0e6ec;
+			transform-origin: 50% 50%;
+			width: 18px;
+			transition: transform .2s;
+		}
+		> span {
+			transform: translate(-50%, -50%);
+		}
+		&::before {
+			transform: translate(-50%, calc(-50% - 8px));
+		}
+		&::after {
+			transform: translate(-50%, calc(-50% + 8px));
+		}
+	}
+
+	.btn--close {
+		position: absolute;
+		right: 20px;
+		top: 44px;
+		font-size: 17px;
+		color: rgba(white, .5);
+		z-index: 2;
+	}
+
+	body.show--nav {
+		overflow: hidden;
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	// шапка сайта
+	$height: 70px;
+	// *************************************************************************
+
+	.header-wrapper { // блок-обёртка для компонента
+		margin-bottom: -$height;
+	}
+
+	.header {
+		transition: none;
+
+		.container {
+			line-height: 1;
+		}
+
+		.column--logo {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		.column--in {
+			padding-left: 0;
+		}
+
+		.column--contacts,
+		.column--nav {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: $height;
+			background: #1174cc;
+			padding-bottom: 40px;
+			display: none;
+			&::before {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 7px 7px 7px;
+				border-color: transparent transparent #1174cc transparent;
+				position: absolute;
+				top: -6px;
+			}
+		}
+
+		.column--contacts {
+			width: 100%;
+			margin-left: 0;
+			text-align: left;
+			padding-top: 31px;
+			&::before {
+				right: 17px;
+			}
+		}
+
+		.column--nav {
+			padding-top: 39px;
+			padding-right: 0;
+			&::before {
+				left: 17px;
+			}
+		}
+
+		.logo {
+			top: 20px;
+			left: 4px;
+			width: 166px;
+			margin: 0 auto;
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+
+	}
+
+	.header-wrapper,
+	.header {
+		height: $height;
+	}
+
+	.content {
+		padding-top: $height;
+	}
+
+	.header-contacts {
+		padding-right: 0;
+		padding-left: 30px;
+		li {
+			font-size: 20px;
+			color: white;
+			margin-bottom: 19px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		span {
+			display: block;
+			font-size: 15px;
+			text-align: left;
+			color: white;
+			font-weight: 100;
+			min-width: auto;
+			padding-right: 0;
+			padding-left: 4px;
+			margin-bottom: 3px;
+		}
+	}
+
+	.btn--nav,
+	.btn--call {
+		width: 50px;
+		height: $height;
+		position: absolute;
+		top: 0;
+		border-radius: 0;
+	}
+
+	.btn--nav {
+		left: 0;
+		> span,
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 2px;
+			background: #177dd7;
+			transform-origin: 50% 50%;
+			width: 18px;
+			transition: transform .2s;
+		}
+		> span {
+			transform: translate(-50%, -50%);
+		}
+		&::before {
+			transform: translate(-50%, calc(-50% - 8px));
+		}
+		&::after {
+			transform: translate(-50%, calc(-50% + 8px));
+		}
+	}
+
+	.btn--call {
+		right: 0;
+		color: #177dd7;
+		.icon {
+			font-size: 24px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.btn--white {
+		background: rgba(white, .15);
+		color: white;
+		&:hover,
+		&:active,
+		&:focus,
+		&:active:focus {
+			background: rgba(white, .2);
+			color: white;
+		}
+	}
+
+	.btn--order {
+		margin-left: 25px;
+		top: auto;
+	}
+
+	body.show--nav,
+	body.show--contacts {
+		overflow: hidden;
+	}
+
+	body.show--nav {
+		.btn--nav {
+			> span {
+				transform: translate(-50%, -50%) scale(0);
+			}
+			&::before,
+			&::after {
+				width: 22px;
+			}
+			&::before {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,60 @@
+<!-- section-target -->
+<section class="section section--target">
+	<div class="container">
+
+		<div class="section-title text--center">
+			<h3 class="title-1">Кому полезен SAUMAL<sup>&reg;</sup>?</h3>
+		</div>
+
+		<div class="section-content">
+
+			<!-- items-list -->
+			<div class="items-list">
+				<div class="row block-in">
+					{% for item in [
+						{
+							title: "Беременным<br /> и&nbsp;кормящим женщинам",
+							text: "Сходство кобыльего молока с&nbsp;грудным дает основания и&nbsp;возможность рассматривать его в&nbsp;качестве альтернативы грудного молоку.",
+							img: "img/pic-cat-01.png",
+							type: "pregnant"
+						}, {
+							title: "Детям<br /> и&nbsp;подросткам",
+							text: "Употребление SAUMAL&reg;&nbsp;&mdash; хорошая основа для профилактики болезней и&nbsp;нарушений работы организма в&nbsp;первые годы жизни.",
+							img: "img/pic-cat-02.png",
+							type: "children"
+						}, {
+							title: "Пожилым людям",
+							text: "Кобылье молоко не&nbsp;содержит трансизомеров жирных кислот, ослабляющих иммунитет и&nbsp;способствующих развитию сердечно-сосудистых и&nbsp;онкологических заболеваний.",
+							img: "img/pic-cat-03.png",
+							type: "age"
+						}, {
+							title: "Спортсменам",
+							text: "SAUMAL&reg; помогает набору мышечной массы и&nbsp;укреплению скелета, снижает риск накопления холестерина и&nbsp;повышает энергоемкость рациона.",
+							img: "img/pic-cat-04.png",
+							type: "sport"
+						}
+					] -%}
+					<div class="col-lg-6 col-md-6">
+						<!-- item -->
+						<div class="item item--{{item.type}}">
+							<a href="product.komu-polezen-saumal.html#{{item.type}}" class="link--block">
+								<h5>{{item.title|safe}}</h5>
+								<div class="item-text hidden-xs">{{item.text|safe}}</div>
+								<div class="item-img" data-img-loader>
+									<img src="{{item.img}}" class="img--fluid" />
+								</div>
+								<span class="item-more text--center text--white">
+									<span class="hidden-xs">Узнать подробнее</span>
+									<span class="visible-xs-inline">Узнать больше</span>
+								</span>
+							</a>
+						</div><!-- /item -->
+					</div>
+					{%- endfor %}
+				</div>
+			</div><!-- /items-list -->
+
+		</div>
+
+	</div>
+</section><!-- /section-target -->

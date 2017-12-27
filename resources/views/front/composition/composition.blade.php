@@ -59,16 +59,15 @@
                         <!-- /elements-item -->
                     </div>
                 </div>
-                <h3>@lang('about.t1_title')</h3>
+                <h3>@lang('about.t_title')</h3>
                 <div class="table">
                     <div class="table-head">
                         <table>
                             <thead>
                             <tr>
-                                <th>&nbsp;</th>
-                                <th>@lang('about.t1_c2')</th>
-                                <th>@lang('about.t1_c3')</th>
-                                <th>@lang('about.t1_c4')</th>
+                                <th>@lang('about.t_column_title1')</th>
+                                <th>@lang('about.t_column_title2')</th>
+                                <th>@lang('about.t_column_title3')</th>
                             </tr>
                             </thead>
                         </table>
@@ -76,174 +75,47 @@
                     <div class="table-body">
                         <table>
                             <tbody>
-                            <tr>
-                                <td>@lang('about.t1_r1')</td>
-                                <td>1,2</td>
-                                <td>0,5</td>
-                                <td>0,7</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t1_r2')</td>
-                                <td>3,3</td>
-                                <td>2,8</td>
-                                <td>0,5</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t1_r3')</td>
-                                <td>2,2</td>
-                                <td>0,9</td>
-                                <td>1,3</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t1_r4')</td>
-                                <td>3,5</td>
-                                <td>3,5</td>
-                                <td></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <h3>@lang('about.t2_title')</h3>
-                <div class="table">
-                    <div class="table-head">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>&nbsp;</th>
-                                <th>@lang('about.t23_c2')</th>
-                                <th>@lang('about.t23_c3')</th>
-                                <th>@lang('about.t23_c4')</th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="table-body">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>@lang('about.t2_r1')</td>
-                                <td>78</td>
-                                <td>97</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r2')</td>
-                                <td>131</td>
-                                <td>229</td>
-                                <td>290</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r3')</td>
-                                <td>75</td>
-                                <td>90</td>
-                                <td>140</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r4')</td>
-                                <td>60</td>
-                                <td>101</td>
-                                <td>150</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r5')</td>
-                                <td>57</td>
-                                <td>111</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r6')</td>
-                                <td>23</td>
-                                <td>28</td>
-                                <td>50</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r7')</td>
-                                <td>23</td>
-                                <td>35</td>
-                                <td>60</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.t2_r8')</td>
-                                <td>81</td>
-                                <td>189</td>
-                                <td>270</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <h3>@lang('about.t3_title')</h3>
-                <div class="table">
-                    <div class="table-head">
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>&nbsp;</th>
-                                <th>@lang('about.t23_c2')</th>
-                                <th>@lang('about.t23_c3')</th>
-                                <th>@lang('about.t23_c4')</th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="table-body">
-                        <table>
-                            <tbody>
-                            <tr>
-                                <td>@lang('about.ca')</td>
-                                <td>28 - 34</td>
-                                <td>50 - 135</td>
-                                <td>112 - 123</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.p')</td>
-                                <td>14 - 43</td>
-                                <td>20 - 121</td>
-                                <td>59 - 119</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.k')</td>
-                                <td>53 - 62</td>
-                                <td>25 - 87</td>
-                                <td>106 - 163</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.mg')</td>
-                                <td>3 - 4</td>
-                                <td>3 - 12</td>
-                                <td>7 - 12</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.na')</td>
-                                <td>10 - 18</td>
-                                <td>8 - 58</td>
-                                <td>58</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.hl')</td>
-                                <td>19</td>
-                                <td>60 - 63</td>
-                                <td>100 - 119</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.fe')</td>
-                                <td>0,04 - 0,2</td>
-                                <td>0,02 - 0,15</td>
-                                <td>0,03 - 0,1</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.zn')</td>
-                                <td>0,09 - 0,64</td>
-                                <td>0,2 - 0,4</td>
-                                <td>0,03 - 0,55</td>
-                            </tr>
-                            <tr>
-                                <td>@lang('about.cu')</td>
-                                <td>0,02 - 0,06</td>
-                                <td>0,02 - 0,11</td>
-                                <td>0,01 - 0,06</td>
-                            </tr>
+                                <tr><td>@lang('about.t_1')</td><td>kcal</td><td>48</td></tr>
+                                <tr><td></td><td>kJ</td><td>199</td></tr>
+                                <tr><td>@lang('about.t_2')</td><td>g</td><td>89,7</td></tr>
+                                <tr><td>@lang('about.t_3')</td><td>g</td><td>2,2</td></tr>
+                                <tr><td>@lang('about.t_4')</td><td>g</td><td>1,5</td></tr>
+                                <tr><td>@lang('about.t_5')</td><td>g</td><td>0,08</td></tr>
+                                <tr><td>@lang('about.t_6')</td><td>g</td><td>0,15</td></tr>
+                                <tr><td>@lang('about.t_7')</td><td>mg</td><td>5</td></tr>
+                                <tr><td>@lang('about.t_8')</td><td>g</td><td>6,2</td></tr>
+                                <tr><td>@lang('about.t_9')</td><td>g</td><td>6,2</td></tr>
+                                <tr><td>@lang('about.t_10')</td><td>g</td><td>0,4</td></tr>
+                                <tr><td>@lang('about.t_11')</td><td>mg</td><td>25</td></tr>
+                                <tr><td>@lang('about.t_12')</td><td>mg</td><td>70</td></tr>
+                                <tr><td>@lang('about.t_13')</td><td>mg</td><td>9</td></tr>
+                                <tr><td>@lang('about.t_14')</td><td>mg</td><td>110</td></tr>
+                                <tr><td>@lang('about.t_15')</td><td>mg</td><td>54</td></tr>
+                                <tr><td>@lang('about.t_16')</td><td>mg</td><td>20</td></tr>
+                                <tr><td>@lang('about.t_17')</td><td>μg</td><td>70</td></tr>
+                                <tr><td>@lang('about.t_18')</td><td>μg</td><td>30</td></tr>
+                                <tr><td>@lang('about.t_19')</td><td>μg</td><td>2</td></tr>
+                                <tr><td>@lang('about.t_20')</td><td>μg</td><td>10</td></tr>
+                                <tr><td>@lang('about.t_21')</td><td>μg</td><td>0,9</td></tr>
+                                <tr><td>@lang('about.t_22')</td><td>μg</td><td>5</td></tr>
+                                <tr><td>@lang('about.t_23')</td><td>μg</td><td>0,9</td></tr>
+                                <tr><td>@lang('about.t_24')</td><td>μg</td><td>0,5</td></tr>
+                                <tr><td>@lang('about.t_25')</td><td>μg</td><td>150</td></tr>
+                                <tr><td>@lang('about.t_26')</td><td>μg</td><td>17</td></tr>
+                                <tr><td>@lang('about.t_27')</td><td>μg</td><td>32</td></tr>
+                                <tr><td>@lang('about.t_28')</td><td>μg</td><td>0,05</td></tr>
+                                <tr><td>@lang('about.t_29')</td><td>μg</td><td>100</td></tr>
+                                <tr><td>@lang('about.t_30')</td><td>μg</td><td>2</td></tr>
+                                <tr><td>@lang('about.t_31')</td><td>μg</td><td>30</td></tr>
+                                <tr><td>@lang('about.t_32')</td><td>μg</td><td>30</td></tr>
+                                <tr><td>@lang('about.t_33')</td><td>μg</td><td>30</td></tr>
+                                <tr><td>@lang('about.t_34')</td><td>μg</td><td>7</td></tr>
+                                <tr><td>@lang('about.t_35')</td><td>mg</td><td>30</td></tr>
+                                <tr><td>@lang('about.t_36')</td><td>μg</td><td>0,3</td></tr>
+                                <tr><td>@lang('about.t_37')</td><td>μg</td><td>4</td></tr>
+                                <tr><td>@lang('about.t_38')</td><td>μg</td><td>623</td></tr>
+                                <tr><td>@lang('about.t_39')</td><td>μg</td><td>300</td></tr>
+                                <tr><td>@lang('about.t_40')</td><td>mg</td><td>15</td></tr>
                             </tbody>
                         </table>
                     </div>

@@ -30,7 +30,7 @@
                                 <li> <a class="js-menu-item" href="/mission">@lang('all_page.about_company')</a> </li>
                                 <li> <a class="js-menu-item" href="/factory">@lang('all_page.factory')</a> </li>
                                 <li> <a class="js-menu-item" href="/process">@lang('all_page.process')</a> </li>
-                                <li> <a class="js-menu-item" href="/news">@lang('all_page.news')</a> </li>
+                                {{--<li> <a class="js-menu-item" href="/news">@lang('all_page.news')</a> </li>--}}
                             </ul>
                         </div>
                         <div class="column">
@@ -38,7 +38,7 @@
                             <ul class="list--unstyled">
                                 <li> <a class="js-menu-item" href="/contacts">@lang('all_page.address_off')</a> </li>
                                 <li> <a class="js-menu-item" href="/contacts">@lang('all_page.address_sales')</a> </li>
-                                <li> <a class="js-menu-item" href="#">@lang('all_page.reviews')</a> </li>
+                                {{--<li> <a class="js-menu-item" href="#">@lang('all_page.reviews')</a> </li>--}}
                             </ul>
                         </div>
                     </div>

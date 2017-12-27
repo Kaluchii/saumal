@@ -1,0 +1,42 @@
+.rycle-informer {
+	position: relative;
+}
+
+.link--rycle {
+	position: absolute;
+	right: 0;
+	top: -43px;
+	z-index: 2;
+	width: 40px;
+	height: 40px;
+	border-radius: 3px;
+	background: white;
+	.icon {
+		position: absolute;
+		left: 50%;
+		top: calc(50% + 1px);
+		transform: translate(-50%, -50%);
+	}
+	sup {
+		position: absolute;
+		right: -5px;
+		top: -3px;
+		text-align: center;
+		color: white;
+		min-width: 13px;
+		padding: 0 2px;
+		height: 13px;
+		line-height: 15px;
+		border-radius: 6.5px;
+		font-size: 9px;
+		font-weight: 300;
+		background: #177dd7;
+	}
+
+	.rycle--empty & {
+		sup {
+			background: rgba($text-color, .5);
+		}
+	}
+
+}

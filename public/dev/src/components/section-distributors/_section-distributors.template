@@ -1,0 +1,46 @@
+<!-- section-distributors -->
+<section class="section section--white section--distributors">
+	<div class="container">
+
+		<div class="section-content">
+
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+
+					<div class="section-in">
+
+						<h3 class="title-3">Дистрибьюторы</h3>
+						
+						<p>ТОО &laquo;Торговый дом &laquo;Saumal&raquo;, Республика Казахстан,</p>
+
+						<div class="buttons">
+							<a href="#" type="button" class="btn--unstyled btn--map active" data-latitude="43.238949" data-longitude="76.961628" data-zoom="17" data-pin="img/pin.png">
+								<strong>Алматы</strong>
+								ул. Луганского 34,<br /> 
+								+7 (727) 291-94-77,<br /> 
+								info_almaty@saumal.kz
+							</a>
+							<a href="#" type="button" class="btn--unstyled btn--map" data-latitude="43.251105" data-longitude="76.967788" data-zoom="17" data-pin="img/pin.png">
+								<strong>Астана</strong>
+								пр. Кабанбай батыра 6/3, ВП-2<br /> 
+								+7 (7172) 925-554,<br /> 
+								info_astana@saumal.kz
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="col-lg-6 col-md-6">
+
+					<div class="section-map">
+						<div class="map"></div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</section><!-- /section-distributors -->

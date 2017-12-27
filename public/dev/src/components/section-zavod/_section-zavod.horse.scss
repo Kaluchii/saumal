@@ -1,0 +1,45 @@
+.section--zavod-horse {
+	height: 803px;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	background-image: url(#{$path-img}/section-zavod-horse-bg.png);
+	padding-top: 97px;
+
+	.section-tip {
+		background: white url(#{$path-img}/section-tip-bg.png) 100% 0 no-repeat;
+		position: relative;
+		width: 380px;
+		border-radius: 20px;
+		padding: 19px 115px 20px 28px;
+		color: black;
+		top: -10px;
+		left: -10px;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 15px 11px 0 11px;
+			border-color: white transparent transparent transparent;
+			bottom: -15px;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+		&[data-animate] {
+			transition: transform .5s, opacity .5s;
+			transition-delay: .4s;
+			transform: translate(0, 50%);
+			opacity: 0;
+		}
+		&.animated {
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
+
+}

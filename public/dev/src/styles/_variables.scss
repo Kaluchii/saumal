@@ -1,0 +1,20 @@
+// переменные проекта
+
+$font-family-base: "Museo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-base: 15px !default;
+$line-height-base: 25px !default;
+
+// пути
+// *************************************************************************
+
+$path-fonts:		"../fonts";	// путь к директории со шрифтами
+$path-img:			"../img"; // путь к директории с картинками
+$path-inline: 	"#{$path-img}/inline"; // путь к инлайн-картинкам
+$path-sprite: 	"#{$path-img}/sprites"; // путь к спрайтам
+
+
+$layout-offset: 100px;
+$header-height: 84px;
+
+$layout-offset-phone: 15px;

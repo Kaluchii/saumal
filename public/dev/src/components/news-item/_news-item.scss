@@ -1,0 +1,40 @@
+.news-item {
+	font-weight: 300;
+	margin-bottom: 27px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.item-date {
+		color: rgba(black, .5);
+		font-size: 10px;
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+
+	a {
+		color: black;
+		transition: color .3s ease-in-out;
+		padding-bottom: 7px;
+		&:hover {
+			color: #177dd7;
+		}
+	}
+
+	&.active {
+		a {
+			pointer-events: none;
+			color: #177dd7;
+		}
+	}
+
+}
+
+.news-items-list {
+	margin-top: -3px;
+	max-width: 230px;
+	.block-in {
+		padding-top: 14px;
+	}
+}

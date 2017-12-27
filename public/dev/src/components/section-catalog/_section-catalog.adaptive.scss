@@ -1,0 +1,102 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--catalog {
+
+		.item--small {
+			width: 45%;
+		}
+
+		.item--medium {
+			width: 45%;
+		}
+
+		.item--large {
+			width: 55%;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--catalog {
+
+		.block-in {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.item {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.item-body {
+			padding: 20px 20px 40px;
+		}
+
+		.item-price {
+			font-size: 25px;
+		}
+
+		.item-img {
+			min-height: 200px;
+		}
+
+		.item-title {
+			font-size: 14px;
+		}
+
+		.item--small,
+		.item--medium,
+		.item--large {
+			width: 100%;
+			.item-img {
+				padding: 34px 0 55px;
+			}
+			.img--centered {
+				height: 200px;
+				line-height: 200px;
+			}
+		}
+
+	}
+
+}

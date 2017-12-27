@@ -1,0 +1,250 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	.footer-sup {
+		$max: $layout-max-width;
+		$column-left: fluid(225px, $max);
+		$column-right: fluid(200px, $max);
+		$column-center: 100% - $column-left - $column-right;
+		.column--left {
+			width: $column-left;
+		}
+		.column--right {
+			width: $column-right;
+		}
+		.column--center {
+			width: $column-center;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	$footer-sup: 320px;
+	$footer-sub: 80px;
+	$height: $footer-sup + $footer-sub;
+
+	.footer {
+		margin-top: -$height;
+		height: $height;
+		.logo {
+			left: auto;
+		}
+	}
+
+	.content {
+		padding-bottom: $height;
+	}
+
+	.footer-sup {
+		$max: $layout-max-width;
+		$column-left: fluid(300px, $max);
+		$column-right: fluid(155px, $max);
+		$column-center: 100% - $column-left - $column-right;
+		height: $footer-sup;
+		padding-top: 40px;
+		position: relative;
+		.column--left {
+			width: $column-left;
+			margin-right: -$column-left;
+		}
+		.column--right {
+			width: 100%;
+			padding-left: $column-left;
+		}
+		.column--center {
+			width: 100%;
+			padding-left: $column-left;
+		}
+	}
+
+	.footer-sub {
+		height: $footer-sub;
+		line-height: $footer-sub;
+	}
+
+	.footer-contacts {
+		> div {
+			display: inline-block;
+			vertical-align: top;
+			&:nth-child(1) {
+				width: 40%;
+			}
+		}
+		ul {
+			margin-bottom: 0;
+		}
+	}
+
+	.footer-share {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		padding-top: 0;
+	}
+
+	.section--mission {
+		min-height: calc(100vh - #{$height} - #{$header-height});
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.footer {
+		margin-top: 0;
+		height: auto;
+
+		.logo {
+			left: auto;
+			margin: 0 23px 0 0;
+			vertical-align: middle;
+			width: 89px;
+		}
+
+	}
+
+	.content {
+		padding-bottom: 0;
+	}
+
+	.footer-sup {
+		height: auto;
+		padding-top: 40px;
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
+		.column--left {
+			float: none;
+			width: auto;
+			order: 3;
+			font-size: 0;
+			padding-top: 20px;
+		}
+		.column--center {
+			float: none;
+			width: auto;
+			order: 1;
+			margin-bottom: 23px;
+		}
+		.column--right {
+			float: none;
+			width: auto;
+			order: 2;
+			padding-bottom: 8px;
+		}
+		.column--center,
+		.column--right {
+			position: relative;
+			&::after {
+				content: '';
+				@include stretch-x(-$layout-offset-phone, -$layout-offset-phone);
+				bottom: 0;
+				border-bottom: 1px solid rgba(white, .15);
+			}
+		}
+	}
+
+	.footer-sub {
+		height: auto;
+		line-height: 1;
+		.container {
+			display: flex;
+			flex-direction: column;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.column {
+			display: block;
+			float: none;
+			width: auto;
+			padding-left: $layout-offset-phone;
+			padding-right: $layout-offset-phone;
+		}
+		.column--left {
+			order: 2;
+			height: 62px;
+			line-height: 62px;
+			background: white;
+		}
+		.column--right {
+			text-align: left;
+			order: 1;
+			padding-top: 32px;
+			padding-bottom: 30px;
+		}
+		&::before {
+			display: none;
+		}
+		.copyright {
+			color: black;
+			top: auto;
+		}
+	}
+
+	.developer {
+		position: relative;
+		display: block;
+		top: auto;
+		> span {
+			position: absolute;
+			left: 113px;
+			top: 4px;
+			margin-right: 0;
+		}
+	}
+
+	.copyright {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: 6px;
+	}
+
+	.footer-share {
+		padding-top: 0;
+		position: absolute;
+		right: 0;
+		top: 21px;
+	}
+
+	.section--mission {
+		min-height: auto;
+	}
+
+}

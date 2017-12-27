@@ -1,0 +1,98 @@
+<!-- elements-item -->
+<div class="elements-item">
+	
+	<h3>
+		Более 40 биокомпонентов<br /> 
+		необходимых организму
+	</h3>
+
+	<div class="block-in">
+		<label>Аминокислоты, жиры, ферменты</label>
+		Лизоцим, амилаза
+	</div>
+
+	<div class="block-in">
+		<label>Ваитамины</label>
+		<ul class="list--inline text--uppercase list--vitamins">
+			{% for item in [
+				{
+					el: "c",
+					class: "item--c"
+				}, {
+					el: "b<sub>1</sub>",
+					class: "item--b1"
+				}, {
+					el: "b<sub>6</sub>",
+					class: "item--b6"
+				}, {
+					el: "a",
+					class: "item--a"
+				}, {
+					el: "b<sub>2</sub>",
+					class: "item--b2"
+				}, {
+					el: "b<sub>12</sub>",
+					class: "item--b12"
+				}, {
+					el: "b<sub>9</sub>",
+					class: "item--b9"
+				}
+			] -%}
+			<li class="{{item.class}}">
+				<span class="el">{{item.el|safe}}</span>
+			</li>
+			{%- endfor %}
+		</ul>
+	</div>
+
+	<div class="block-in">
+		<label>Микроэлементы</label>
+		<ul class="list--inline list--micro">
+			{% for item in [
+				{
+					title: "Натрий",
+					el: "Na"
+				}, {
+					title: "Железо",
+					el: "Fe"
+				}, {
+					title: "Сера",
+					el: "S"
+				}, {
+					title: "Кальций",
+					el: "Ca"
+				}, {
+					title: "Магний",
+					el: "Mg"
+				}, {
+					title: "Кремний",
+					el: "Si"
+				}, {
+					title: "Калий",
+					el: "K"
+				}, {
+					title: "Медь",
+					el: "Cu"
+				}, {
+					title: "Цинк",
+					el: "Zn"
+				}, {
+					title: "Фосфор",
+					el: "P"
+				}, {
+					title: "Йод",
+					el: "I"
+				}, {
+					title: "Кобальт",
+					el: "Co"
+				}
+			] -%}
+			<li>
+				<span class="el">{{item.el|safe}}</span>
+				<span class="name">{{item.title}}</span>
+			</li>
+			{%- endfor %}
+		</ul>
+	</div>
+
+</div><!-- /elements-item -->

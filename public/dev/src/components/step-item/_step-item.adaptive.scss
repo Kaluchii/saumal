@@ -1,0 +1,259 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	.step-item {
+		.item-viewport {
+			width: 480px;
+		}
+		.img--centered {
+			height: 480px;
+			line-height: 478px;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.step-item {
+
+		&:nth-child(even) {
+			[class^="col-"] {
+				&:nth-child(1) {
+					left: 58.3333333333%;
+				}
+				&:nth-child(2) {
+					left: -41.6666666667%;
+				}
+			}
+			.item-viewport {
+				left: auto;
+			}
+			.item-in {
+				left: auto;
+			}
+		}
+
+		.item-text {
+			font-size: 14px;
+		}
+
+		.item-viewport {
+			width: 300px;
+			left: -10px;
+		}
+
+		.img--centered {
+			height: 300px;
+			line-height: 298px;
+		}
+
+		.item-in {
+			left: auto;
+			max-width: 100%;
+		}
+
+		.item-desc {
+			$width: 280px;
+			$height: 150px;
+			bottom: -47px;
+			width: $width;
+			height: $height;
+			margin-left: -$width/2;
+			border-top-left-radius: $width/2 $height/2;
+			border-top-right-radius: $width/2 $height/2;
+			border-bottom-left-radius: $width/2 $height/2;
+			border-bottom-right-radius: $width/2 $height/2;
+			overflow: hidden;
+			.thumb {
+				height: $height;
+			}
+		}
+
+		.owl-dots {
+			bottom: 0;
+		}
+
+		.owl-nav {
+			display: none;
+		}
+
+		.slide-in {
+			padding-top: 10px;
+		}
+
+		.slide-index {
+			margin-bottom: 0;
+		}
+
+		.slide-title {
+			margin-bottom: 0;
+			font-size: 14px;
+			letter-spacing: 0;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.step-item {
+		margin-bottom: 60px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		[class^="col-"] {
+			display: block;
+		}
+
+		&:nth-child(even) {
+			[class^="col-"] {
+				&:nth-child(1),
+				&:nth-child(2) {
+					left: auto;
+				}
+			}
+			.item-viewport {
+				left: auto;
+			}
+		}
+
+		&:nth-child(1) .item-viewport::before,
+		&:nth-child(2) .item-viewport::before {
+			display: none;
+		}
+
+		.item-viewport {
+			width: auto;
+			left: auto;
+			margin-bottom: 160px;
+		}
+
+		.item-slider {
+			border-radius: 0;
+			margin-left: -$layout-offset-phone;
+			margin-right: -$layout-offset-phone;
+		}
+
+		.slide-img {
+			width: 100%;
+		}
+
+		.img--centered {
+			height: auto;
+			line-height: 1;
+			padding-bottom: 100%;
+			background-color: white; 
+			> * {
+				@include stretch;
+			}
+		}
+
+		.item-in {
+			left: auto;
+			max-width: 100%;
+		}
+
+		.item-desc {
+			left: -$layout-offset-phone;
+			right: -$layout-offset-phone;
+			bottom: -140px;
+			width: auto;
+			height: 140px;
+			margin-left: 0;
+			z-index: 2;
+			border-radius: 0;
+			.thumb {
+				height: 140px;
+			}
+		}
+
+		.owl-dots {
+			bottom: 5px;
+		}
+
+		.owl-nav {
+			top: 50%;
+		}
+
+		.owl-prev {
+			left: 15px;
+		}
+
+		.owl-next {
+			right: 15px;
+		}
+
+		.slide-in {
+			padding-top: 10px;
+		}
+
+		.slide-index {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 0;
+			margin-right: 10px;
+		}
+
+		.slide-title {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		h3 {
+			margin-bottom: 20px;
+			padding-left: 12px;
+			margin-left: 30px;
+			> span {
+				left: -26px;
+				top: -3px;
+				font-size: 20px;
+				min-width: 30px;
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+
+	}
+
+	.step-items-list {
+		padding-top: 40px;
+	}
+
+}

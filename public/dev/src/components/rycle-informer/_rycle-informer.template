@@ -1,0 +1,7 @@
+<!-- rycle-informer -->
+<div class="rycle-informer rycle--empty">
+	<a href="rycle.html" class="link--block link--rycle">
+		<i class="icon icon-rycle"></i>
+		<sup data-count>0</sup>
+	</a>
+</div><!-- /rycle-informer -->

@@ -1,0 +1,146 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-point-1) {
+
+	.section--news {
+		.owl-prev {
+			left: -35px;
+		}
+		.owl-next {
+			right: -35px;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+@include respond-to($respond-desktop) {
+
+	.section--news {
+		.items-list {
+			max-width: 860px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.owl-nav {
+			top: 80px;
+		}
+		.owl-prev {
+			left: -40px;
+		}
+		.owl-next {
+			right: -40px;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--news {
+		.items-list {
+			max-width: 640px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.owl-nav {
+			top: 80px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			right: auto;
+			width: 660px;
+		}
+		.owl-prev {
+			left: -40px;
+		}
+		.owl-next {
+			right: -40px;
+		}
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--news {
+		padding-bottom: 0;
+
+		.section-title {
+			margin-bottom: 26px;
+			> * {
+				margin-bottom: 0;
+			}
+		}
+
+		[class^="col-"] {
+			display: block;
+		}
+
+		.item-img {
+			margin-bottom: 12px;
+		}
+
+		.item {
+			margin-bottom: 27px;
+		}
+
+		.ratio {
+			padding-bottom: ratio(160px, 290px);
+			img {
+				width: 100%;
+			}
+		}
+
+		.item:hover {
+			img {
+				transform: none;
+			}
+			.ratio::after {
+				background: rgba($blue, .2);
+			}
+			.item-title {
+				color: $link-color;
+			}
+		}
+
+		.item-title {
+			font-size: 15px;
+			line-height: 21px;
+		}
+
+	}
+
+}

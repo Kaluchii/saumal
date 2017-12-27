@@ -1,0 +1,44 @@
+<!-- nav-category -->
+<div class="nav-category{% if page == 'mainpage' %} mode--2{% else %} hidden-xs{% endif %}"{% if page == 'product' %} data-sticky{% endif %}>
+
+	<ul class="list--unstyled">
+
+		<li>
+			<a href="{% if page == 'product' %}#nervous{% else %}product.vliyaniye-na-organizm.html#nervous{% endif %}">
+				<i class="icon icon-nervous"></i> <span>Нервная система</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="{% if page == 'product' %}#circulatory{% else %}product.vliyaniye-na-organizm.html#circulatory{% endif %}">
+				<i class="icon icon-circulatory"></i> <span>Кровеносная система</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="{% if page == 'product' %}#respiratory{% else %}product.vliyaniye-na-organizm.html#respiratory{% endif %}">
+				<i class="icon icon-respiratory"></i> <span>Дыхательная система</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="{% if page == 'product' %}#digestive{% else %}product.vliyaniye-na-organizm.html#digestive{% endif %}">
+				<i class="icon icon-digestive"></i> <span>Пищеварительная система</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="{% if page == 'product' %}#endocrine{% else %}product.vliyaniye-na-organizm.html#endocrine{% endif %}">
+				<i class="icon icon-endocrine"></i> <span>Эндокринная система</span>
+			</a>
+		</li>
+
+		<li>
+			<a href="{% if page == 'product' %}#cover{% else %}product.vliyaniye-na-organizm.html#cover{% endif %}">
+				<i class="icon icon-cover"></i> <span>Покровная система</span>
+			</a>
+		</li>
+
+	</ul>
+
+</div><!-- /nav-category -->

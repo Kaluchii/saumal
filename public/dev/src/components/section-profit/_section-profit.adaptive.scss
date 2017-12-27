@@ -1,0 +1,133 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+@include respond-to($respond-point-1) {
+	.section--profit {
+		.section-content {
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			background-image: none;
+		}
+	}
+}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet) {
+
+	.section--profit {
+		height: 860px;
+		padding-top: 40px;
+
+		.column--left {
+			width: auto;
+			float: none;
+			margin-right: 0;
+		}
+
+		.column--right {
+			width: auto;
+			float: none;
+			padding-left: 0;
+		}
+
+		.column--schema {
+			top: 20px;
+		}
+
+		.section-title {
+			margin-bottom: 20px;
+		}
+
+		.section-content {
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0;
+		}
+
+		.tab-pane {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+	}
+
+}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-tablet-up) {
+
+	.section--profit {
+		background-image: url(#{$path-img}/section-profit-bg.png);
+	}
+
+}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.section--profit {
+		background-image: url(#{$path-img}/section-profit-mobile-bg.png);
+		background-size: 100% auto;
+		height: auto;
+		padding-bottom: 47px;
+		padding-top: 29px;
+
+		.title-1 {
+			span {
+				position: relative;
+				top: -6px;
+			}
+		}
+
+		.column--left {
+			margin-right: auto;
+			margin-left: auto;
+			float: none;
+		}
+
+		.section-title {
+			margin-bottom: 16px;
+		}
+
+		.section-content {
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0;
+			background-image: none;
+		}
+
+	}
+
+}

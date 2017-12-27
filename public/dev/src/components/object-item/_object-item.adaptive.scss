@@ -1,0 +1,72 @@
+/*
+	Стили для Больших экранов
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-large) {}
+
+
+
+/*
+	Стили для Десктопа
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-desktop) {}
+
+
+
+/*
+	Стили для Планшета и выше
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-up) {}
+
+
+
+/*
+	Стили для Планшета
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet) {}
+
+
+
+/*
+	Стили для Планшета и Телефона
+ -------------------------------------------------------------------- */
+// @include respond-to($respond-tablet-down) {}
+
+
+
+/*
+	Стили для Телефона
+ -------------------------------------------------------------------- */
+@include respond-to($respond-phone) {
+
+	.object-item {
+		padding: 20px;
+		min-height: auto;
+		line-height: 22px;
+		text-align: center;
+
+		> div {
+			display: block;
+			font-size: 18px;
+		}
+
+		.item-img {
+			top: auto;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 10px;
+			width: 135px;
+			img {
+				width: 100%;
+			}
+		}
+
+		.item-in {
+			padding-left: 0;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+
+	}
+
+}

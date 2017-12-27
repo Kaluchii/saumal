@@ -1,0 +1,10 @@
+<!-- share-item -->
+<div class="share-item">
+
+	<div class="social-likes">
+		<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Поделиться</div>
+		<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Поделиться</div>
+		<div class="twitter" title="Поделиться ссылкой в Твиттере">Твитнуть</div>
+	</div>
+
+</div><!-- /share-item -->

@@ -1,0 +1,33 @@
+{% set title = "О компании" %} <!-- заголовок страницы -->
+{% set page = "about" %} <!-- идентификатор страницы -->
+{% set mode = "zavod" %}
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+
+	<div class="container">
+
+		<div class="page-title text--center">
+			<h1 class="title-1">{{title}}</h1>
+		</div>
+
+		{% include "nav-content/_nav-content.about.template" %}
+	
+	</div>
+
+	<div class="page-content">
+
+		{% include "section-zavod/_section-zavod.info.template" %}
+
+		{% include "section-zavod/_section-zavod.remark.template" %}
+
+		{% include "section-zavod/_section-zavod.horse.template" %}
+
+		{% include "section-zavod/_section-zavod.location.template" %}
+
+	</div>
+
+</div><!-- /page -->
+{% endblock %}

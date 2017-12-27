@@ -1,0 +1,76 @@
+$column-left: 230px;
+
+.section--profit {
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 920px;
+	color: white;
+	padding-top: 110px;
+
+	.column--left {
+		width: $column-left;
+		margin-right: -$column-left;
+		position: relative;
+	}
+
+	.column--right {
+		width: 100%;
+		padding-left: $column-left + 55px;
+	}
+
+	.column--schema {
+		width: 220px;
+		margin-right: -220px;
+		position: relative;
+		top: -20px;
+		> img {
+			opacity: 0;
+			transition: opacity .4s ease-out;
+			&.active {
+				opacity: 1;
+			}
+			&:not(:first-child) {
+				@include stretch;
+			}
+		}
+	}
+
+	.column--tab {
+		width: 100%;
+		padding-left: 220px + 50px;
+	}
+
+	.section-title {
+		margin-bottom: -24px;
+		> * {
+			margin-bottom: 0;
+			color: white;
+		}
+	}
+
+	.section-content {
+		margin-left: -$layout-offset;
+		margin-right: -$layout-offset;
+		padding: 100px $layout-offset 60px;
+		background-image: inline('#{$path-inline}/section-profit-border.png');
+		background-size: 100% 100%;
+	}
+
+	h3 {
+		color: white;
+		margin-bottom: 22px;
+	}
+
+	.tab-pane {
+		padding-top: 16px;
+		font-weight: 300;
+	}
+
+	.btn--more {
+		margin-top: 7px;
+		position: relative;
+		left: -10px;
+	}
+
+}

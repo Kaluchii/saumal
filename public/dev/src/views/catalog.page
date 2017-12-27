@@ -1,0 +1,28 @@
+{% set title = "Заказ продукта" %} <!-- заголовок страницы -->
+{% set page = "catalog" %} <!-- идентификатор страницы -->
+{% extends "layouts/default.layout" %} <!-- используемый layout -->
+
+{% block content %}
+<!-- page -->
+<div class="page">
+
+	<div class="container">
+
+		{% include "rycle-informer/_rycle-informer.template" %}
+
+		<div class="page-title text--center">
+			<h1 class="title-1">{{title}}</h1>
+		</div>
+
+	</div>
+
+	<div class="page-content">
+		<div class="container">
+
+			{% include "section-catalog/_section-catalog.template" %}
+
+		</div>
+	</div>
+
+</div><!-- /page -->
+{% endblock %}

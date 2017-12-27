@@ -1,0 +1,168 @@
+// подвал сайта
+$footer-sup: 270px;
+$footer-sub: 80px;
+$height: $footer-sup + $footer-sub;
+// *************************************************************************
+
+.footer {
+	position: relative;
+	background-color: #1174cc;
+	margin-top: -$height;
+	height: $height;
+	overflow: hidden;
+	color: white;
+	a {
+		color: rgba(white, .5);
+		transition: color .3s ease-in-out;
+		&:hover {
+			color: white;
+		}
+	}
+
+	.logo {
+		display: inline-block;
+		position: relative;
+		left: -5px;
+		margin: 7px 0 8px;
+		transition: opacity .3s ease-in-out;
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+}
+
+.content {
+	padding-bottom: $height;
+}
+
+.footer-sup {
+	$max: $layout-max-width;
+	$column-left: fluid(225px, $max);
+	$column-right: fluid(160px, $max);
+	$column-center: 100% - $column-left - $column-right;
+	height: $footer-sup;
+	padding-top: 58px;
+	.column--left {
+		width: $column-left;
+	}
+	.column--right {
+		width: $column-right;
+	}
+	.column--center {
+		width: $column-center;
+	}
+}
+
+.footer-sub {
+	height: $footer-sub;
+	position: relative;
+	font-size: 0;
+	line-height: $footer-sub;
+	.column {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: $font-size-base;
+		float: none;
+		width: 50%;
+		line-height: 1;
+	}
+	.column--right {
+		text-align: right;
+	}
+	&::before {
+		content: '';
+		@include stretch-x;
+		top: 0;
+		border-top: 1px solid rgba(white, .15);
+	}
+}
+
+.developer {
+	font-size: 0;
+	display: inline-block;
+	color: rgba(white, .4);
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	&:hover {
+		color: white;
+	}
+	> * {
+		display: inline-block;
+		vertical-align: top;
+	}
+	> span {
+		font-size: 12px;
+		line-height: 14px;
+		text-align: left;
+		margin-right: 14px;
+	}
+}
+
+.copyright {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(white, .4);
+}
+
+.footer-contacts {
+	font-weight: 500;
+	h6 {
+		margin-bottom: 0;
+		font-weight: 100;
+		font-size: $font-size-base;
+		line-height: 22px;
+	}
+	ul, li {
+		padding: 0;
+	}
+	ul {
+		margin: 0 0 14px;
+	}
+	li {
+		margin: 0;
+		font-size: 18px;
+	}
+	a {
+		color: white;
+	}
+}
+
+.footer-share {
+	$links-offset: 9px;
+	font-size: 0;
+	padding-top: 5px;
+	a {
+		@extend .link--block;
+		width: 28px;
+		height: 28px;
+		border-radius: 3px;
+		position: relative;
+		font-size: 14px;
+		color: white;
+		background: rgba(white, .15);
+		transition: background .2s ease-in-out;
+		&:hover {
+			background: white;
+			color: $blue;
+		}
+	}
+	.icon {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	ul {
+		margin: 0 (-$links-offset/2);
+	}
+	li {
+		padding-left: $links-offset/2;
+		padding-right: $links-offset/2;
+	}
+}
+
+.section--mission {
+	min-height: calc(100vh - #{$height} - #{$header-height});
+}
