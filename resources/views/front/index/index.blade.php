@@ -265,7 +265,7 @@
             </section>
             <!-- /section-production -->
             <!-- section-news -->
-            <section class="section section--news">
+            {{--<section class="section section--news">
                 <div class="container">
                     <div class="section-title text--center">
                         <h3 class="title-1">@lang('all_page.news')</h3>
@@ -294,7 +294,7 @@
                         <!-- /items-list -->
                     </div>
                 </div>
-            </section>
+            </section>--}}
             <!-- /section-news -->
         </div>
     </div>
