@@ -1,6 +1,6 @@
 <?php
 return [
-    'pay_test_mode' => true,
+    'pay_test_mode' => false,
 
     'MERCHANT_CERTIFICATE_ID'   => 'c183dbbb',
     'MERCHANT_NAME'             => 'sau-med.com',
