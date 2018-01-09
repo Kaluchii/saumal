@@ -23,5 +23,6 @@ return [
     'EPAY_FAILURE_BACK_LINK'    => 'http://saumal.mrkalu0a.beget.tech/fail',
 //    'EPAY_FAILURE_BACK_LINK'    => 'http://saumal/fail',
 
+//    'EPAY_FORM_TEMPLATE'        => '../epay_source/template.xml',
     'EPAY_FORM_TEMPLATE'        => 'default.xsl',
 ];
